@@ -49,8 +49,10 @@ ___
 ### 웹페이지를 제작해봅시다.
 
 - [](https://www.strikingly.com)
-- [](https://my.readymag.com/)
+- [웹페이지 제작해보기](https://my.readymag.com/)
 - [](https://www.canva.com)
+- [](http://deluxe-menu.com/)
+- [웹페이지 제작하기-다운로드](https://mobirise.com/)
 
 
 
