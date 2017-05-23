@@ -27,6 +27,10 @@
       h2{font-family: 'Montserrat Subrayada', sans-serif;}
       h4 a{font-size: 2.2em;}
       .none{display: none !important;}
+      li ul>li{font-size:0.7em;}
+      li ul>li{height: 0; transition: all 0.3s ease; overflow: hidden;}
+      li:hover ul>li:first-child{height: auto;}
+      h2:hover ~ ul ul>li{height: auto; background-color: #0af; color:#fff;}
     </style>
   </head>
   <body>
@@ -140,11 +144,18 @@ class: center, middle
 - Hue, Saturation, Light
 
 ---
-## Extension
+## Extension(확장자 이해하기)
 
-- 유틸리티( 한글, 워드, 엑셀, 파워포인트 )
-- 그래픽( 포토샵, 일러스트레이터, 이미지, 투명배경이미지, 움짤 )
-- 웹문서( 구조, 디자인, 제어 )
+- 유틸리티
+  * ( 한글, 워드, 엑셀, 파워포인트 )
+  * ( *.hwp, *.doc, *.xlsx, *.ppt )
+- 그래픽
+  * ( 포토샵, 일러스트레이터, 이미지, 투명배경, 움짤 )
+  * ( *.psd, *.ai, *.jpg, *.png, *.gif )
+- 웹문서
+  * ( 구조, 디자인, 제어 )
+  * ( *.html, *.css, *.js )
+
 
 ---
 ## route source
