@@ -1,19 +1,19 @@
 # 서비스 경험디자인 과정에 오신 여러분들 환영합니다.
 
 수업시작에 앞서 간단한 설문조사 및 테스트를 진행하여, <br>
-수업진행(활용)에 도움이 되고자 합니다. 
+수업진행(활용)에 도움이 되고자 합니다.
 아래 주소를 통해 테스트 진행 부탁드립니다.
 
 [01.과정진행전 설문조사](https://docs.google.com/forms/d/1CnNZTFoO0oejyil1VUN1g-C3SmsEt5F2bC4Oev3fRCU/edit)
 
-수업진행에 앞서 앞으로 진행할 내용에 따른 기초 테스트입니다. 
+수업진행에 앞서 앞으로 진행할 내용에 따른 기초 테스트입니다.
 다소 어려울 수 있습니다. 두려워 하지 마시고 편안하게 풀어보세요.
 
 [02.서비스 경험디자인 과정을 통한 테스트](https://docs.google.com/forms/d/1PzTaurc1eCagB-UPs9jXvhIYPbETtxfpQLE7lBl08so/edit?usp=forms_home)
 
 ___
 
-## 1교시: 인터넷 브라우저
+## 인터넷 브라우저
 
 ### 인터넷 브라우저란?
 
@@ -27,11 +27,6 @@ ___
 - [파이어폭스](http://mozilla.com)
 - [오페라](http://opera.com)
 
-## 웹용 문서프로그램설치(웹전용 문서프로그램도 존재한다?)
-
--  [markdown이란?](http://thisblogbusy.tistory.com/entry/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4Markdown-%EC%9D%B4%EB%9E%80)
--  [markdown 프로그램 설치하기-haroopad](http://pad.haroopress.com/)
--  [markdown 사용하기(기준:github)](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
 ### 브라우저의 또다른 기능(개발자모드)
 
@@ -40,37 +35,40 @@ ___
 - 자바스크립트 작성하기
 - 남들이 모르는 숨은 기능 사용하기- **네이버블로거들이 올린 바탕화면 이미지 다운받기**
 
-  ​
-
 ___
 
-## 2교시: 웹페이지를 제작해 봅시다.(크롬을 사용하세요.)
+## 웹페이지를 제작해 봅시다.(크롬을 사용하세요.)
 
 ### 웹페이지를 제작해봅시다.
 
-- [](https://www.strikingly.com)
-- [웹페이지 제작해보기](https://my.readymag.com/)
-- [](https://www.canva.com)
-- [](http://deluxe-menu.com/)
-- [웹페이지 제작하기-다운로드](https://mobirise.com/)
-
+- [웹페이지 제작해보기1](https://www.strikingly.com)
+- [웹페이지 제작해보기2](https://my.readymag.com/)
+- [웹페이지 제작해보기3](https://www.canva.com)
+- [웹페이지 제작하기-다운로드-가입필요](https://mobirise.com/)
+ [](http://deluxe-menu.com/)
+___
 
 
 ### 코드 작성하기
 
+- [웹 기초 코드 테스트 바로가기](https://wordtohtml.net/)
+- 코드란?(HTML, CSS, Javascript)
 - 폴더 생성하기(폴더 생성시 필요한 규칙)
 - 문서 만들기(파일 생성에 필요한 규칙 및 확장자)
 - 이미지 불러오기(이미지 경로 파악하기)
-- 코드란?(HTML, CSS, Javascript)
-- [웹 기초 코드 설명하기](https://wordtohtml.net/)
-
+- [선행학습 - 칸아카데이 HTML 배우러가기](https://ko.khanacademy.org/computing/computer-programming)
 ___
 
-## 3교시: 우리가 배울 내용의 기초
+## 우리가 배울 내용의 기초
 
 - 그래픽 기초
 - 확장자(html, css, js, psd, ai, md)
+___
+## 웹용 문서프로그램설치(웹전용 문서프로그램도 존재한다?)
 
+-  [markdown이란?](http://thisblogbusy.tistory.com/entry/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4Markdown-%EC%9D%B4%EB%9E%80)
+-  [markdown 프로그램 설치하기-haroopad](http://pad.haroopress.com/)
+-  [markdown 사용하기(기준:github)](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 ___
 
 사전학습에 참여하신 여러분들 고생하셨습니다.
