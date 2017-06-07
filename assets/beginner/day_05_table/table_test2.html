@@ -7,7 +7,11 @@
       table, td, th, thead, tbody, tfoot{
         border:1px solid #ccc;
         border-spacing: 0;  border-collapse: collapse;}
-
+      thead{background-color: #25a;}
+      th{color:#fff;}
+      td,th{width:250px; height:50px; text-align:center;}
+      .first_cell{background-color:rgba(0,100,255,0.2);}
+      .second_cell{background-color:rgba(200,200,200,0.1);}
     </style>
   </head>
   <body>
@@ -16,57 +20,57 @@
       <caption>테이블 만들기 테스트2</caption>
       <thead>
         <tr>
-          <td>1분기</td>
-          <td>2분기</td>
-          <td>3분기</td>
-          <td>4분기</td>
-          <td>5분기</td>
+          <th></th>
+          <th>1분기</th>
+          <th>2분기</th>
+          <th>3분기</th>
+          <th>4분기</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="first_cell">
           <td>A</td>
           <td>02</td>
           <td>03</td>
           <td>04</td>
           <td>05</td>
         </tr>
-        <tr>
+        <tr class="second_cell">
           <td>B</td>
           <td>02</td>
           <td>03</td>
           <td>04</td>
           <td>05</td>
         </tr>
-        <tr>
+        <tr class="first_cell">
           <td>C</td>
           <td>02</td>
           <td>03</td>
           <td>04</td>
           <td>05</td>
         </tr>
-        <tr>
+        <tr class="second_cell">
           <td>D</td>
           <td>02</td>
           <td>03</td>
           <td>04</td>
           <td>05</td>
         </tr>
-        <tr>
+        <tr class="first_cell">
           <td>E</td>
           <td>02</td>
           <td>03</td>
           <td>04</td>
           <td>05</td>
         </tr>
-        <tr>
+        <tr class="second_cell">
           <td>F</td>
           <td>02</td>
           <td>03</td>
           <td>04</td>
           <td>05</td>
         </tr>
-        <tr>
+        <tr class="first_cell">
           <td>G</td>
           <td>02</td>
           <td>03</td>
