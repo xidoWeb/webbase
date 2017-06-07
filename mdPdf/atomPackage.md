@@ -40,3 +40,22 @@
 ### Sequential Number
 > 연속 되어진 숫자를 넣어주는 기능
 > 단축키 `ctrl` + `alt` + `0`
+
+### Platformio Ide Terminal
+> 아톰에디터에서 터미널 바로 실행하기
+> window에서는 `cmd`가 실행되는 문제가 있기 때문에 기본 프로그램을 수정해주어야함
+> `file>settings>package>Platformio-Ide-Terminal`에서 `shell override`내용에 작성
+> C:\Program Files\Git\bin\bash.exe
+
+### autocomplete path
+> 파일작성시 외부문서 불러오는 경로 자동확인하기
+
+### file icons
+> 웹문서 아이콘을 나타냄으로 좀더 쉽게 문서구분하기
+
+### hilighter selected
+> `html`문서 선택시 연결태그 확인기능
+
+### indent guide improved
+> 가이드라인으로 들여쓰기 확인하기 기능
+> 팩키지 기능에 첨부되지 않음 (보이고 끄는 기능이 없음)
