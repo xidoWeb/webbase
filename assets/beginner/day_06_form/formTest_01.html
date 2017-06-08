@@ -66,21 +66,20 @@
                   태어난 해를 입력하세요(숫자 네자리).
                 </label>
               </div><!-- // .birth_year -->
-              <!-- 월(2차 작업) -->
+              <!-- 월(3차 작업) -->
               <div class="birth_month">
                 <select name="birthMonth" id="birthMonth">
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="07">07</option>
-                  <option value="08">08</option>
-                  <option value="09">09</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
+                  <script>
+                    var i = 1;
+                    for(; i<=12; i++){
+                      document.write(
+                        '<option value="'+ i +'">'+ i +'</option>'
+                      );
+                    }
+                  </script>
+<!-- 자바스크립트를 활용하면
+     반복 또는 연속 되어지는 내용을 약간의 수식을 통해 간단하게 처리할 수 있다.
+-->
                 </select>
                 <label for="birthMonth">
                   태어난 월을 선택하세요.
