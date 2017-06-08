@@ -20,7 +20,7 @@
         <div class="user">
           <label for="userName">사용자 이름을 입력하세요.</label>
           <input type="text" id="userName"
-                 name="userName" value=""
+                 name="userName" value="" autocomplete="on"
                  placeholder="아이디를 입력" />
         </div>
         <div class="pwd">
@@ -80,6 +80,23 @@
  -->
 
 <!-- 버튼 영역  -->
+  <fieldset>
+    <legend>버튼영역설명</legend>
+    <input type="submit" id="ok" name="ok" value="확인">
+    <input type="reset" id="cancle" name="cancle" value="취소">
+    <input type="button" id="btn" name="btn" value="검색">
+    <input type="image" src="#" alt="#" id="img" name="img">
+    <input type="file" id="data" name="data">
+  </fieldset>
+<!-- 버튼 설명
+* type="image"의 경우 src(이미지불러오기), alt(불러온이미지 설명)을 반드시 같이 작성해야한다. value의 경우 특별히 작성할 필요가 없다.(default)
+* type="file의 경우 value를 작성하지 않는다.(default)
+* 참고 페이지:
+* https://html.spec.whatwg.org/#the-input-element (4.10.5 input element 표 참고)
+-->
+
+
+
 <!-- 멀티(복합) 영역  -->
 
 <!-- 추가 설명 -->
