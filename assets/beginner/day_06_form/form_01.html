@@ -35,7 +35,7 @@
     <fieldset>
       <legend>선택1 radio</legend>
       <p>당신의 성별을 선택하세요.</p>
-      <input type="radio" id="male" name="sex" value="male">
+      <input type="radio" id="male" name="sex" value="male"     checked="checked" />
       <label for="male">남자</label>
 
       <input type="radio" id="female" name="sex" value="female">
@@ -49,7 +49,8 @@
     <fieldset>
       <legend>선택 2 checkbox</legend>
       <p>오늘 저녁에 먹고 싶은 음식을 선택하세요.</p>
-      <input type="checkbox" id="food1" name="food" value="치킨" />
+      <input type="checkbox" id="food1" name="food" value="치킨"
+        checked="checked" />
       <label for="food1">치킨</label>
 
       <input type="checkbox" id="food2" name="food" value="보쌈" />
@@ -62,6 +63,22 @@
       <label for="food4">족발</label>
 
     </fieldset>
+<!-- 입력, 선택 속성
+* radio, checkbox 구분:
+  * radio는 하나만 선택가능, 완전한 해제는 불가능
+  * checkbox는 여러개(중복) 선택/해제 가능
+* radio, checkbox의 경우 checked="checked"라고하는 속성이 존재
+* 브라우저에서 마우스로 체크전에 미리 선택되어진 형태로 설정
+* radio는 하나만 선택, checkbox는 여러개를 선택
+
+* 암묵적인 형식
+* 원칙: <input type="text" id="box"><label for="box">선택</label>
+* 암묵적1: <label for="box"> <input type="text" id="box"> 선택</label>
+* 암묵적2: <label> <input type="text"> 선택</label>
+* 암묵적 방식중 1번은 id, for를 연결하여 사용하기 때문에 큰문제 없지만.
+* 2번의 방식은 반드시 작성해야하는 id, for를 사용하지 않아 시멘틱(정확한 의미)을 가지지 않으므로 표준과, 유효성의 문제가 됨(권장X)
+ -->
+
 <!-- 버튼 영역  -->
 <!-- 멀티(복합) 영역  -->
 
