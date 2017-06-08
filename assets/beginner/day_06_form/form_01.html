@@ -95,10 +95,54 @@
 * https://html.spec.whatwg.org/#the-input-element (4.10.5 input element 표 참고)
 -->
 
-
-
 <!-- 멀티(복합) 영역  -->
+    <fieldset>
+      <legend>multi영역</legend>
+      <!-- 입력 -->
+      <textarea id="multiText" value="" name=""
+        cols="10" rows="5" maxlength="50"></textarea>
+      <textarea id="multiText" value="" name=""
+          cols="10" rows="5" readonly="readonly">
+1. 계약서
+2. 보증서
+3. 시승권
+      </textarea>
 
+        <!-- cols="10글자" rows="5줄" 정도의 크기를 만들어라
+        (임시사이즈, 최소크기일때 적용하는 내용) -->
+      <!-- 선택 -->
+        <label for="selectMenu">selectMenu</label>
+
+        <select name="" id="selectMenu">
+          <option>선택하세요.</option>
+          <option value="coffee">커피(+1,000)</option>
+          <option value="iphone">아이폰(+3,000,000)</option>
+          <option value="tumble">텀블러(+100)</option>
+          <option value="random">랜덤박스(+100,000)</option>
+        </select>
+        <select name="" id="selectMenu">
+          <option>선택하세요.</option>
+          <optgroup label="drink">
+            <option value="coffee">coffee</option>
+            <option value="juice">juice</option>
+            <option value="ade">ade</option>
+          </optgroup>
+          <optgroup label="icecream">
+            <option value="strawberry">strawberry</option>
+            <option value="grape">grape</option>
+            <option value="coffee">coffee</option>
+          </optgroup>
+          <optgroup label="cookie">
+            <option value="javachip">javachip</option>
+            <option value="oreo">oreo</option>
+            <option value="saukkang">saukkang</option>
+          </optgroup>
+        </select>
+      <!-- 버튼 -->
+      <button type="submit" name="#">확인</button>
+      <button type="reset" name="#">취소</button>
+      <button type="button" name="#">검색</button>
+    </fieldset>
 <!-- 추가 설명 -->
     <fieldset>
       <legend>html5 추가 기능 및 속성-주석처리</legend>
