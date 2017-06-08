@@ -57,25 +57,43 @@
               </div><!-- // .sexuality_select -->
             </div><!-- // #member -->
             <div id="birthday">
-              <p><label for="birthYear">생년월일을 입력해 주세요.</label></p>
-              <!-- 년 -->
-              <input type="text" name="year" id="birthYear"
-                     maxlength="4" value="">
-              <label for="birthYear">
-                태어난 해를 입력하세요(숫자 네자리).
-              </label>
-              <!-- 월(1차 작업) -->
-              <input type="number" name="month" id="birthMonth"
-                     min="1" max="12" step="1" value="">
-              <label for="birthMonth">
-                태어난 월을 선택하세요.
-              </label>
+              <div class="birth_year">
+                <p><label for="birthYear">생년월일을 입력해 주세요.</label></p>
+                <!-- 년 -->
+                <input type="text" name="year" id="birthYear"
+                       maxlength="4" value="">
+                <label for="birthYear">
+                  태어난 해를 입력하세요(숫자 네자리).
+                </label>
+              </div><!-- // .birth_year -->
+              <!-- 월(2차 작업) -->
+              <div class="birth_month">
+                <select name="birthMonth" id="birthMonth">
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <label for="birthMonth">
+                  태어난 월을 선택하세요.
+                </label>
+              </div><!-- // .birth_month -->
               <!-- 일 -->
-              <input type="number" name="day" id="birthDay"
-                     min="1" max="31" step="1" value="">
-              <label for="birthDay">
-                태어난 날짜를 선택 또는 입력하세요.
-              </label>
+              <div class="birth_day">
+                <input type="number" name="day" id="birthDay"
+                       min="1" max="31" step="1" value="">
+                <label for="birthDay">
+                  태어난 날짜를 선택 또는 입력하세요.
+                </label><!-- // .birth_day -->
+              </div>
             </div><!-- // #birthday -->
             <div id="checkMember">
               이메일
