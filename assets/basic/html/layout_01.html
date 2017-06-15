@@ -60,8 +60,22 @@
           width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */
 
           height:300px; float:left; background-color:#ccc;}
-        #dataBox{width:calc(100% / 3); height:300px; float:left; background-color:#333;}
-        #dataBox2{width:calc(100% / 3); height:300px; float: left;background-color:#fff;}
+        #dataBox{
+          width:-webkit-calc(100% / 3); /* webkit:chrome, safari, swing */
+          width:-moz-calc(100% / 3); /* moz: mozilla(fire fox) */
+          width:-ms-calc(100% / 3); /* ms: microsoft(IE, edge) */
+          width:-o-calc(100% / 3); /* o: opera */
+          width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */ 
+
+          height:300px; float:left; background-color:#333;}
+        #dataBox2{
+          width:-webkit-calc(100% / 3); /* webkit:chrome, safari, swing */
+          width:-moz-calc(100% / 3); /* moz: mozilla(fire fox) */
+          width:-ms-calc(100% / 3); /* ms: microsoft(IE, edge) */
+          width:-o-calc(100% / 3); /* o: opera */
+          width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */
+          
+          height:300px; float: left;background-color:#fff;}
         /*div.clearfix 처리*/
         /*
         div.clearfix{width:100%; height:50px; background-color:#fd0; clear:both;}
