@@ -30,20 +30,31 @@
 
       .out_box{width:inherit; height: 100px;}
       #headBox{background-color: #f0a;}
-      #contentBox{height:auto;}
 /*
  * 블록 요소를 옆으로 나열하기 위해 float기능을 사용한다.
  * 왼쪽을 기준으로 나열하기 위해서는 float:left;
  * 오른쪽을 기준으로 나열하려면 float:right; 
  * 문제점1: 부모요소에 높이값을 설정하면- 넘어가는 사이즈를 설정시 매번 변경!
  * 문제점2: 부모요소에 높이값을 auto로 설정 -부모의 높이는 0처리(float의 의미)
- * 해결하기위한 용어1: clear속성을 사용
- * 해결하기 위한 용어2: 정의된 이름은 아니지만 보편적으로 .clearfix의 기법
- * 해결하기위한 용어(방법)3: css의 추가기능(선택자의 기능)- ::before , ::after 
+ * 해결하기 위한 방법1: clear속성을 사용
+ * 해결하기 위한 방법2: 정의된 이름은 아니지만 보편적으로 .clearfix의 기법
+ * 해결하기 위한 방법3: css의 추가기능(선택자의 기능)- ::before , ::after 
  */
+      #contentBox{height:auto;}
         #sideBox{width:40%; height:300px; float:left; background-color:#ccc;}
         #dataBox{width:60%; height:300px; float:left; background-color:#333;}
         #dataBox2{width:60%; height:300px; float: left;background-color:#fff;}
+        /*div.clearfix 처리*/
+        /*
+        div.clearfix{width:100%; height:50px; background-color:#fd0; clear:both;}
+        */
+
+        /*br.clearfix 처리*/
+        /*br.clearfix{clear: both;}*/
+
+        /* .clearfix::after 사용*/
+        .clearfix::after{content:" "; display:block; width:0; height:0; clear: both;}
+
       #footBox{background-color: #0af;}
 
   </style>    
@@ -54,10 +65,22 @@
     <header id="headBox" class="out_box">
       headBox
     </header><!-- // #headBox -->
-    <section id="contentBox" class="out_box">
+    <section id="contentBox" class="out_box clearfix">
       <aside id="sideBox">sideBox</aside><!-- // #sideBox -->
       <article id="dataBox">dataBox</article><!-- // #dataBox -->
       <article id="dataBox2">dataBox</article><!-- // #dataBox -->
+<!-- .clearfix의 이해
+  * div코드로 눈에 보이게 만들어서 사용
+  * br코드로 변형시켜 사용
+  * 가상선택자(:after)를 사용
+ -->
+      <!--이해1: div.clearfix를 사용 -->
+      <!-- <div class="clearfix">clearfix위치</div> -->
+
+      <!--이해2: br.clearfix를 사용 -->
+     <!--  <br class="clearfix" /> -->
+
+     <!-- 이해3: 가상선택자 ::after를 사용(부모에 class="clearfix" 삽입) -->
     </section><!-- // #contentBox -->
     <footer id="footBox" class="out_box">
       footBox
