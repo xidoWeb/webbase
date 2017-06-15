@@ -39,11 +39,29 @@
  * 해결하기 위한 방법1: clear속성을 사용
  * 해결하기 위한 방법2: 정의된 이름은 아니지만 보편적으로 .clearfix의 기법
  * 해결하기 위한 방법3: css의 추가기능(선택자의 기능)- ::before , ::after 
+ * ------------------------------------------------
+ * 크기값 계산하기: 3등분의 경우 소수점의 크기값을 계산해야하므로 
+ * 소수점 6자리까지 계산하여 사용합니다.(%, em , rem ...)- px의 수치 제외
+ * css3의 최신기능에는 수치를 자동으로 계산하는 속성값이 있다.( calc() - 표준 X )
+ * calc() : calc()는 ()안에 원하는 수치와, 사칙연산 그리고 계산내용을 작성
+ * 이때 연산기호( *, /, +, -, %)앞, 뒤에는 공백을 만들어 주어야 계산이 된다.
+ * 기술은 구현되지만 표준으로 등록되지 않은경우에는 사용할 수 없다.
+ * 이러한경우에 미래에 사용할 수 있는 기능을 강제로 끌어쓰는 방법
+ * 벤더프리픽스: 앞, 뒤에 밴더(-)를 달고, 해당하는 브라우저의 방식 작성하여 구현
+ * 차후 표준으로 등재(권고)시 밴더프리픽스의 기능은 삭제
  */
       #contentBox{height:auto;}
-        #sideBox{width:33.333333%; height:300px; float:left; background-color:#ccc;}
-        #dataBox{width:33.333334%; height:300px; float:left; background-color:#333;}
-        #dataBox2{width:33.333333%; height:300px; float: left;background-color:#fff;}
+
+        #sideBox{
+          width:-webkit-calc(100% / 3); /* webkit:chrome, safari, swing */
+          width:-moz-calc(100% / 3); /* moz: mozilla(fire fox) */
+          width:-ms-calc(100% / 3); /* ms: microsoft(IE, edge) */
+          width:-o-calc(100% / 3); /* o: opera */
+          width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */
+
+          height:300px; float:left; background-color:#ccc;}
+        #dataBox{width:calc(100% / 3); height:300px; float:left; background-color:#333;}
+        #dataBox2{width:calc(100% / 3); height:300px; float: left;background-color:#fff;}
         /*div.clearfix 처리*/
         /*
         div.clearfix{width:100%; height:50px; background-color:#fd0; clear:both;}
