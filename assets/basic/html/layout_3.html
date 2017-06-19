@@ -31,7 +31,12 @@
 				#unb{width: 500px; height: 50px; float:right; background-color:rgba(250,250,250,0.5);}
 				#unb>h2{width:0; height:0; overflow: hidden;}
 				/* #gnb ________________________________________________ */
-	      #gnb{width:960px; height: 40px; float: left; background-color: #a9a; margin-left:-30px;}
+	      #gnb{width:960px; height: 40px; float: left; background-color: #a9a; 
+	      	margin-left:-30px; padding:5px 30px; box-sizing:border-box;}
+	      #gnb>h2{width: 0; height: 0; overflow: hidden;}
+	      #gnb>ul{width: 100%; height: 100%; background-color: #0c2;}
+	      #gnb>ul>li{float: left;}
+
       /* #contentBox ________________________________________________ */
       #contentBox{width: 100%; height:520px; background-color:#2a7;}
       /* #footBox ________________________________________________ */
@@ -65,7 +70,19 @@
 			<nav id="unb">
 				<h2>utility navigation</h2>
 			</nav>
-			<nav id="gnb">gnb</nav><!-- // #gnb -->
+			<nav id="gnb">
+				<h2>global navigation</h2>
+				<ul>
+					<li>navi_01</li>
+					<li>navi_02</li>
+					<li>navi_03</li>
+					<li>navi_04</li>
+					<li>navi_05</li>
+					<li>navi_06</li>
+					<li>navi_07</li>
+					<li>navi_08</li>
+				</ul>
+			</nav><!-- // #gnb -->
 		</header><!-- // #headBox -->
 		<section id="contentBox">contentBox</section><!-- // #contentBox -->
 		<footer id="footBox">footBox</footer><!-- // #footBox -->
