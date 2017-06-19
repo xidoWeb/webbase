@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--[if lte IE 9]>
+	<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+	<![endif]-->
+	<title>layout sample3</title>
+	<style>
+	/* reset: 브라우저 초기화(모든 브라우저 통일처리) */
+	html,body{width: 100%; height: 100%;}
+	html,body, h1,h2,h3,h4,h5,h6,
+	p,div,pre,form,fieldset,hr{margin: 0; padding: 0;}
+
+	/*html5 reset*/
+	header,nav,aside,article,section,footer,main,figure{
+		display: block;	margin: 0; padding: 0;}
+
+	/* design */
+		#wrap{width: 960px; height: 740px; background-color: #ccc;
+			margin:0 auto;}
+			/* #headBox ________________________________________________ */
+			#headBox{width: 100%; height:140px; background-color:#1af;}
+				/* #gnb ________________________________________________ */
+	      #gnb{}
+      /* #contentBox ________________________________________________ */
+      #contentBox{width: 100%; height:520px; background-color:#2a7;}
+      /* #footBox ________________________________________________ */
+      #footBox{width: 100%; height:80px; background-color:#3a3;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header id="headBox">headBox
+			<nav id="gnb">gnb</nav><!-- // #gnb -->
+		</header><!-- // #headBox -->
+		<section id="contentBox">contentBox</section><!-- // #contentBox -->
+		<footer id="footBox">footBox</footer><!-- // #footBox -->
+	</div><!-- // #wrap -->
+</body>
+</html>
+
+
+
+
