@@ -27,4 +27,23 @@
   /* #contentBox ________________________________________________ */
   #contentBox{width: 100%; height:520px; background-color:#2a7;}
   /* #footBox ________________________________________________ */
-  #footBox{width: 100%; height:80px; background-color:#3a3;}
+  #footBox{width: 100%; height:80px; padding:15px 20px; box-sizing:border-box; background-color:#3a3;}
+  	#footBox>h2{width: 150px; height: 50px; float:left; background-color: #fff;}
+		address{width: 300px; height: 50px; float:left; margin-left: 150px; 
+			background-color: #fff;}
+		.family{width: 100px; height: 50px; float:right; background-color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

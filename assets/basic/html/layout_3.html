@@ -12,28 +12,28 @@
 	
 	<title>layout sample3</title>
 	<style>
-/*		@import url("../css/base/reset.css");	
-		@import url("../css/base/normalize.css");	
-		@import url("../css/src/layout_03.css");	*/
+	/*		@import url("../css/base/reset.css");	
+			@import url("../css/base/normalize.css");	
+			@import url("../css/src/layout_03.css");	*/
 
-/* narr 
- * overflow:일정한 크기의 값을 가진 태그에 내용이 넘쳤을 경우 처리하는 속성기법
- * overflow 종류: overflow, overflow-X(가로영역), overflow-Y(세로영역)
- * overflow 속성: normal, auto, scroll, hidden
+	/* narr 
+	 * overflow:일정한 크기의 값을 가진 태그에 내용이 넘쳤을 경우 처리하는 속성기법
+	 * overflow 종류: overflow, overflow-X(가로영역), overflow-Y(세로영역)
+	 * overflow 속성: normal, auto, scroll, hidden
 
- * 자식요소에 margin VS 부모요소에 padding 
- * margin을 사용하는 방법은 직접적으로 하나하나 간격을 설정하는 방법
- * 모든 필요 요소에 매번 사용해야하는 불편함이 발생
- * 부모요소에 padding을 사용하면 각각 처리하는 내용중에 공통영역을 한꺼번에 처리하기 때문에 
- * 전체 코드의 양이 줄고, 통일성을 잡을 수 있다
- * padding 또는 border를 사용할때
- * 해당하는 크기를 조절한다면(padding-top:20px을 사용하여 전체 높이를 20만큼 줄여야한다면)
- * box-sizing:border-box; 속성을 사용하면 전체의 크기를 조정하지 않아도 된다.
+	 * 자식요소에 margin VS 부모요소에 padding 
+	 * margin을 사용하는 방법은 직접적으로 하나하나 간격을 설정하는 방법
+	 * 모든 필요 요소에 매번 사용해야하는 불편함이 발생
+	 * 부모요소에 padding을 사용하면 각각 처리하는 내용중에 공통영역을 한꺼번에 처리하기 때문에 
+	 * 전체 코드의 양이 줄고, 통일성을 잡을 수 있다
+	 * padding 또는 border를 사용할때
+	 * 해당하는 크기를 조절한다면(padding-top:20px을 사용하여 전체 높이를 20만큼 줄여야한다면)
+	 * box-sizing:border-box; 속성을 사용하면 전체의 크기를 조정하지 않아도 된다.
 
- * box-sizing 은 padding, borderd에대한 선의 위치를 설정하는 속성
- * 속성은 2가지: content-box(지정상자의 바깥쪽) | border-box(지정상자의 안쪽)
+	 * box-sizing 은 padding, borderd에대한 선의 위치를 설정하는 속성
+	 * 속성은 2가지: content-box(지정상자의 바깥쪽) | border-box(지정상자의 안쪽)
 
- 	*/
+	 	*/
 
 	</style>
 </head>
@@ -64,8 +64,14 @@
 				</ul>
 			</nav><!-- // #gnb -->
 		</header><!-- // #headBox -->
-		<section id="contentBox">contentBox</section><!-- // #contentBox -->
-		<footer id="footBox">footBox</footer><!-- // #footBox -->
+		<section id="contentBox">
+			<h2 class="hidden">content 영역</h2>
+		</section><!-- // #contentBox -->
+		<footer id="footBox">
+			<h2>info</h2>
+			<address>address</address>
+			<div class="family">family</div>
+		</footer><!-- // #footBox -->
 	</div><!-- // #wrap -->
 </body>
 </html>
