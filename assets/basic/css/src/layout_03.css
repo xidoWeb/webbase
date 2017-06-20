@@ -27,14 +27,32 @@
   /* #contentBox ________________________________________________ */
   #contentBox{width: 100%; height:auto;}
   /*#contentBox:after{content: " "; display: block; width: 0; height: 0; clear: both;}*/
-		.log_in{width:40%; height:200px; float:left; background-color:#1a5;}
-	  .banner_box{width:60%; height:200px; float:left; background-color:#2af;}
+		.log_in{width:40%; height:200px; float:left; 
+				padding: 10px; box-sizing:border-box; background-color:#1a5;}
+			.log_in>ul{width: 100%; height: 100%; background-color:rgba(255,255,255,0.7);}
+			.log_in>ul>li{width: 70%; height: 60px; margin-bottom:5px; float:left;}
+			.login_1{background-color:#f90;}
+    	.login_2{background-color:#f50;}
+    	.log_in>ul>li.login_3{height: 50px; margin-bottom: 0; background-color:#f30;}
+			.log_in>ul>li.login_vertical{width:25%; height:100%; float: right;
+				background-color: #a0f; margin-top:-130px;}
+
+
+	  .banner_box{width:60%; height:200px; float:left; 
+	  		padding:10px; box-sizing:border-box; background-color:#2af;}
+			.banner_image{widows: 100%; height:150px; margin-bottom:10px; 
+				background-color:#cda;}
+      .indicator{widows: 100%; height:20px; background-color:#693;}
+
 	  .news_box{width:100%; height:400px; float:left; padding: 20px; 
 	  		box-sizing:border-box; background-color:#39a;}
 		  .news_box>ul{width: 100%; height: 100%;}
-		  .news_box>ul>li{width:25%; height: 100%; float:left; 
-		  	background-color: #fff;	border:10px solid transparent; box-sizing:border-box;}
-	  	.news_box>ul div{width: 100%; height: 100%; background-color: #ccc;}
+		  .news_box>ul>li{width:25%; height: 100%; float:left;border:10px solid #fff; box-sizing:border-box;}
+	  	.news_1{background-color:#f01;}
+      .news_2{background-color:#f61;}
+      .news_3{background-color:#f91;}
+      .news_4{background-color:#fa1;}
+	  	.news_box>ul div{width: 100%; height: 100%; }
 
   /* #footBox ________________________________________________ */
   #footBox{width: 100%; height:80px; padding:15px 20px; box-sizing:border-box; background-color:#3a3;}
