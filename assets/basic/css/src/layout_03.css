@@ -25,7 +25,12 @@
 	      /*#gnb>ul>li.first_li{margin-left:0;}*/
 
   /* #contentBox ________________________________________________ */
-  #contentBox{width: 100%; height:520px; background-color:#2a7;}
+  #contentBox{width: 100%; height:auto;}
+  /*#contentBox:after{content: " "; display: block; width: 0; height: 0; clear: both;}*/
+		.log_in{width:40%; height:200px; float:left; background-color:#1a5;}
+	  .banner_box{width:60%; height:200px; float:left; background-color:#2af;}
+	  .news_box{width:100%; height:400px; float:left; background-color:#39a;}
+
   /* #footBox ________________________________________________ */
   #footBox{width: 100%; height:80px; padding:15px 20px; box-sizing:border-box; background-color:#3a3;}
   	#footBox>h2{width: 150px; height: 50px; float:left; background-color: #fff;}
