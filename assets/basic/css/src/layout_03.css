@@ -29,7 +29,12 @@
   /*#contentBox:after{content: " "; display: block; width: 0; height: 0; clear: both;}*/
 		.log_in{width:40%; height:200px; float:left; background-color:#1a5;}
 	  .banner_box{width:60%; height:200px; float:left; background-color:#2af;}
-	  .news_box{width:100%; height:400px; float:left; background-color:#39a;}
+	  .news_box{width:100%; height:400px; float:left; padding: 20px; 
+	  		box-sizing:border-box; background-color:#39a;}
+		  .news_box>ul{width: 100%; height: 100%;}
+		  .news_box>ul>li{width:25%; height: 100%; float:left; 
+		  	background-color: #fff;	border:10px solid transparent; box-sizing:border-box;}
+	  	.news_box>ul div{width: 100%; height: 100%; background-color: #ccc;}
 
   /* #footBox ________________________________________________ */
   #footBox{width: 100%; height:80px; padding:15px 20px; box-sizing:border-box; background-color:#3a3;}
