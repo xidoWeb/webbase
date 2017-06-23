@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* position_test_01_modal.css */
+
+#wrap{width: 960px; height: 3000px; 
+      margin: 0 auto; background-color: #afc; 
+      background-image:linear-gradient(45deg, #afc, #0cf);}
+  h1{width: 100%; height: auto; padding:2em; box-sizing:border-box;
+     color:#fff; text-align: center; background-color: #05c; }
+
+
+  /* modal _01 ___________________________________*/
+/* 스크롤 위치 관계없이, 브라우저상에 무조건 꽉차게 만들기 */
+  .modal_win{width: 100%; height: 100%; 
+    position: fixed; z-index:100; top: 0; left: 0;
+    background-color:rgba(100,100,100,0.3);}
+    
+  .modal_box{width: 50px; height: 50px; background-color: #370;}
