@@ -3,7 +3,7 @@
 body{background-color: #3c3; padding-top: 3em;}
 #wrap{width: 500px; height:auto;
 	margin: 0 auto; background-color: #fff;}
-	form{width: 100%; height:100%; padding:3em; box-sizing:border-box;}
+	form{width: 100%; height:auto; padding:3em; box-sizing:border-box;}
 	fieldset{border:0;}
 	
 	fieldset>div{width: 100%; height:auto; padding:0.5em; box-sizing: border-box;

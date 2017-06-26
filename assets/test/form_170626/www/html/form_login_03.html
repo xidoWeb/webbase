@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--[if IE]>
+	<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../css/base/reset.css" />
+	<link rel="stylesheet" href="../css/base/normalize.css" />
+	<link rel="stylesheet" href="../css/src/form_layout_02.css" />
+	<title>form test_02</title>
+	<style>
+		body{ background-color: #ccc; }
+		#wrap{width: 400px; height: auto; min-height:200px; margin:3em auto; background-color: #fff;
+			padding:2em; box-sizing: border-box;}
+		h1{font-size: 2.5em; color:#333;}
+		h1>span{word-spacing:-0.25em;}
+		.form_box{width: 100%; height: auto; min-height:200px; background-color: #acf;}
+			.user_input{width:100%; height:100px; margin-bottom:20px;}
+				.user_input>div{width: 100%; height: 50px; background-color: #fff; border:1px solid #777;
+					              box-sizing: border-box; color:#777;}
+				.user_input>.user{border-top-left-radius:0.7em; border-top-right-radius: 0.7em; 
+					                border-bottom: 0;}
+				.user_input>.pwd{border-bottom-left-radius:0.7em; border-bottom-right-radius: 0.7em;}
+
+	    .check_id{width:100%; height:20px; margin-bottom:20px;}
+		    .remember_check{color:#333;}
+
+	    .button_login{width:100%; height:50px; background-color:#71a;}
+	    	.btn{width: 100%; height: 100%; text-align: center; line-height:50px; color:#fff;
+	    			font-size: 1.3em;}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Please <span>Log in</span></h1>
+		<div class="form_box">
+			<div class="user_input">
+				<div class="user">user name</div>
+				<div class="pwd">password</div>
+			</div>
+			<div class="check_id">
+				<p class="remember_check">Remember me</p>
+			</div>
+			<div class="button_login">
+				<p class="btn">log in</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
