@@ -16,38 +16,52 @@
 			padding:2em; box-sizing: border-box;}
 		h1{font-size: 2.5em; color:#333;}
 		h1>span{word-spacing:-0.25em;}
-		.form_box{width: 100%; height: auto; min-height:200px; background-color: #acf;}
-			.user_input{width:100%; height:100px; margin-bottom:20px;}
-				.user_input>div{width: 100%; height: 50px; background-color: #fff; border:1px solid #777;
-					              box-sizing: border-box; color:#777;}
-				.user_input>.user{border-top-left-radius:0.7em; border-top-right-radius: 0.7em; 
-					                border-bottom: 0;}
-				.user_input>.pwd{border-bottom-left-radius:0.7em; border-bottom-right-radius: 0.7em;}
+		.form_box{width: 100%; height: auto; min-height:200px;}
+			.form_box>fieldset{width: 100%; height: auto;}
 
-	    .check_id{width:100%; height:20px; margin-bottom:20px;}
-		    .remember_check{color:#333;}
+				.user_input{width:100%; height:100px; margin-bottom:20px;}
+					.user_input>div{width: 100%; height: 50px; background-color: #fff; border:1px solid #777;
+						              box-sizing: border-box; color:#777;}
+					.user_input>.user{border-top-left-radius:0.7em; border-top-right-radius: 0.7em; 
+						                border-bottom: 0;}
+					.user_input>.pwd{border-bottom-left-radius:0.7em; border-bottom-right-radius: 0.7em;}
+						.user_input input{width: 100%; height: 100%; background-color:transparent;}
 
-	    .button_login{width:100%; height:50px; background-color:#71a;}
-	    	.btn{width: 100%; height: 100%; text-align: center; line-height:50px; color:#fff;
-	    			font-size: 1.3em;}
+		    .check_id{width:100%; height:20px; margin-bottom:20px;}
+			    #checkId{width: 0; height: 0; border: 0; margin-right:0.5em;}
+			    .remember_check{width: auto; height: 20px; color:#333; line-height: 20px;}
+
+		    .button_login{width:100%; height:50px; background-color:#71a;}
+		    	.btn{width: 100%; height: 100%; text-align: center; line-height:50px; color:#fff;
+		    			font-size: 1.3em;}
 
 	</style>
 </head>
 <body>
 	<div id="wrap">
 		<h1>Please <span>Log in</span></h1>
-		<div class="form_box">
+		<form class="form_box">
+		<fieldset>
+			<legend class="hidden">login form</legend>
 			<div class="user_input">
-				<div class="user">user name</div>
-				<div class="pwd">password</div>
+				<div class="user">
+					<label for="user" class="hidden">user name</label>
+		      <input type="text" id="user" class="user" placeholder="user name" value="" />
+				</div>
+				<div class="pwd">
+					<label for="pwd" class="hidden">password</label>
+					<input type="password" id="pwd" class="pwd" placeholder="password" value="" />
+				</div>
 			</div>
 			<div class="check_id">
-				<p class="remember_check">Remember me</p>
+				<input type="checkbox" id="checkId" name="checkId" vaule="checkId">
+				<label for="checkId" class="remember_check">Remember me</label>
 			</div>
 			<div class="button_login">
-				<p class="btn">log in</p>
+				<input type="submit" name="" id="" class="btn" value="log in" />
 			</div>
-		</div>
+		</fieldset>
+		</form>
 	</div>
 </body>
 </html>
