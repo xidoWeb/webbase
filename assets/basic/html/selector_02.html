@@ -18,6 +18,14 @@
 		.of_type{width: 100%; height: auto; margin-top:1em; background-color: #faa;}
 		.of_type>*{padding:0.5em  1em;box-sizing: border-box; 
 			border-bottom: 1px solid  #80f; margin-bottom: 0.5em;}
+
+		/*li:first-child{color:#fa0;}*/
+		/*li:last-child{color:#00a;}*/
+		/*li:nth-child(5){color:#4f3;}*/
+		li:nth-child(4n){background-color: #fff;}
+		/* 짝수 : even , 홀수: odd */
+
+		p:nth-of-type(2n){background-color: #fff;}
 	</style>
 </head>
 <body>
@@ -39,7 +47,7 @@
 	 			<p>p selector_3</p>
 	 			<p>p selector_4</p>
 	 			<p>p selector_5</p>
-	 			<span>type code</span>
+	 			<h2>type code</h2>
 	 		</div>
 	 </div>
 </body>
