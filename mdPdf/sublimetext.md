@@ -5,9 +5,17 @@
 1. emmet
 2. IME support
 3. open in browser
-4. terminal
-5. sidebar
-6. theme senti_UI
+4. view in browser
+5. terminal
+6. sidebar
+7. theme senti_UI
+8. alignment
+9. autoFileName
+10. Increment selection
+11. markdown preview
+12. rem px
+13. terminal
+14. scss
 
 
 
