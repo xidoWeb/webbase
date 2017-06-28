@@ -23,7 +23,7 @@
 		.content{width: 100%; height: auto; border-bottom:2px solid #07c;}
 		.content>li{width: 100%; height: auto; padding:0.2em 1em; box-sizing:border-box;}
 
-		.single_icon{width: 90%; height: auto; margin-left: 5%; background-color: #fff;}
+		.single_icon{width:100%; height: auto; background-color: #fff;}
 		.first_icon{width: 100%; height: 500px; margin-bottom: 1em; 
 			          background-color: #ccc; 
 			          background-image: url(../img/icon/home.png);
@@ -37,6 +37,22 @@
       .second_icon>li:nth-child(2){background-position:right top;}
       .second_icon>li:nth-child(3){background-position:center;}
       .second_icon>li:nth-child(4){background-position:right bottom;}
+      .second_icon>li:nth-child(5){background-position:center bottom;}
+      .second_icon>li:nth-child(6){background-position:left center;}
+
+     .third_icon{width: 100%; height: auto;}
+	     .third_icon:after{content:" "; display: block; width: 0; height: 0; clear: both;}
+	     .third_icon>li{float: left; margin:0.5em; 
+	     								background-image: url("../img/icon/oneIcon.jpg");
+	     							  background-repeat:no-repeat;}
+
+	     .third_icon>li:nth-child(1){width:120px; height:120px; background-position: 0 0;
+	     								transition:all 300ms ease-in;}
+	     .third_icon>li:nth-child(1):hover{background-position:left center;}
+	     .third_icon>li:nth-child(1):active{background-position:left bottom;}
+
+	     
+
 	</style>
 </head>
 <body>
@@ -61,6 +77,14 @@
 				<li><!-- icon :  3,3 --></li>
 				<li><!-- icon :  2,3 --></li>
 				<li><!-- icon :  1,2 --></li>
+			</ul>
+			<ul class="third_icon">
+				<!-- 세번째 아이콘(oneIcon.jpg) -->
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
 			</ul>
 		</div>
 	</div>
