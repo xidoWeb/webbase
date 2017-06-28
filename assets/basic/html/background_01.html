@@ -68,10 +68,28 @@
 
 		.forth_icon{width: 100%; height: auto;}
 			.forth_icon:after{content:" "; display: block; clear: both;}
-			.forth_icon>li{width: 50px; height: 50px; margin: 0.5em; float: left;}
-			.forth_icon>li>a{width: 100%; height: 100%; display: block; background-color: #0af;}
+			.forth_icon>li{width: 30px; height: 28px; margin: 0.5em; float: left;}
+			.forth_icon>li>a{width: 100%; height: 100%; display: block; 
+										background-image: url("../img/icon/iconBasic.jpg"); 
+										background-repeat:no-repeat; }
+			
+			.forth_icon>li:nth-child(1)>a{width:30px; height:28px; background-position:-10px -10px;}
+			.forth_icon>li:nth-child(2)>a{width:30px; height:26px; background-position:-86px -50px;}
 
-			.hidden_wrap a>span{display: block; width: 0; height: 0; overflow: hidden;}
+
+			.forth_icon>li:nth-child(3)>a{}
+			.forth_icon>li:nth-child(4)>a{}
+			.forth_icon>li:nth-child(5)>a{}
+			.forth_icon>li:nth-child(6)>a{}
+			.forth_icon>li:nth-child(7)>a{}
+			.forth_icon>li:nth-child(8)>a{}
+			.forth_icon>li:nth-child(9)>a{}
+			.forth_icon>li:nth-child(10)>a{}
+
+
+
+
+
 
 	</style>
 </head>
@@ -128,14 +146,43 @@
 
 
 
+<!-- .forth_icon:nth-child(1)>li>a{} -->
+<!-- 
+<ul class="forth_icon">
+	<li>
+		<a href=""></a>
+	</li>
+</ul>
+<ul class="forth_icon"></ul>
+<ul class="forth_icon"></ul>
+<ul class="forth_icon"></ul>
+ -->
 
+<!-- .forth_icon>li:nth-child(1)>a{} -->
+<!-- 
+<ul class="forth_icon">
+	<li>
+		<a href=""></a>
+	</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul> -->
 
-
-
-
-
-
-
+<!-- .forth_icon>li>a:nth-child(1){} -->
+<!-- 
+<div class="forth_icon">
+	<li>
+		<a href=""></a>
+		<a href=""></a>
+		<a href=""></a>
+		<a href=""></a>
+		<a href=""></a>
+	</li>
+	<li></li>
+</div>
+ -->
 
 
 
