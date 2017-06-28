@@ -42,16 +42,36 @@
 
      .third_icon{width: 100%; height: auto;}
 	     .third_icon:after{content:" "; display: block; width: 0; height: 0; clear: both;}
-	     .third_icon>li{float: left; margin:0.5em; 
+	     .third_icon>li{height:120px; float: left; margin:0.5em; 
 	     								background-image: url("../img/icon/oneIcon.jpg");
-	     							  background-repeat:no-repeat;}
+	     							  background-repeat:no-repeat; transition:all 300ms ease-in;}
 
-	     .third_icon>li:nth-child(1){width:120px; height:120px; background-position: 0 0;
-	     								transition:all 300ms ease-in;}
+	     .third_icon>li:nth-child(1){width:120px; background-position: 0 0;}
 	     .third_icon>li:nth-child(1):hover{background-position:left center;}
 	     .third_icon>li:nth-child(1):active{background-position:left bottom;}
 
-	     
+	     .third_icon>li:nth-child(2){width:120px; background-position:-250px 0;}
+	     .third_icon>li:nth-child(2):hover{background-position:-250px center;}
+	     .third_icon>li:nth-child(2):active{background-position:-250px bottom;}
+
+	     .third_icon>li:nth-child(3){width:110px; background-position:-640px 0;}
+	     .third_icon>li:nth-child(3):hover{background-position:-640px center;}
+	     .third_icon>li:nth-child(3):active{background-position:-640px bottom;}
+
+	     .third_icon>li:nth-child(4){width:100px; background-position:-1030px 0;}
+	     .third_icon>li:nth-child(4):hover{background-position:-1030px center;}
+	     .third_icon>li:nth-child(4):active{background-position:-1030px bottom;}
+
+	     .third_icon>li:nth-child(5){width:105px; background-position:-1285px 0;}
+	     .third_icon>li:nth-child(5):hover{background-position:-1285px center;}
+	     .third_icon>li:nth-child(5):active{background-position:-1285px bottom;}
+
+		.forth_icon{width: 100%; height: auto;}
+			.forth_icon:after{content:" "; display: block; clear: both;}
+			.forth_icon>li{width: 50px; height: 50px; margin: 0.5em; float: left;}
+			.forth_icon>li>a{width: 100%; height: 100%; display: block; background-color: #0af;}
+
+			.hidden_wrap a>span{display: block; width: 0; height: 0; overflow: hidden;}
 
 	</style>
 </head>
@@ -86,10 +106,33 @@
 				<li></li>
 				<li></li>
 			</ul>
+			<ul class="forth_icon hidden_wrap">
+				<!-- 네번째 아이콘(iconBasic.jpg) -->
+				<li><a href="#"><span>1</span></a></li>
+				<li><a href="#"><span>2</span></a></li>
+				<li><a href="#"><span>3</span></a></li>
+				<li><a href="#"><span>4</span></a></li>
+				<li><a href="#"><span>5</span></a></li>
+				<li><a href="#"><span>6</span></a></li>
+				<li><a href="#"><span>7</span></a></li>
+				<li><a href="#"><span>8</span></a></li>
+				<li><a href="#"><span>9</span></a></li>
+				<li><a href="#"><span>10</span></a></li>
+			</ul>
 		</div>
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
