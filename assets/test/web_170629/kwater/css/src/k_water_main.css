@@ -1,2 +1,24 @@
-/* ! k_water_main.css */
 @charset "utf-8";
+/* ! k_water_main.css */
+
+#contentBox{width:100%; height:auto;}
+	#adBox{width: 100%;height:498px; background-image:url("../../img/banner.jpg");
+				background-repeat:no-repeat; background-position:center;}
+
+	#lnb{width: 100%; height:98px; padding:5px; box-sizing:border-box; border-bottom:1px solid #eee; background-color: #9ff;}
+		#lnb>ul{width: 100%; height: 100%;}
+		#lnb>ul>li{width: 95px; height: 100%; float: left; padding:1px; box-sizing:border-box;}
+		#lnb>ul>li>a{ background-color: #fff; }
+		
+		#lnb>ul>li:nth-child(1){}
+		#lnb>ul>li:nth-child(2){}
+		#lnb>ul>li:nth-child(3){}
+		#lnb>ul>li:nth-child(4){}
+		#lnb>ul>li:nth-child(5){}
+		#lnb>ul>li:nth-child(6){}
+		#lnb>ul>li:nth-child(7){}
+		#lnb>ul>li:nth-child(8){}
+		#lnb>ul>li:nth-child(9){}
+		#lnb>ul>li:nth-child(10){}11
+
+	#mainBox{width: 100%; height:636px; padding:28px 5px 42px; box-sizing: border-box; background-color: #999;}
