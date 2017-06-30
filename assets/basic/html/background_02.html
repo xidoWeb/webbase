@@ -19,23 +19,30 @@
 	<title>my title</title>
 	<style>
 	body{width: 100%; height: 3000px;}
-		#wrap{width: 960px; height: auto; margin: 0 auto;}
+		#wrap{width: 960px; height: auto; margin: 0 auto;position:relative;}
 			#header{width:100%; height:auto;}
 			h1{padding:1em; background-color: #09f; color:#fff; font-size: 1.5em; border-bottom: 2px solid #fa0;}
 
-			#adBox{width:100vw; height:800px; position:relative; left:50%; top:0; margin-left:-50vw;
+			#adBox{width:100vw; height:800px; 
+						 position:relative; left:50%; top:0; margin-left:-50vw;
 						 background-image: url("../img/background/city.jpg");
 						 background-repeat: no-repeat; background-position:center;	background-size:cover;
-						 background-attachment:scroll;}
+						 background-attachment:scroll; background-color: #ccc;}
 
-			#adBox2{width:100vw; height:200px; position:relative; left:50%; top:0; margin-left:-50vw;
+			#adBox2{width:100vw; height:200px; 
+						 position:relative; left:50%; top:0; margin-left:-50vw;
 						 background-image: url("../img/background/forest.jpg");
 						 background-repeat: no-repeat; background-position:center;	background-size:cover;
 						 background-attachment:fixed;}
+
 			#adBox3{width:100vw; height:1200px; position:relative; left:50%; top:0; margin-left:-50vw;
 						 background-image: url("../img/background/coffee_big.jpg");
 						 background-repeat: no-repeat; background-position:center;	background-size:cover;
 						 background-attachment:scroll;}
+
+		@media screen and (max-width:960px) {
+			#adBox,#adBox2,#adBox3{width: 100%; left: 0; margin-left: 0;}
+				}
 
 			#imgTag{width:100%; height:500px;margin-top:50px; background-color:#ddd;}
 				#imgTag>div{width:300px; height: 100%; float: left; margin-right:30px; background-color: #daa;
