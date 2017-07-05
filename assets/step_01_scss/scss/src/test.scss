@@ -4,7 +4,7 @@
 
 /* 한글도 주석이 표현될까? */ 
 
-$test : #a06;
+$test : #a00521;
 
 body{background-color: #ccd; 
 	   margin: 0; 
@@ -12,4 +12,5 @@ body{background-color: #ccd;
 
 	h1{padding:1em; 
 		 color:#fff;
+		 border-bottom:1px solid #393;
 		 background-color:$test;}
