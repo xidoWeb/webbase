@@ -1,6 +1,0 @@
-@charset "UTF-8";
-/* test.scss  */
-/* 한글도 주석이 표현될까? */
-body { background-color: #ccd; margin: 0; padding: 0; }
-
-h1 { padding: 1em; color: #fff; border-bottom: 1px solid #393; background-color: #a00521; }

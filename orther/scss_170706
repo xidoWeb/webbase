@@ -1,0 +1,66 @@
+2017. 7. 6
+
+---
+
+## scss?
+
+##### **setting :** node-sass -o css scss —output-style compact -w
+
+### 기초 문법
+
+#### 변수
+
+어떠한 값을 담는 수(변하는 수) - 임시로 사용환경에 맞춰 값이 변하고 그값을 저장할 수 있다.
+
+- 회사의 주 색상을 설정하기 편하다.
+- 전체를 컨트롤 하거나, 요약해서 정리
+- 전체 시스템의 속도가 빨라진다.
+
+```scss
+$이름 : 변수의 값 ;
+$이름 : "값이 경로주소, 파일명....";			// 문자열일 경우 " "를 감싸 처리
+$이름 : $변수명 ;
+```
+
+위내용의 예시
+
+```scss
+$primaryColor : #333;
+$lineColor : $primaryColor;
+$lineWidth : 1px; 
+$line :$lineWidth solid $lineColor; 
+$baseUrl : "../../img/header/nav/"; 
+$logo :"../../img/header/logo.jpg"; 
+
+h1{border:$line; background-image:url($logo);}
+.nav_01{background-image:url($baseUrl + "nav_03.jpg");}
+.nav_02{background-image:url($baseUrl + "nav_04.jpg");}
+.nav_03{background-image:url(#{$baseUrl} + "nav_05.jpg");}
+```
+
+#### interpolation ( #{} )
+
+원하는 값을 원본형태 그대로 가져오는 방법
+
+#### nesting
+
+중첩이라는 의미로 부모/자식… 관계를 가진 선택자를 `{ }`기호의 중첩형태로 사용하는것
+
+#### @import
+
+외부 문서를 불러오는 방법 기존방법 `@import url();`이아닌 
+`@import "파일명";`표현인 scss전용 불러오기
+
+---
+
+
+
+## photoshop
+
+- 레이어 마스크
+- 클리핑 마스크
+- transform (**warp**)
+
+
+---
+
