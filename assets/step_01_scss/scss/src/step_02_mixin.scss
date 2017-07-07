@@ -1,13 +1,18 @@
 /* step_02_mixin.css */
 
 @import "../_setting/base";
-// 1 영역 구분(nesting처리)
-// 2 @mixin test1
+// step_1 영역 구분(nesting처리)
+
+// step_2 @mixin test1
 @mixin border(){
 	border-bottom:2px solid #fff;
 	padding-bottom:5px;
 }
-
+// step_3 @mixin test2 - link 첨부
+@mixin link(){
+	&:hover{background-color:#0af;}
+	>a{width:100%; height:100%; display:block;}
+}
 
 #wrap{
 	>h1{float: left;}
@@ -19,11 +24,14 @@
 		>ul{width:100%; height:100%;
 			>li{height:100%; float:left; margin-left:10px;
 				@include border;
+				@include link;
+
 				&:first-child{margin-left:0}
 			}// #gnb li
 		}// #gnb>ul
 	}//#gnb
-}// #wrap
+}// #wrap  
+
 
 
 
