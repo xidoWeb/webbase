@@ -1,0 +1,52 @@
+// step_03_dataType.scss
+/* step_03_dataType.css */
+
+// number : 숫자    
+// string : 문자  
+// color : 색상
+// list : 목록
+// maps : object
+// boolean : 참(true)/거짓(false)
+// null : 없음(무)
+
+// --- 형타입 (data type)
+// type-of()
+// data()
+
+$type : 10000; 
+$aa:();
+$aa1:11, 33, 55;
+$aa2:(11), (33), (55);
+$bb:(a:#aa5);
+
+.type1{content:type-of(10);}
+.type2{content:type-of(100px);}
+.type3{content:type-of("");}
+.type4{content:type-of("text");}
+.type5{content:type-of($type);}
+.type6{content:type-of("$type");}
+.type7{content:type-of(rgba(100,200,250,0.4));}
+.type8{content:type-of(#afc);}
+.type9{content:type-of("#afc");}
+.type10{content:type-of( $aa );}
+.type11{content:type-of( $bb );}
+.type13{content:type-of( true );}
+.type14{content:type-of( false );}
+.type15{content:type-of( null );}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

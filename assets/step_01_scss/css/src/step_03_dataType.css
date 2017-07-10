@@ -1,0 +1,42 @@
+/* step_03_dataType.css */
+.type1 {
+  content: number; }
+
+.type2 {
+  content: number; }
+
+.type3 {
+  content: string; }
+
+.type4 {
+  content: string; }
+
+.type5 {
+  content: number; }
+
+.type6 {
+  content: string; }
+
+.type7 {
+  content: color; }
+
+.type8 {
+  content: color; }
+
+.type9 {
+  content: string; }
+
+.type10 {
+  content: list; }
+
+.type11 {
+  content: map; }
+
+.type13 {
+  content: bool; }
+
+.type14 {
+  content: bool; }
+
+.type15 {
+  content: null; }
