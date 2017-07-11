@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* step_04_for.css */
+/*
+@for $임의변수 from 시작값 through 마지막값 {
+
+}
+// through  <=, >= : 이상, 이하
+// to <, > : 초과,미만
+*/
+li:nth-child(1) { background-image: url("img_1.png"); }
+
+li:nth-child(1):hover { background-image: url("img_1_on.png"); }
+
+li:nth-child(2) { background-image: url("img_2.png"); }
+
+li:nth-child(2):hover { background-image: url("img_2_on.png"); }
+
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(3):hover { background-image: url("img_3_on.png"); }
+
+li:nth-child(4) { background-image: url("img_4.png"); }
+
+li:nth-child(4):hover { background-image: url("img_4_on.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(5):hover { background-image: url("img_5_on.png"); }
+
+li:nth-child(6) { background-image: url("img_6.png"); }
+
+li:nth-child(6):hover { background-image: url("img_6_on.png"); }
+
+li:nth-child(7) { background-image: url("img_7.png"); }
+
+li:nth-child(7):hover { background-image: url("img_7_on.png"); }
+
+li:nth-child(8) { background-image: url("img_8.png"); }
+
+li:nth-child(8):hover { background-image: url("img_8_on.png"); }
+
+li:nth-child(9) { background-image: url("img_9.png"); }
+
+li:nth-child(9):hover { background-image: url("img_9_on.png"); }
+
+li:nth-child(10) { background-image: url("img_10.png"); }
+
+li:nth-child(10):hover { background-image: url("img_10_on.png"); }

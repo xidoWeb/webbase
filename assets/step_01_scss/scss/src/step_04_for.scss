@@ -1,0 +1,28 @@
+//step_04_for.scss
+/* step_04_for.css */
+
+// for : 반복문 
+// 일정한 간격으로 연속되어진 증가 또는 감소의 기능을
+// 반복하여 처리할때 사용하는 기능
+/*
+@for $임의변수 from 시작값 through 마지막값 {
+
+}
+// through  <=, >= : 이상, 이하
+// to <, > : 초과,미만
+*/
+
+
+@for $i from 1 through 10 {
+	li:nth-child(#{$i}){background-image:url("img_" + $i + ".png");}
+	li:nth-child(#{$i}):hover{background-image:url("img_" + $i + "_on.png");}
+}
+ 
+
+
+
+
+
+
+
+
