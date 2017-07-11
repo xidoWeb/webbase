@@ -12,12 +12,44 @@
 // to <, > : 초과,미만
 */
 
-
+// for 1
 @for $i from 1 through 10 {
 	li:nth-child(#{$i}){background-image:url("img_" + $i + ".png");}
 	li:nth-child(#{$i}):hover{background-image:url("img_" + $i + "_on.png");}
 }
- 
+
+// each
+// for와 기본적으로 반복한다는 의미로는 같다
+// 일정한 간격으로 연속된다는 의미는 아니다
+
+/*
+@each 임의변수 in (각각의 값){ 
+	// 내용
+}
+*/
+/* each 1 */
+@each $j in (3, 10, 5, 15){
+	li:nth-child(#{$j}){background-image:url("img_" + $j + ".png");}
+}
+/* each 2 */
+@each $k in (americano, latte, viena, compana, mocha){
+	.coffee_#{$k}{background-image:url($k + ".png");}
+	.coffee_#{$k}:hover{background-image:url($k + "_on.png");}
+}
+
+/* each 3 */
+$myTea : (americano, latte, viena, compana, mocha);
+
+@each $k in $myTea{
+	.green_#{$k}{background-image:url($k + ".png");}
+	.green_#{$k}:hover{background-image:url($k + "_on.png");}
+}
+
+
+
+
+
+
 
 
 

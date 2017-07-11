@@ -46,3 +46,55 @@ li:nth-child(9):hover { background-image: url("img_9_on.png"); }
 li:nth-child(10) { background-image: url("img_10.png"); }
 
 li:nth-child(10):hover { background-image: url("img_10_on.png"); }
+
+/* @each 임의변수 in (각각의 값){  // 내용 } */
+/* each 1 */
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(10) { background-image: url("img_10.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(15) { background-image: url("img_15.png"); }
+
+/* each 2 */
+.coffee_americano { background-image: url(americano.png); }
+
+.coffee_americano:hover { background-image: url(americano_on.png); }
+
+.coffee_latte { background-image: url(latte.png); }
+
+.coffee_latte:hover { background-image: url(latte_on.png); }
+
+.coffee_viena { background-image: url(viena.png); }
+
+.coffee_viena:hover { background-image: url(viena_on.png); }
+
+.coffee_compana { background-image: url(compana.png); }
+
+.coffee_compana:hover { background-image: url(compana_on.png); }
+
+.coffee_mocha { background-image: url(mocha.png); }
+
+.coffee_mocha:hover { background-image: url(mocha_on.png); }
+
+/* each 3 */
+.green_americano { background-image: url(americano.png); }
+
+.green_americano:hover { background-image: url(americano_on.png); }
+
+.green_latte { background-image: url(latte.png); }
+
+.green_latte:hover { background-image: url(latte_on.png); }
+
+.green_viena { background-image: url(viena.png); }
+
+.green_viena:hover { background-image: url(viena_on.png); }
+
+.green_compana { background-image: url(compana.png); }
+
+.green_compana:hover { background-image: url(compana_on.png); }
+
+.green_mocha { background-image: url(mocha.png); }
+
+.green_mocha:hover { background-image: url(mocha_on.png); }
