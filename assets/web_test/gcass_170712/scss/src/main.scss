@@ -7,18 +7,72 @@
 // @import "./layout/main_etc";
 // @import "./layout/footer";
 
+%hidden{width:0; height:0; display:block; position:absolute; z-index:-100; overflow:hidden;}
+
 
 #wrap{width: 980px; height:auto; margin: 0 auto; 
 	    background-color: #ccc;}
 #wrap:after{content:" "; display: block; clear: both;}	    
 
+// -- sideBox
 #sideBox{width: 100%; height:30px; 
-	background-color:lighten(map-get($color,primary), 10%);  float:left;}
+	background-color:lighten(map-get($color,primary), 6.5%);  float:left;
+	>h2{@extend %hidden;}
+	>ul{width:435px; height: 100%; float: right;
+		>li{width:95px; height: 100%; float: left;}
+		>li:last-child{width:245px;}
+			// a{width: 100%; height: 100%; display: block; background-image: url();
+			// 	background-repeat: ; background-position: 0 0; 
+			//  >span{width: 0; height: 0; display: block; overflow: hidden; position: absolute;}
+			// }// a
+	}// ul
+}// #sideBox
+// -----------------------
+$url:"../../img/";
+@mixin link($u:$url, $f:none, $f2:none, $r:no-repeat,$p:0 0){
+	width: 100%; height: 100%; display: block;
+	background-image: url($u + $f);
+	background-repeat:$r; background-position:$p;
+	&:hover{background-image: url($u + $f2);}// hover
+	>span{width: 0; height: 0; display: block; position: absolute; overflow: hidden;}
+}// link()
+// -----------------------
 
-#headBox{width: 250px; height: 710px; 
-	background-color:map-get($color,primary); float:left;}
 
-#contentBox{width:(980 - 250) + px; height: 710px;
+#headBox{width: 250px; height:auto; min-height:710px;
+	background-color:map-get($color,primary); float:left;
+	padding:55px 55px 100px 42px; box-sizing:border-box;
+	a{@include link($f:"header/header.png", $f2:"header/header_on.png", $p:0 0);}
+	>h1{width: 100%; height:105px; margin-bottom: 40px;}
+	>#gnb{width: 100%; height: auto; 
+		>h2{@extend %hidden;}
+		ul{width:100%; height:auto;
+			>li{width: 100%; height:38px; margin-bottom:25px; background-color: #fff;}
+			>li:nth-last-child(2){margin-bottom: 8px;}
+			>li:last-child{height: 112px; margin-bottom: 0;}	
+// list 각각 값 입력
+			// >li:nth-child(1)>a{background-position:0 -144px;}
+			// >li:nth-child(2)>a{background-position:0 -206px;}
+			// >li:nth-child(3)>a{background-position:0 -268px;}
+			// >li:nth-child(4)>a{background-position:0 -331px;}
+			// >li:nth-child(5)>a{background-position:0 -393px;}
+			// >li:nth-child(6)>a{background-position:0 -438px;}
+			
+// list 반복문으로 변경			
+			$gnbLink:(0 -144px, 0 -206px, 0 -268px, 0 -331px, 0 -393px, 0 -438px);
+
+			@for $i from 1 through length($gnbLink){
+				>li:nth-child(#{$i})>a{background-position:nth($gnbLink, $i);}
+			}// @for
+
+			// a{
+			// 	>span{}
+			// }// a
+		}// ul
+	}// #gnb
+}// #headBox
+
+#contentBox{width:(980 - 250) + px; height:auto; min-height:710px;
 	background-color:#ffa; float:left;}
 
 #footBox{width: 100%; height:110px; 
