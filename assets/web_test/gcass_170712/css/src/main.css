@@ -1,0 +1,12 @@
+/* main.css */
+#wrap { width: 980px; height: auto; margin: 0 auto; background-color: #ccc; }
+
+#wrap:after { content: " "; display: block; clear: both; }
+
+#sideBox { width: 100%; height: 30px; background-color: #919191; float: left; }
+
+#headBox { width: 250px; height: 710px; background-color: #777; float: left; }
+
+#contentBox { width: 730px; height: 710px; background-color: #ffa; float: left; }
+
+#footBox { width: 100%; height: 110px; border-top: 1px solid #555; background-color: #e6e6e6; float: left; }

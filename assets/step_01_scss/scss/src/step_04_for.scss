@@ -45,16 +45,17 @@ $myTea : (americano, latte, viena, compana, mocha);
 	.green_#{$k}:hover{background-image:url($k + "_on.png");}
 }
 
+/* for 2 */
+$myColor:(#333, #137, #0f6, #f07, #afc, #479, #aaf, #7f4, #f9a);
+// nth(변수명, 변수값의 위치) -- list기능을 사용시
 
+@for $l from 1 through 7{
+	li:nth-child(#{$l}){color:nth($myColor, $l);}
+}
 
+/* for 3 */
+// length(변수명) -- list의 갯수파악시
 
-
-
-
-
-
-
-
-
-
-
+@for $l from 1 through length($myColor){
+	.box_#{$l}{color:nth($myColor, $l);}
+}

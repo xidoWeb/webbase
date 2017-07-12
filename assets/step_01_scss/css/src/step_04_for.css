@@ -98,3 +98,37 @@ li:nth-child(15) { background-image: url("img_15.png"); }
 .green_mocha { background-image: url(mocha.png); }
 
 .green_mocha:hover { background-image: url(mocha_on.png); }
+
+/* for 2 */
+li:nth-child(1) { color: #333; }
+
+li:nth-child(2) { color: #137; }
+
+li:nth-child(3) { color: #0f6; }
+
+li:nth-child(4) { color: #f07; }
+
+li:nth-child(5) { color: #afc; }
+
+li:nth-child(6) { color: #479; }
+
+li:nth-child(7) { color: #aaf; }
+
+/* for 3 */
+.box_1 { color: #333; }
+
+.box_2 { color: #137; }
+
+.box_3 { color: #0f6; }
+
+.box_4 { color: #f07; }
+
+.box_5 { color: #afc; }
+
+.box_6 { color: #479; }
+
+.box_7 { color: #aaf; }
+
+.box_8 { color: #7f4; }
+
+.box_9 { color: #f9a; }
