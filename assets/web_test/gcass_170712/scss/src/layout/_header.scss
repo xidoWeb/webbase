@@ -7,7 +7,7 @@
 
 
 // #headerBox
-#headBox{width: 250px; height:auto; min-height:710px;
+#headBox{width: 250px; height:1160px; min-height:710px;
 	background-color:map-get($color,primary); float:left;
 	padding:55px 55px 100px 40px; box-sizing:border-box;
 	a{@include link($f:"header/header.png", $f2:"header/header_on.png", $p:0 0);}
