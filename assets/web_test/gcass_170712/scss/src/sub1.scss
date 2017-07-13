@@ -56,9 +56,9 @@
 		// #contentBox>hgroup>h3{@extend #contentBox>hgroup>h2; font-size:(18 / 16)+rem;}
 
 		.curriculum{width: 100%; height:540px; margin-bottom: 50px;
-					background-color: #777;
 				>h4{@extend %hidden;}
 				>dl{width: 200px; height: 100%; margin-right: 10px;float: left;
+					position: relative;
 					&:last-of-type{margin-right: 0;}
 				}// dl
 				>dl>dt{width: 100%; height:340px; background-color: #fff;
@@ -71,7 +71,21 @@
 							// border-top-right-radius:20px;
 							// border-bottom-left-radius:20px;
 							// border-bottom-right-radius:20px;
+
+					box-shadow:0.3em 0.3em 0.3em rgba(#fff,0.5);
+							//	box-shadow 그림자를 만드는 기능, png이미지의 투명한부분은 그림자 X
+							//	box-shadow:x값, y값, 번짐의 정도, 색상;
+							//	box-shadow:x값, y값, 확장크기, 번짐의 정도, 색상;
+
+					background-image: url($url + "sub/mouse.jpg");
+					background-repeat:no-repeat;
 							}
+				>dl:nth-of-type(2)>dt{background-position:center -35px; margin-top:40px;}
+				>dl:nth-of-type(3)>dt{background-position:right 0;}
+
+
+				>dl>dt:hover{transform:translateY(-20px); transition:all 0.5s ease;}
+
 				>dl>dt>span{width:340px; display: block; font-size:3em;
 										transform:rotate(-90deg) translate(-100px, -20px);
 										color:map-get($color, point);
@@ -82,11 +96,14 @@
 									//	transform:skew();				// 기울임(30deg)
 									}
 
-
 				>dl>dd{width:100%; box-sizing:border-box;
-							 height:auto; min-height:150px;
+							 height:auto; min-height:190px;
 							 border:1px solid map-get($color, white); 
-							 border-top:0; border-bottom:0;}
+							 border-top:0; border-bottom:0;
+							 position: absolute; bottom: 0; left: 0;
+								color:$white;}
+				>dl:nth-of-type(2)>dd{ min-height:150px}
+
 				}// .curriculm
 		.curriculm>h4{}
 

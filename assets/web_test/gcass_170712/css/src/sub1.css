@@ -85,16 +85,24 @@
 
 #contentBox > hgroup h3 { font-size: 1.125rem; }
 
-.curriculum { width: 100%; height: 540px; margin-bottom: 50px; background-color: #777; }
+.curriculum { width: 100%; height: 540px; margin-bottom: 50px; }
 
-.curriculum > dl { width: 200px; height: 100%; margin-right: 10px; float: left; }
+.curriculum > dl { width: 200px; height: 100%; margin-right: 10px; float: left; position: relative; }
 
 .curriculum > dl:last-of-type { margin-right: 0; }
 
-.curriculum > dl > dt { width: 100%; height: 340px; background-color: #fff; border-radius: 20px; margin-bottom: 5px; }
+.curriculum > dl > dt { width: 100%; height: 340px; background-color: #fff; border-radius: 20px; margin-bottom: 5px; box-shadow: 0.3em 0.3em 0.3em rgba(255, 255, 255, 0.5); background-image: url("../../img/sub/mouse.jpg"); background-repeat: no-repeat; }
+
+.curriculum > dl:nth-of-type(2) > dt { background-position: center -35px; margin-top: 40px; }
+
+.curriculum > dl:nth-of-type(3) > dt { background-position: right 0; }
+
+.curriculum > dl > dt:hover { transform: translateY(-20px); transition: all 0.5s ease; }
 
 .curriculum > dl > dt > span { width: 340px; display: block; font-size: 3em; transform: rotate(-90deg) translate(-100px, -20px); color: #fff30d; }
 
-.curriculum > dl > dd { width: 100%; box-sizing: border-box; height: auto; min-height: 150px; border: 1px solid #fff; border-top: 0; border-bottom: 0; }
+.curriculum > dl > dd { width: 100%; box-sizing: border-box; height: auto; min-height: 190px; border: 1px solid #fff; border-top: 0; border-bottom: 0; position: absolute; bottom: 0; left: 0; color: #fff; }
+
+.curriculum > dl:nth-of-type(2) > dd { min-height: 150px; }
 
 .curri_narr { width: 100%; height: 315px; background-color: #add; }
