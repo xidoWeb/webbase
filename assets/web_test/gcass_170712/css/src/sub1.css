@@ -1,0 +1,42 @@
+/* sub1.css */
+#sideBox > h2 { width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden; }
+
+#wrap { width: 980px; height: auto; min-height: 1300px; margin: 0 auto; }
+
+#wrap:after { content: " "; display: block; clear: both; }
+
+#sideBox { width: 100%; height: 30px; float: left; background-color: #888; }
+
+#sideBox > ul { width: auto; height: 100%; float: right; }
+
+#sideBox > ul > li { width: 90px; height: 30px; float: left; }
+
+#sideBox > ul > li:last-child { width: 250px; }
+
+#sideBox > ul > li > a { width: 100%; height: 100%; display: block; background-image: url("../../img/sub/top_nav.jpg"); background-repeat: no-repeat; background-position: 0 0; transition: all 0.3s ease; }
+
+#sideBox > ul > li > a:hover { background-image: url("../../img/sub/top_nav.jpg"); background-position: 0 0; }
+
+#sideBox > ul > li > a span { width: 0; height: 0; display: block; position: absolute; overflow: hidden; }
+
+#sideBox > ul > li:nth-child(1) > a { background-position: -460px 0; }
+
+#sideBox > ul > li:nth-child(1) > a:hover { background-position: -460px bottom; }
+
+#sideBox > ul > li:nth-child(2) > a { background-position: -550px 0; }
+
+#sideBox > ul > li:nth-child(2) > a:hover { background-position: -550px bottom; }
+
+#sideBox > ul > li:nth-child(3) > a { background-position: -640px 0; }
+
+#sideBox > ul > li:nth-child(3) > a:hover { background-position: -640px bottom; }
+
+#sideBox > ul > li:nth-child(4) > a { background-position: right 0; }
+
+#sideBox > ul > li:nth-child(4) > a:hover { background-position: right bottom; }
+
+#headBox { width: 250px; height: auto; min-height: 710px; float: left; background-color: rgba(136, 136, 136, 0.3); }
+
+#contentBox { width: 730px; height: auto; min-height: 710px; float: left; background-color: transparent; }
+
+#footBox { width: 100%; height: 110px; float: left; background-color: #fff; }

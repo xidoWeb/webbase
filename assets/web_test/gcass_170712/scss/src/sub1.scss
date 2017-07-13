@@ -1,0 +1,77 @@
+// sub1.scss
+/* sub1.css */
+
+@import "../base/variable";
+@import "../base/mixin";
+
+#wrap{width: 980px; height: auto; min-height:1300px; margin: 0 auto;}
+#wrap:after{content:" "; display: block; clear: both;}
+
+	#sideBox{width: 100%; height: 30px;float: left;
+			 background-color:map-get($color, gray);}// #sideBox
+	// #sideBox>h2{width: 0; height: 0; position: absolute; overflow: hidden;}
+	#sideBox>h2{@extend %hidden;}
+	#sideBox>ul{width:auto; height: 100%; float: right;}
+	#sideBox>ul>li{width: 90px; height: 30px; float: left;}
+	#sideBox>ul>li:last-child{width:250px;}
+
+	// #sideBox>ul>li>a{width: 100%; height: 100%; display: block;
+		// background-image:url(); 
+		// background-repeat:no-repeat; background-position: 0 0;}
+	// #sideBox>ul>li>a>span{width: 0; height: 0; 
+	// position: absolute;		overflow: hidden;}
+
+	#sideBox>ul>li>a{
+		$url:"../../img/sub/";
+		$nav:"top_nav.jpg";
+		// 지역변수: 변수의 값을 사용할 수 있는 범위(scope)
+		@include link($u:$url,$f:$nav, $f2:$nav, $r:no-repeat);
+			transition:all 0.3s ease;}
+
+	// #sideBox>ul>li:nth-child(1)>a{background-position:-460px 0;}
+	// #sideBox>ul>li:nth-child(2)>a{background-position:-550px 0;}
+	// #sideBox>ul>li:nth-child(3)>a{background-position:-640px 0;}
+	// #sideBox>ul>li:last-child>a{background-position:right 0;}
+
+	// #sideBox>ul>li:nth-child(1)>a:hover{background-position:-460px bottom;}
+	// #sideBox>ul>li:nth-child(2)>a:hover{background-position:-550px bottom;}
+	// #sideBox>ul>li:nth-child(3)>a:hover{background-position:-640px bottom;}
+	// #sideBox>ul>li:last-child>a:hover{background-position:right bottom;}
+	
+	// $sideLi:(-460px 0, -550px 0, -640px 0, right 0);
+	// $sideLiHover:(-460px bottom, -550px bottom, -640px bottom, right bottom);
+
+
+	$sideLi:(-460px, -550px, -640px, right);
+	@for $i from 1 through length($sideLi){
+		// #sideBox>ul>li:last-child(#{$i})>a:hover{background-position:nth($sideLi, $i);}	
+		// #sideBox>ul>li:last-child(#{$i})>a{background-position:nth($sideLiHover, $i);}	
+		#sideBox>ul>li:nth-child(#{$i})>a{background-position:nth($sideLi, $i) 0;}	
+		#sideBox>ul>li:nth-child(#{$i})>a:hover{
+							background-position:nth($sideLi, $i) bottom;}	
+	}// @for
+
+
+
+	#headBox{width: 250px; height: auto; min-height: 710px; float: left;
+			background-color:rgba(map-get($color,gray),0.3);}
+//	#444 -> rgba(#444,0.3)  -> rgba(70,70,70,0.3)
+
+	#contentBox{width:730px; height: auto; min-height: 710px;float: left;
+			background-color:transparent;}
+
+	#footBox{width: 100%; height:110px; float:left;
+			background-color:map-get($color,white);}
+
+
+
+
+
+
+
+
+
+
+
+
+
