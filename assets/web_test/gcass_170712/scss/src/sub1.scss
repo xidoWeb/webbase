@@ -63,14 +63,26 @@
 				}// dl
 				>dl>dt{width: 100%; height:340px; background-color: #fff;
 							border-radius:20px; margin-bottom:5px;
+							// border-radius:위왼 외오른 아래오른 아래왼; 
 							// border-top-left-radius:20%(200px -> 40px) 20%(340px -> 78px);
 							// border-top-left-radius:20px 20px;
-
+		
 							// border-top-left-radius:20px;
 							// border-top-right-radius:20px;
 							// border-bottom-left-radius:20px;
 							// border-bottom-right-radius:20px;
 							}
+				>dl>dt>span{width:340px; display: block; font-size:3em;
+										transform:rotate(-90deg) translate(-100px, -20px);
+										color:map-get($color, point);
+									//  transform은 block형태일때 사용가능
+									//	transform:rotate(); 	  // 회전(45deg)   z축을 기준, 단위:deg
+									//	transform:scale();			// 크기(2)				1 = 100%
+									//	transform:translate();	// 위치이동(100px)			본래의 위치를 기점으로 이동
+									//	transform:skew();				// 기울임(30deg)
+									}
+
+
 				>dl>dd{width:100%; box-sizing:border-box;
 							 height:auto; min-height:150px;
 							 border:1px solid map-get($color, white); 

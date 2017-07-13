@@ -9,3 +9,22 @@
 					background-position:$p2;}// hover
 	span{width: 0; height: 0; display: block; position: absolute; overflow: hidden;}
 }// link()
+
+// 벤더프리픽스 기능 처리  
+@mixin prefix($attr, $value){
+		-webkit-#{$attr}:$value;
+		   -moz-#{$attr}:$value;
+		    -ms-#{$attr}:$value;
+		     -o-#{$attr}:$value;
+		        #{$attr}:$value;
+} // prefix
+// @include prefix(transform, rotate() translate());
+
+
+
+
+
+
+
+
+
