@@ -12,6 +12,19 @@
 # 포토샵 템플릿 파일 제한
 assets/graphic/photoshop/template/*
 
+# photoshop
+**/*.psd
+**/*.psb
+
+# illustrator
+**/*.ai
+**/*.eps
+
 # ppt파일 제한
 *.ppt
 *.pptx
+
+
+
+
+
