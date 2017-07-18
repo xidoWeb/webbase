@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- step_03_js_dataType.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript dataType</title>
+</head>
+<body>
+	<h1>javascript dataType</h1>
+	<h2>기본 자료형</h2>
+	<ul>
+		<li>숫자</li>
+		<li>문자</li>
+		<li>논리</li>
+		<li>특수:undefined</li>
+		<li>특수:null</li>
+	</ul>
+
+	<h2>참조 자료형</h2>
+	<ul>
+		<li>배열</li>
+		<li>객체</li>
+		<li>함수</li>
+	</ul>
+	<!-- javascript -->
+	<script>
+		// 기본 자료형
+		// 숫자
+		var num = 1;
+		console.log(num);
+		console.log(typeof(num));
+
+		console.log(1);
+		console.log(typeof(1));
+
+		console.log(num + 10);
+		console.log(1 + 10);
+
+		var hyNum = num +100;
+		console.log(hyNum); // 101
+
+		// 문자
+		console.log(hyNum + '1'); // 1011  숫자값 101 + 문자 '1'
+		console.log(typeof(hyNum + '1')); // 1011  숫자값 101 + 문자 '1'
+
+		var changeNum = parseInt(hyNum + '1');
+		// parse + integer => parseInt()  값을 숫자로 치환
+		console.log(changeNum + 100);
+		
+		var hy = "hayeong";
+		console.log(typeof(hy));
+		var hyChange = parseInt(hy);
+		console.log(hyChange);
+		// NaN: 숫자가 아님을 뜻하는 에러 메시지
+
+		hy = hy + 100; // "hayeong" + 100 => hayeong100
+		console.log(hy); // hayeong100
+		console.log(typeof(hy)); // hayeong100
+		console.log(parseInt(hy)); // NaN
+
+		hy = 100 + hy; // 100 + "hayeong100"  => 100hayeong100
+		console.log(hy);	// 100hayeong100
+		console.log(typeof(hy));	// 100hayeong100
+		console.log(parseInt(hy));
+		 // 100 : parseInt는 앞부분 부터 숫자로 인지할 수 있는 영역까지 변환
+
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
