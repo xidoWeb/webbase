@@ -72,11 +72,14 @@
 				return result;
 			};
 
+var fir, sec, thi=1;
+
 			var Rest = function(i , j){
-				var fir    = i;			var sec    = j;				var result = i % j;
+				// var thi = 100;
+				var fir = i;			var sec= j;	var result = i % j + thi;
 				return result;
 			};
-
+ 
 			// console.log( 'Multiple(3, 20): ', Multiple(3, 20) );
 			// console.log( 'Multiple(3, 100): ', Multiple(3, 100) );
 			// console.log( 'Multiple(10, 100): ', Multiple(10, 100) );
@@ -98,11 +101,11 @@
 					re: Rest
 			};
 			// console.log( myMath.pl(2, 10) );
-			console.log( myMath.re(12, 3));
-			console.log( parseInt( myMath.di(11, 3) ) );
+			// console.log( myMath.re(12, 3));
+			// console.log( parseInt( myMath.di(11, 3) ) );
 
 			// parseInt();
-
+ 
 
 	</script>
 </body>
