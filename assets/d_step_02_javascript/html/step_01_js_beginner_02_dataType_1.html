@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- step_03_js_dataType.html -->
+<!-- step_01_js_beginner_02_dataType_1.html -->
 <html lang="ko-KR">
 <head>
 	<meta charset="UTF-8">
@@ -64,7 +64,41 @@
 		console.log(parseInt(hy));
 		 // 100 : parseInt는 앞부분 부터 숫자로 인지할 수 있는 영역까지 변환
 
+		 // boolean: true/false
+		 var boo = true; 
+		 console.log(!boo);
+		 console.log(!!boo);
+		 console.log(!!!boo);
 
+		 // !의 의미: not(반대의 개념)
+		 // a[href!="#"]{}
+
+		 // undefined/null
+		 var un;
+		 console.log(un); // undefined
+
+		 un = null;
+		 console.log(un); // null
+
+		 un = "어떠한 값을 넣을 수 있다";
+		 console.log(un); // 어떠한 값을 넣을 수 있다
+
+		 un = 0;
+		 console.log(un);
+
+		 un = null;
+		 console.log(un);
+
+		 // 비교
+
+		 var zero, none, nothing;
+		 zero = 0;
+		 nothing = null;
+		 console.log(zero, none, nothing);
+		 console.log(zero == none);
+		 console.log(zero == nothing);
+		 console.log(none == nothing);
+		 console.log(none === nothing);
 
 
 	</script>
