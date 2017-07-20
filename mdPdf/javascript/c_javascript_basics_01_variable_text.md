@@ -250,7 +250,7 @@ console.log(comColl);
 
 ---
 
-### 이스케이프 인용부호와 아포스트로피(문자열)
+### 이스케이프 인용부호와 어포스트로피(문자열)
 
 문자열을 나타내는 데 따옴표가 사용되므로 
 문자열에 아포스트로피와 따옴표를 사용할 때는 특별한 고려 사항이 있어야합니다. 
@@ -327,7 +327,7 @@ console.log(webLang.length);
 var secret1 = '자바스크립트를 이해하기';
 var secret2 = '병역 신체검사';
 var secret3 = '잘만든 작품을 보면 나오는 감탄사!';
-var secretTextResult = secret1[0] + secret2[3] + secret3[16];
+var secretTextResult = secret1[0] + secret2[3] + secret3[15];
 
 console.log(secretTextResult);
 ```
@@ -475,13 +475,37 @@ console.log(lastIndexChar);
 위 코드는 인수가 들어있는 위치를 알려 줍니다.
 겹치는 글자가 있다면 그중의 처음 나오는 글자의 위치를 알려주는 기능을 하고 있습니다. 
 
-`indexOf()`의 경우는 앞에서부터 위치를 파악하고, 
-`lastIndexOf()`의 경우는 뒤에서부터 위치를 파악하게 되는 형태입니다.
+`indexOf()`의 경우는 **가장 앞에 있는 글자**의 위치를 파악하고, 
+`lastIndexOf()`의 경우는 **가장 마지막에 있는 글자**의 위치를 파악하게 되는 형태입니다.
 원하는 값은 하나의 글자가아닌 여러개의 글자로도 찾을 수 있습니다.
 `charText.indexOf('char')`을 대신 넣어서 결과를 확인해 보세요.
 
-다소 특이한 부분이 있다면 앞에서 부터이든, 뒤에서부터이든 원하는 글자의 값은 
-앞쪽에서부터 나오는 첫번째 글자의 위치라는 내용입니다.
+```javascript
+  var charText =['one','two','three','four','tt','two'];
+  var indexChar = charText.indexOf('four');
+
+  console.log(indexChar);
+  var lastIndexChar = charText.lastIndexOf('two');
+
+  console.log(lastIndexChar);
+```
+위 내용은 배열형태의 값을 파악하기 위한 내용입니다. 
+배열내의 원하는 단어의 위치를 파악하고 위치를 파악할 수 있도록 체크하는 것입니다.
+기본 내용은 이전의 설명된 내용과 동일합니다. 
+
+```javascript
+	var charText =['one','two','three','four','tt'];
+  var indexChar = charText.indexOf('r');
+
+  console.log(indexChar);
+  var lastIndexChar = charText.lastIndexOf('t');
+
+  console.log(lastIndexChar);
+```
+배열의 내용에서 글자 하나의 위치를 파악해 보았습니다.
+결론는 찾지 못합니다.
+배열의 형식은 index의 위치에 해당하는 값 전체를 작성해야 정확한 위치를 파악할 수 있으며, 
+위치를 파악하지 못하는 경우에는 `-1`값을 도출되게 됩니다.
 
 #### split()
 
@@ -547,24 +571,71 @@ console.log(newString);
 `toLowerCase()`는 소문자로 변환처리하겠다는 의미입니다. 
 
 ```javascript
-var myTeam = 'hello my javascript studing team';
+	var myTeam = 'hello my javascript studing team';
 
-var myTeamUpper = myTeam.toUpperCase();
-var myTeamLower = myTeam.toLowerCase();
+	var myTeamUpper = myTeam.toUpperCase();
+	var myTeamLower = myTeam.toLowerCase();
 
-console.log(myTeamUpper);
-console.log(mhTeamLower);
+	console.log(myTeamUpper);
+	console.log(mhTeamLower);
 ```
 
 직접 글자를 작성하여 처리해도 되지만 실제로는 변후로 작성하여 하는 경우가 더 많습니다.
 
 위 내용에서 내용상의 첫글자만 대문자로 사용하려면 어떻게 처리해야할까요?
 
+---
 ```javascript
-var myTeam = 'hello my javascript studing team';
+	var text = 'hello my javascript studing team';
+	var firstText, moreText;
 
-
-
-// console.log();
+	firstText = text.charAt(0).toUpperCase();
+	moreText = text.slice(1).toLowerCase();
+	var totalText = firstText + moreText;
+	console.log( );
 ```
+위 내용으로 간단하게 정리할 수 있습니다.
+조금더 생각해 보겠습니다. 
+차후 매번 사용할 수 있도록 텍스트를 입력처리하면 어떨까요? 
+함수(function)형태로 한번 만들어 보세요.
+
+```javascript
+	var TextFn = function(myText) {
+	     var text = myText;
+	     var firstText, moreText;
+	     firstText = text.charAt(0).toUpperCase();
+	     moreText = text.slice(1).toLowerCase();
+	     var totalText = firstText + moreText;
+	     return totalText;
+	 };
+	    console.log( TextFn('hello My Javascript Studing team') );
+```
+위 코드의 내용은 함수를 처리한 내용입니다. 
+다음코드는 다음시간에 배울 영단어의 첫글자를 대문자로 처리, 나머지 글자를 소문자로 처리할 수 있도록 변경한 내용입니다. 
+
+```javascript
+	var TextFn = function(myText) {
+    var text = myText;
+    var textDivid = text.split(' ');
+    var firstText, moreText, partText, totalText;
+    totalText = '';
+
+    for(var i = 0; i < textDivid.length; ++i){
+        firstText = textDivid[i].charAt(0).toUpperCase();
+        moreText  = textDivid[i].slice(1).toLowerCase();
+        partText = firstText + moreText + ' ';
+        totalText += partText;
+    }
+    return totalText;
+	}; // TextFn()
+
+	console.log( TextFn('hello My Javascript Studing team') );
+```
+
+
+
+
+
+
+
 
