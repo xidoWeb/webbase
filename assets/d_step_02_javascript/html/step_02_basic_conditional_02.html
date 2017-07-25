@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- step_02_basic_conditional_02.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var english = function(lan){
+		// 	var en = /^[A-Za-z]*$/;
+		// 	if (lan == en){
+		// 		console.log('영문');
+		// 	}else{
+		// 		console.log(lan.value);
+
+		// 	}
+		// };
+
+		function SetAlphaNum(obj){
+				val=obj;
+				re=/[^a-zA-Z]/gi;
+				obj=val.replace(re,"");
+				obj2=val.replace("",re);
+				console.log(val);
+				console.log(re);
+				console.log(obj);
+				console.log(obj2);
+			}
+	</script>
+
+</body>
+</html>
