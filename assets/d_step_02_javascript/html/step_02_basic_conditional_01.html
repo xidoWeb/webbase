@@ -30,7 +30,8 @@
 			}
 		};
 
-   
+   // MyRank1('a');
+   // MyRank1('B');
 
    //step_02 영문 글자수 파악하여 처리
    var MyRank2 = function(myrank){
@@ -60,9 +61,102 @@
 			} // if문구분
 		};
 
+		// MyRank2('aaa');
+		// MyRank2('b');
+		// MyRank2(111);
+// ------------------------------------------------
+		// 성적등급 
 
+   var ScoreTest = function(num){
+   	// 1 50점 이하 파악
+   		if(0 <= num && num <= 50){
+   			console.log('당신은 50점이 안되었으므로 등급은 D입니다');
+   		} else if(51 <= num && num <= 70) {
+   			console.log('당신의 등급은 C입니다');
+   		} else if(71 <= num && num <= 85){
+   			console.log('당신의 등급은 B입니다.');
+   		} else if(86<=num && num <= 100 ) {
+   			console.log('당신의 등급은 A입니다.');
+   		} else{
+   			console.log('잘못된 값을 입력하셨습니다 0~100 사이의 숫자를 입력하세요');
+   		}
+   	// return num;
+   };
 
+   // console.log( ScoreTest(100) );
+var ScoreTest2 = function(num){
+	var grade = num;
 
+	// 1 50점 이하 파악
+ 	var NumBox = function(num){
+ 		if(0 <= num && num <= 50){
+ 			grade = 'A';
+ 		} else if(51 <= num && num <= 70) {
+ 			grade = 'B';
+ 		} else if(71 <= num && num <= 85){
+ 			grade = 'C';
+ 		} else if(86<=num && num <= 100 ) {
+ 			grade = 'D';
+ 		} else{
+ 			grade = 'E';
+ 		}
+ 		return grade;
+ 		}// NumBox()
+// --------------------
+  var SwitchBox = function(num){
+  	var grade = num;
+  			switch(grade){
+   			case 'A': 
+	   			return grade;
+	   			break;
+   			case 'B':
+	   			return grade;
+	   			break;
+   			case 'C': 
+	   			return grade;
+	   			break;
+   			case 'D': 
+	   			return grade;
+	   			break;
+   			default: 
+	   			return grade;
+   		}// switch
+  }// SwitchBox
+
+	var typeCheck = typeof(num);
+	// console.log(typeCheck);
+		if(typeCheck == 'number'){
+			console.log('숫자입니다.');
+			console.log( '당신의 등급은' + NumBox(num) + '입니다.' );
+		}else if(typeCheck == 'string'){
+			grade = num.toUpperCase();
+			console.log('문자입니다.');
+			console.log( '당신의 등급은' + SwitchBox(grade) + '입니다.' );
+		}
+
+   	
+/*
+   
+   	// return num;
+
+   	*/
+   };
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
