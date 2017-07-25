@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- step_02_basic_conditional_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//step_01 switch (함수처리)
+		// 대소문자 인식( .toUpperCase(); )
+		var MyRank1 = function(myrank){
+			// 매개변수의 값을 무조건 대문자로 처리
+			var rank = myrank.toUpperCase();
+			switch(rank){
+				case 'A':
+					console.log('당신은 A랭크로 최고 등급입니다.');
+				break;  //------------------------------------
+				case 'B':
+					console.log('당신은 B랭크로 잘하는 등급입니다.');
+				break;  //------------------------------------
+				case 'C':
+					console.log('당신은 C랭크로 보통 등급입니다.');
+				break;  //------------------------------------
+				case 'D':
+					console.log('당신은 D랭크로 조금더 노력해야하는 등급입니다.');
+				break;  //------------------------------------
+				default :
+					console.log('당신은 등급외 입니다.');
+			}
+		};
+
+   
+
+   //step_02 영문 글자수 파악하여 처리
+   var MyRank2 = function(myrank){
+			var rank;
+			if(myrank.length == 1){
+				rank = myrank.toUpperCase();
+			
+			switch(rank){
+				case 'A':
+					console.log('당신은 A랭크로 최고 등급입니다.');
+				break;  //------------------------------------
+				case 'B':
+					console.log('당신은 B랭크로 잘하는 등급입니다.');
+				break;  //------------------------------------
+				case 'C':
+					console.log('당신은 C랭크로 보통 등급입니다.');
+				break;  //------------------------------------
+				case 'D':
+					console.log('당신은 D랭크로 조금더 노력해야하는 등급입니다.');
+				break;  //------------------------------------
+				default :
+					console.log('당신은 등급외 입니다.');
+				}// switch
+			}else{
+			 console.log('작성하는 글자는 '+ myrank +'입니다.');
+			 console.log('영문 알파벳 한자리 글자를 입력하세요.');
+			} // if문구분
+		};
+
+
+
+
+	</script>
+</body>
+</html>
