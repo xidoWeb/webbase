@@ -395,19 +395,30 @@ var screen = window.innerWidth;
 // 기본 크기를 목록으로 설정
 var device = [480, 640, 768, 1024, 1280];
 // 크기별, 명칭
-var level = ['mobile_1','mobile_2','tablet_1','tablet_2','pc_1','pc_2'];
+var level = ['mobile_1','mobile_2','tablet_1', 'tablet_2','pc_1','pc_2'];
 // 화면 크기값 가져초기
 var screen = window.innerWidth;
+console.log('화면 크기: ', screen);
 // 반복문을 통한 크기값 설정
 for(var i = 0; i<device.length; i++){
+// device 항목중 첫번째 항목 이내에 포함되는 경우
+  if( screen <= device[0]){
+    // console.log('현재 화면의 크기는 ' + device[0]+'보다 작은 크기 입니다.');
+	console.log('view는 '+ level[i]+' 입니다');
+  }
+
+// device항목에 포함되는 경우
   if( device[i] < screen && screen <= device[i+1]){
-	//console.log('현재 화면의 크기는 ' + device[i]+'보다 크고 '+device[i+1]+' 보다 작은' + screen + '크기 입니다.');
+    // console.log('현재 화면의 크기는 ' + device[i]+'보다 크고 '+ device[i+1]+' 보다 작은' + screen + '크기 입니다.');
 	console.log('view는 '+ level[i]+' 입니다');
   }
 }// for
 // 목록 내에 들어있는 화면크기와 일치 하지 않는 경우
 if(screen > device[device.length - 1]){
-	console.log('현재 화면의 크기는 ' + device[i - 1] + ' 보다 큰 화면입니다.');
+	console.log(
+       '현재 화면의 크기는 ' 
+       + device[i - 1] 
+       + ' 보다 큰 화면입니다.');
 }
 ```
 
