@@ -538,10 +538,58 @@ console.log('합계: ' + result);
 생년월일을 작성하는 코드를 작성해보세요.
 `html`의 `select`코드를 활용하여 작성하는 코드입니다. (최대 150살 까지 선택할 수 있다고 가정하겠습니다.)
 
+```html
+<body>
+  <form action="" method="post">
+    <fieldset>   
+      <legend>생년월일 선택하기</legend>  
+      <label for="year">태어난 해</label>
+      <select name="" id="year">
+        <script> /* 이곳에 내용을 작성하세요. */ </script>
+      </select>
+
+      <label for="month">월</label>  
+      <select name="" id="month">
+        <script> /* 이곳에 내용을 작성하세요. */ </script>
+      </select>
+
+      <label for="day">일</label> 
+      <select name="" id="day">
+        <script> /* 이곳에 내용을 작성하세요. */ </script>
+      </select>
+    </fieldset>
+  </form>
+</body>
+```
+
+
+
 두번째는 핸드폰번호를 선택하게 만들어보세요.
-010부터 019까지 선택하게 만들어보세요.(015빼고는 모두 존재하는 번호입니다. )
+010부터 019까지 선택하게 만들어보세요. (015빼고는 모두 존재하는 번호입니다. )
 
+```html
+ <body>
+   <form action="" method="post">
+     <fieldset>
+       <legend>휴대폰 번호입력</legend>
+       <label for="first">앞자리 선택</label>
+       <select name="" id="first">
+         <script>/* 이곳에 코드를 입력하세요 */</script>
+       </select>
 
+       <label for="middle">가운데 번호 입력</label>
+       <input type="text" maxlength="4" id="middle" 
+              name="middle" value="" 
+              placeholder="4자리 번호입력">
+
+       <label for="last">가운데 번호 입력</label>
+       <input type="text" maxlength="4" id="last" 
+              name="last" value="" 
+              placeholder="4자리 번호입력">
+     </fieldset>
+   </form>
+ </body>
+```
 
 ---
 
