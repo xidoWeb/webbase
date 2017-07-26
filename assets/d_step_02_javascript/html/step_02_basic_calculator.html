@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var MyKey = function(i,j,c) {
+			var result;
+			switch(c){
+				case '+':
+					result = (i + '+' + j + '=' + (i + j));
+				return result;
+				break;
+				case '-':
+					result = (i + '-' + j + '=' + (i - j));
+				return result;
+				break;
+				case '*':
+					result = (i + '*' + j + '=' + (i * j));
+				return result;
+				break;
+				case '/':
+					result = (i + '/' + j + '=' + parseInt(i / j) + ' 나머지값: '+(i % j));
+				return result;
+				break;
+			}
+		};
+
+		var calc = function(i,j,calc) {
+			var num1 = typeof(i);
+			var num2 = typeof(j);
+
+			if(num1 == 'number' && num2 == 'number'){
+				console.log( MyKey(i,j,calc) );
+			}else{
+				console.log('값은 숫자,숫자,연산형식의 순로 입력해야합니다.');
+			}
+		};
+	
+
+	var device = [480, 640, 768, 1024, 1280, 1920];
+	var level = ['mobile','mobile_2','tablet_1','tablet_2','pc_1','pc_2'];
+	var screen = window.innerWidth;
+	for(var i = 0; i<device.length; i++){
+	  if( device[i] <= screen && screen < device[i+1]){
+		console.log('현재 윈도우의 크기는 ' + device[i]+'보다 크고 '+device[i+1]+' 보다 작은' + screen + '크기 입니다.');
+		console.log('i는 '+ i);
+	  } else {
+		console.log('------');
+	  }
+	}
+
+
+
+
+
+	</script>
+</body>
+</html>
