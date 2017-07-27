@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <form action="" method="post">
+    <fieldset>   <legend>생년월일 선택하기</legend>  <label for="year">태어난 해</label>
+      <select name="" id="year">
+        <script> /* 이곳에 내용을 작성하세요. */ 
+        	var date = new Date();
+        	var nowYear = date.getFullYear(); // 2017현재 연도
+        	var yearMinit = nowYear - 150; // 1867
+
+        	for(var i = nowYear; i >= yearMinit; i-=1){
+        		document.write(' <option value="' +i+ '"> '+i+' 년</option> ');
+        	}
+
+        </script>
+      </select>
+      <label for="month">월</label>  <select name="" id="month">
+        <script> /* 이곳에 내용을 작성하세요. */ 
+        for(var j=1; j<=12; j+=1){
+        	document.write(' <option value="' +j+ '"> '+j+' 월</option> ');
+        }
+        </script>
+      </select>
+      <label for="day">일</label> <select name="" id="day">
+        <script> /* 이곳에 내용을 작성하세요. */ 
+        //var monthVal = document.getElementById('month').value();
+
+        	for(var k=1; k<=31; k+=1){
+        	
+        		document.write(' <option value="' +k+ '"> '+k+' 일</option> ');
+        	}
+        </script>
+      </select>
+    </fieldset>
+  </form>
+</body>
+</html>
