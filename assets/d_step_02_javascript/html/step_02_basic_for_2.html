@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <form action="" method="post">
+    <fieldset>   <legend>지역 선택하기</legend>  <label for="area">지역</label>
+      <select name="" id="area">
+        <script> /* 이곳에 내용을 작성하세요. */ 
+        	var area = ['서울','경기','광주','울산','부산','충남','충북','경남','경북','강원','제주'];
+          for(var i = 0; i < area.length; ++i){
+            document.write(
+              '<option value="' + area[i] + '">' + area[i] + '</option>'
+              );
+          }
+        </script>
+        </select>
+        <label for="area">지역</label>
+      <select name="" id="area">
+        <script> /* 이곳에 내용을 작성하세요. */ 
+          var area2 = {'서울':'02','경기':'031','광주':'03','울산':'04','부산':'05','충남':'06','충북':'07','경남':'08','경북':'09','강원':'010','제주':'011'};
+          // document.write('<option>' + area2.서울 + '</option>'); 
+          for(var j in area2){
+            document.write(
+              '<option value="' + area2[j] + '">' + j + '</option>'
+              );
+          }
+        </script>
+      </select>
+    </fieldset>
+  </form>
+</body>
+</html>
