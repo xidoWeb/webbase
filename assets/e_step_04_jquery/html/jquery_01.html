@@ -56,8 +56,41 @@
 		(function($){
 			// jQuery
 			$('#wrap').css({'width':100+'%','backgroundColor':'#cfc'});
-			$('.head_box').css({'width':900+'px', 'backgroundColor':'#7cf'});
+			$('.head_box').css({'width':900+'px', 'backgroundColor':'#dcc'});
 			$('h1').css({'textAlign':'center','lineHeight':50+'px','fontSize':1+'em'});
+			// $('.gnb > li').css({'backgroundColor':'#f00'});
+			$('.gnb a').css({'color':'#0a4'});
+			//
+			// $('.gnb > li:nth-child(1)').css({'backgroundColor':'#0cc'});
+			// $('.gnb > li:first-child').css({'backgroundColor':'#0cc'});
+			// $('.gnb > li:first').css({'backgroundColor':'#0cc'});
+			// $('.gnb > li').first().css({'backgroundColor':'#0cc'});
+			$('.gnb > li').eq(0).css({'backgroundColor':'#0cc'});
+			$('.gnb > li:nth-child(2)').css({'backgroundColor':'#3cc'});
+			$('.gnb > li:nth-child(3)').css({'backgroundColor':'#6cc'});
+			// $('.gnb > li:last-child').css({'backgroundColor':'#9cf'});
+			$('.gnb > li:last').css({'backgroundColor':'#9cf'});
+
+			// $('.gnb > li').eq(0).css({'backgroundColor':'#0cc'});
+			// $('.gnb').children('li').eq(0).css({'backgroundColor':'#0cc'});
+			$('.gnb').children('li').eq(0)
+			         .css({'backgroundColor':'#0cc'});
+			$('.gnb').find('a').css({fontSize:'1.4em'});
+
+			// 이벤트 메서드 .on()
+			var gnb = $('.gnb');
+			gnb.children('li').on('mouseenter',function(){]
+				$(this).parent(gnb)
+				       .css({'backgroundColor':'#fff'});
+
+				$(this).siblings('li')
+				       .css({'backgroundColor':'#222','color':'#fa0'});
+		  	});
+			// gnb.children('li').on('mouseout',function(){});
+
+
+
+
 		})(this.jQuery);
 	</script>
 </body>
