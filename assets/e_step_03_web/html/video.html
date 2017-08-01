@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<title>Document</title>
+	<style>
+		div{border:3px solid #afc;}
+	</style>
+</head>
+<body>
+	<h1>웹에서 video 사용하기</h1>
+	<div>
+	<!-- video 용어
+	* <video>코드로 감싸고 내부에 
+	* <source src="[비디오파일]" type="video/[확장자명]" />
+	* 순서에맞게 호환되는 사용 확장자가 진행
+
+	* 제어를 하는 명령어
+  * controls  : 재생, 정지, 볼륨 등을 조절가능 - 단,브라우저마다 크기/모양이 다르다
+  * preload   : 재생하기전 미리 로딩처리하여 끊김이 덜하도록 만드는 기능
+  * autoplay  : 비디오를 자동으로 재생하게 만드는 기능
+  * volume    : 비디오 재생시 크기값을 조절하는 기능(0 ~ 1)
+  * muted     : 음소거
+	 -->
+	<!-- video 코드 사용1 -->
+		<video preload controls autoplay muted 
+		src="../multi/Web_Design_Speed_Art_Made_with_Love.mp4">
+		당신의 브라우저에서는 모써요 바꾸세요! 크롬으로	
+		</video>
+	<!-- video 코드 사용2 -->
+		<video controls muted poster="../multi/dermi.png">
+			<source 
+					src="../multi/Web_Design_Speed_Art_Made_with_Love.webM" 
+					type="video/webM" />
+			<source 
+					src="../multi/Web_Design_Speed_Art_Made_with_Love.ogv" 
+					type="video/ogv" />
+			<source 
+					src="../multi/Web_Design_Speed_Art_Made_with_Love.mp4" 
+					type="video/mp4" />
+			<p>브라우저가 참 좋네요 다른 최신 브라우저로 바꾸세요.</p>
+		</video>
+	</div>
+
+	<!-- <audio src="">사용가능하지만 실제로는 복수형을 사용</audio> -->
+	<!-- 
+	* audio 에서는 poster, width, height 속성을 사용할 수 없다.
+	* controls는 브라우저마다 크기/모양이 다르므로 별도의 디자인 작업후 자바스크립트로 제어하는 것이 좋다.
+	* 재생( load() ), 정지( pause() )
+	* mp3재생기처럼 여러곡을 사용하려면, 자바스크립트의 기능( )으로 사용하는것이 일반적
+	 -->
+	<audio preload autoplay controls>
+		<source src="[음악재생파일].ogg" type="audio/ogg" />
+		<source src="[음악재생파일].aac" type="audio/aac" />
+		<source src="[음악재생파일].mp3" type="audio/mp3" />
+		<p>현재 브라우저에서는 재생되지 않습니다. 최신 브라우저를 사용하세요.</p>
+	</audio>
+</body>
+</html>
+
+
+
+
+
+

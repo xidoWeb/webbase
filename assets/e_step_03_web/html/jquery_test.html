@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- jquery_test.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<title>Document</title>
+	<style>
+		h1{padding:1em; background-color: #9fc; color:#171717; text-align: center;}
+		#jsBox{width: 100%;height: auto; min-height:500px; background-color: #09f;}
+		#queryBox{width: 100%; height: auto; min-height:500px; background-color: #fc0;} 
+		h2{background-color:#f7a; color:#fff; padding:0.5em;}
+		button{background-color: #555; color:#fff; border-radius:0.5em;
+				transition:all 500ms; font-size: 2em; padding: 1.4em;}
+		button:hover{box-shadow:0.3em 0.3em 0.3em #90f;}
+	</style>
+</head>
+<body>
+	<h1>web test</h1>
+	<div id="jsBox">
+		<h2>javascript</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ex placeat laudantium impedit numquam est, perferendis consequatur nostrum. Voluptas atque debitis ut voluptatum corporis pariatur asperiores impedit recusandae accusamus hic.</p>
+		<button type="button" id="jsBtn">javascript button</button>
+	</div>
+
+	<div id="queryBox">
+		<h2>jquery</h2>
+		<button type="button" id="jqBtn">jquery button</button>
+	</div>
+
+	<script>
+	// javascript
+	// 1. id="jsBtn" 가져오기, id="jsBox"
+	// document.getElementById() == id
+	var jsBtn = document.getElementById('jsBtn');
+	var jsBox = document.getElementById('jsBox');
+	// 2. 버튼을 클릭
+	//jsBtn 클릭(이벤트)
+	// adEventListener()   == 이벤트(크롬,사파리,파이어폭스,오페라..)
+	// attatchEvent()  == 이벤트(익스플로러8버전)
+
+	// call back함수
+	// 콜백함수란 하나의 기능뒤에 다른 함수를 불러와서 사용하는 기법
+
+	// jsBtn.addEventListener('click', function(){	});
+	
+	jsBtn.addEventListener('click', JsBox);
+	function JsBox(){
+		jsBox.style.backgroundColor = '#460';
+		jsBox.style.color = '#fc0';
+	}
+
+	// jquery
+	// 즉시실행함수(IIFE): 함수작성과 동시에 동작(호출)
+	(function($){
+
+		$('#jqBtn').on('click', QueryBox);
+		function QueryBox() {
+			// $('#queryBox').css(backgr3oundColor, '#cca');
+			// $('#queryBox').css(color, '#fff');
+			$('#queryBox').animate({
+				backgroundColor:'#cca',
+				color:'#fff'
+			});
+		}
+
+	})(this.jQuery);
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
