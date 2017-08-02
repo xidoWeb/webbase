@@ -35,8 +35,80 @@ jQuery선택자는 css의 선택자와 거의 같습니다.
 
 사실상 기능이 조금더 많습니다!
 ---
+```javascript
+ $('ul').children('li')
+ $('ul').find('li')
+ $('li').parent()
+ $('dd').siblings()
+ $('li:first')
+ $('li:last')
+ $('li').eq(0)		  // 순서를 선택
+ $('li').index()		// 순서를 탐색
+ $('li:nth-child(odd)')
+ $('li:nth-child(even)')
+```
+---
 
-## style(css)
+- `.show()`
+- `.hide()`
+- `.toggle()`
+
+- `.fadeIn()`
+- `.fadeOut()`
+- `.fadeToggle()`
+
+- `.slideDown()`
+- `.slideUp()`
+- `.slideToggle()`
+
+- `.addClass()`
+- `.removeClass()`
+- `.toggleClass()`
+
+---
+## event
+
+```javascript
+$('[선택]').on('[이벤트]', function(event){
+	event.preventDefault();
+/*
+	pre // 먼저...
+	event // 발생되는 기능
+	default // 취소
+	*/
+
+	// return false;
+});
+```
+
+- 'click'
+- 'dblclick'
+- 'mousedown'
+- 'mouseup'
+
+- 'keypress'
+- 'keydown'
+- 'keyup'
+
+- 'mouseenter'
+- 'mouseleave'
+- 'mouseover'
+- 'mouseout'
+
+- 'scroll'
+- 'mousewheel'   // `fire fox`에 대해서는 별도로 처리
+- 'resize'
+
+- 'focus'
+- 'blur'
+
+
+- 'trigger'
+- 'draggable'
+
+
+
+
 
 
 
