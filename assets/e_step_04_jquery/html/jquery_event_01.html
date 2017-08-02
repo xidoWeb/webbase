@@ -16,12 +16,98 @@
 	<script src="../js/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../js/jquery/jquery-ui.min.js"></script>
 	<title>my title</title>
+	<style>
+		h1{width: 100%; height: auto; padding:2em; box-sizing:border-box;
+			border-bottom:2px solid #faa; margin-bottom: 1em; text-align: center;
+			font-size: 2em; text-transform: uppercase;}
+		.btn{width: 900px; height: auto; margin: 0 auto;}	
+		.btn>button{padding:0.5em; background-color: #09a; color:#fff; font-size: 1.3em;
+				transition:all 500ms ease-in;}
+		.btn>button:hover{background-color: #59c; border-radius:0.3em;}
+		.input_box{font-size:1.5em; padding:0.5em; border:1px solid #555;}
+
+		.tab_box{width: 960px; height: auto; border:2px solid #ccc;}
+		.tab_box:after{content:" "; display: block; clear: both;}
+		.tab_menu{width: 100%; height: 20px;}
+		.tab_menu>li{width:150px; height:100%; float: left; text-align: center;
+			border-right:1px solid #ccc; cursor:pointer;}
+		.tab_content{width: 100%; height: auto; box-sizing:border-box; padding:0.5em;}
+		.tab_content>div{display: none;}
+		.tab_content>div.tab_c_1{display:block;}
+	</style>
 </head>
 <body>
-
+	<h1>event test</h1>
+	<input type="text" class="input_box">
+	<div class="btn">
+		<button type="button" class="btn_01">click</button>
+	</div>
+	<div class="tab_box">
+		<ul class="tab_menu">
+			<li>tab_01</li>
+			<li>tab_02</li>
+			<li>tab_03</li>
+		</ul>
+		<div class="tab_content">
+			<div class="tab_c_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, autem.</div>
+			<div class="tab_c_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus reiciendis vel assumenda iure laborum, doloremque dolore minima aliquid fugiat placeat!</div>
+			<div class="tab_c_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores at saepe, deleniti voluptatem qui voluptatibus temporibus quaerat eveniet mollitia illum cupiditate porro voluptatum sequi delectus vitae, neque natus. Aliquam animi tenetur assumenda, totam quia, quae cumque ipsa quas velit culpa, ipsum obcaecati iste repellendus minus est. Reprehenderit aut omnis est molestias quia, commodi temporibus, hic assumenda magni fugiat veritatis! Quidem similique quasi praesentium incidunt porro? Tenetur sit aperiam nesciunt rerum, nobis adipisci quaerat saepe veritatis quidem delectus alias, doloremque pariatur beatae minus provident consequatur asperiores magnam optio eum esse debitis. Cumque minus tempore error maxime vero, enim, nisi cupiditate excepturi!</div>
+		</div>
+	</div>
 	<script>
-	
+
 		(function($){
+			// $('[선택자]').on([이벤트명], function(){});
+
+// 마우스 클릭 이벤트 확인
+			$('.btn_01').on('mousedown', function(event){
+					// $('h1').text(event);
+					// console.log(event.which);
+				
+					// if(event.which == 3){return false;
+					// }else{
+					// 	$('h1').text('마우스 클릭하였습니다.');
+					// 	console.log(event.which);
+					// }
+
+					switch(event.which){
+						case 1:
+							$('h1').text('마우스 왼쪽 버튼 클릭하였습니다.');
+							console.log('마우스 1');
+						 break;	
+						 case 2:
+							$('h1').text('마우스 가운데 버튼 클릭하였습니다.');
+									console.log('마우스 2');
+						 break;
+						case 3:
+							$('h1').text('마우스 오른 버튼 클릭하였습니다.');
+									console.log('마우스 3');
+							break;
+						default:
+						  console.log('마우스 클릭하셨나요?');
+						  $('h1').text('마우스 클릭하셨나요?');
+					}
+			});
+
+// 키보드 확인
+			$('.input_box').on('keypress',function(event){
+				console.log('키이름: '+event.key+', 키번호: '+event.keyCode);
+				$('h1').text('키이름: '+event.key+', 키번호: '+event.keyCode);
+			});
+
+// tab menu test
+		var tabMenu = $('.tab_menu');
+		var tabCon = $('.tab_content');
+
+		tabMenu.children('li').on('click', function(){
+			var _$this = $(this); //선택한 그 자신
+			var tab_index = _$this.index(); // 선택한 것의 위치(순서) 파악
+			// console.log(tab_index);  // 순서 검증
+
+			// var tab_text = _$this.text(); // 해당 내용을 파악하기 위한 간단한 체크 
+			tabCon.children('div').eq(tab_index).siblings().css({'display':'none'});
+			tabCon.children('div').eq(tab_index).css({'display':'block'});
+		});
 
 		})(this.jQuery);
 	</script>

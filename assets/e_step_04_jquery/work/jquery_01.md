@@ -81,10 +81,10 @@ $('[선택]').on('[이벤트]', function(event){
 });
 ```
 
-- 'click'
-- 'dblclick'
-- 'mousedown'
-- 'mouseup'
+- 'click'  : 왼버튼만 누르는것을 쉽게 확인
+- 'dblclick' : 더블클릭(왼버튼)
+- 'mousedown' : 왼(1), 가운데(2), 오른(3)
+- 'mouseup' : 왼(1), 가운데(2), 오른(3)
 
 - 'keypress'
 - 'keydown'
