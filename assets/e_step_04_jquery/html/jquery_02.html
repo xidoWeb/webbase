@@ -65,17 +65,17 @@
 
 			select_1.on('click', function(event){
 				event.preventDefault();	// a기능 상쇄
-				$('.add_banner').hide();  
+				$('.add_banner').slideUp(1000);  
 			});
 
 			select_2.on('click',function(event){
 				event.preventDefault();
-				$('.add_banner').show();  
+				$('.add_banner').slideDown(1000);  
 			});
 
 			select_3.on('click',function(event){
 				event.preventDefault();
-				$('.add_banner').toggle();  
+				$('.add_banner').slideToggle();  
 			});
 
 			select_4.on('click',function(event){
