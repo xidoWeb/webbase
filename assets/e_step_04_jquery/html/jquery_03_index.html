@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- jquery_03_index.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery/jquery-ui.min.js"></script>
+	<title>Document</title>
+	<style>
+		li{padding:0.5em; background-color:#caf; margin:0.2em;}
+	</style>
+</head>
+<body>
+	 <h1>순서값 찾아오기</h1>
+
+	 <ul class="number">
+	 	<li>순서_01</li>
+	 	<li>순서_02</li>
+	 	<li>순서_03</li>
+	 	<li>순서_04</li>
+	 	<li>순서_05</li>
+	 	<li>순서_06</li>
+	 	<li>순서_07</li>
+	 	<li>순서_08</li>
+	 	<li>순서_09</li>
+	 	<li>순서_10</li>
+	 </ul>
+
+	 <ol class="link_Num">
+	 	<li><a href="#">링크달린 순서_01</a></li>
+	 	<li><a href="#">링크달린 순서_02</a></li>
+	 	<li><a href="#">링크달린 순서_03</a></li>
+	 	<li><a href="#">링크달린 순서_04</a></li>
+	 	<li><a href="#">링크달린 순서_05</a></li>
+	 	<li><a href="#">링크달린 순서_06</a></li>
+	 	<li><a href="#">링크달린 순서_07</a></li>
+	 	<li><a href="#">링크달린 순서_08</a></li>
+	 	<li><a href="#">링크달린 순서_09</a></li>
+	 	<li><a href="#">링크달린 순서_10</a></li>
+	 </ol>
+<!-- script -->
+	<script>
+		(function($){
+		// -------------------------------------------
+
+			var numberList = $('.number').children('li');
+			// 마우스 클릭 이벤트 ( .on('click',function(){}); )
+			// .number자식 li를 클릭하면, 바로뒤의 함수 실행
+
+			numberList.on('click', function(){
+				// 이벤트 발생시 그 요인이 되는 요소 ==> $(this)
+				// 몇번째 요소를 선택했는지 확인
+  				console.log( $(this).index() );
+			}); // numberList.on('click');
+
+			// =====================================================
+
+			// 링크태그가 달린 리스트 순서 확인
+			var linkNum = $('.link_Num').children('li');
+			// 마우스 클릭 이벤트( .on('click', function(){}); )
+			linkNum.on('click', function(evt){
+				// evt가 무엇일까?
+				// console.log(evt);
+				// link기능이 존재한다면 해당하는 링크의 속성이 이벤트로 처리됨
+				// 링크속성이 가진 이벤트를 삭제
+				evt.preventDefault();
+				
+				// console.log( $(this).index() );
+			});
+
+		// -------------------------------------------
+		})(this.jQuery);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
