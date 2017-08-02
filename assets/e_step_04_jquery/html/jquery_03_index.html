@@ -8,7 +8,12 @@
 	<script src="../js/jquery/jquery-ui.min.js"></script>
 	<title>Document</title>
 	<style>
-		li{padding:0.5em; background-color:#caf; margin:0.2em;}
+	ul,ol{width: 100%; height: auto; padding: 0; margin-top: 30px;}
+	ul:after, ol:after{content:" "; display: block; clear: both;}
+
+	li{height: 30px; padding:0.5em; background-color:#caf; margin:0.2em; float: left; border-bottom:1px solid #caf; transition: all 500ms;
+		cursor:pointer; border-radius:0.4em;}
+	li:hover{background-color:#cdf; color:#fff;}
 	</style>
 </head>
 <body>
@@ -39,6 +44,34 @@
 	 	<li><a href="#">링크달린 순서_09</a></li>
 	 	<li><a href="#">링크달린 순서_10</a></li>
 	 </ol>
+
+	 <ul class="btn_num">
+	 	<li><button type="button">버튼의 역할_1</button></li>
+	 	<li><button type="button">버튼의 역할_2</button></li>
+	 	<li><button type="button">버튼의 역할_3</button></li>
+	 	<li><button type="button">버튼의 역할_4</button></li>
+	 	<li><button type="button">버튼의 역할_5</button></li>
+	 	<li><button type="button">버튼의 역할_6</button></li>
+	 	<li><button type="button">버튼의 역할_7</button></li>
+	 	<li><button type="button">버튼의 역할_8</button></li>
+	 	<li><button type="button">버튼의 역할_9</button></li>
+	 	<li><button type="button">버튼의 역할_10</button></li>
+	 </ul>
+
+  <ol class="select_go">
+  	<li><button type="button">선택한 순서의 다른 요소 변경_1</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_2</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_3</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_4</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_5</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_6</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_7</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_8</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_9</button></li>
+  	<li><button type="button">선택한 순서의 다른 요소 변경_10</button></li>
+  </ol>
+
+
 <!-- script -->
 	<script>
 		(function($){
@@ -65,8 +98,36 @@
 				// link기능이 존재한다면 해당하는 링크의 속성이 이벤트로 처리됨
 				// 링크속성이 가진 이벤트를 삭제
 				evt.preventDefault();
-				
+				console.log( $(this).index() );
+			});
+			// ===============================================
+			var btnNum = $('.btn_num').children('li');
+			// btnNum을 클릭했을때 ( .on('click', function(){}); )
+			btnNum.on('click', function(evt){
+				// button의 이벤트 발생 효과 무효화 처리
+				evt.preventDefault();
+				console.log( $(this).index() );
+
+				// 선택한 개체의 배경색을 변경
+				btnNum.css({'backgroundColor':'#ffc'});
+				$(this).css({'backgroundColor':'#afc'});
+			});
+			// ================================================
+
+			var selGo = $('.select_go').children('li');
+			// selGo클릭 이벤트
+			selGo.on('click', function(e){
+				e.preventDefault();
+
 				// console.log( $(this).index() );
+				var i = $(this).index();
+				// .number의 자식 li
+				// 자식: children,  자손: find
+				// $('.number').find('li');
+				// 변수처리된 아이를 가져오기
+				// .number의 자식 li의 내가선택한 순서와 동일한 순서에 색상 변경하기
+				numberList.css({backgroundColor:'#caf', height:'30px'});
+				numberList.eq(i).css({backgroundColor:'#fa7', height:'150px'});
 			});
 
 		// -------------------------------------------
