@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../fontAwesome/css/font-awesome.min.css">
 	<script src="../js/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../js/jquery/jquery-ui.min.js"></script>
 	<title>Document</title>
@@ -22,11 +23,18 @@
 		#contentBox	dt{width: 100%; height: 1.5em; background-color: #7af; color:#fff;
 									font-size: 1.3em; transition:all 300s ease-out;
 									border-top: 1px solid  #777;} 
-		#contentBox	dt:hover{background-color: #3af;}
+		#contentBox	dt:hover{background-color: #3ac;}
+
+		#contentBox i{color:#fd3; float: right; margin-top: 0.2em; margin-right: 2em;
+									transition:all 300ms;}
+
 		#contentBox	dd{width: 100%; height: auto; padding:0.5em; box-sizing:border-box;
 									background-color: #d1d1d1; color:#555;}
 		#contentBox	dd:hover{background-color: #ccc;}
 		button{font-size: 1em; color:inherit;}
+
+		/* jquery addClass 요소 */
+		.rotateArrow{transform:rotate(180deg);}
 	</style>
 </head>
 <body>
@@ -37,15 +45,30 @@
 		<aside id="sideBox"></aside>
 		<article id="contentBox">
 			<dl>
-				<dt><button type="button">slide_title_01</button></dt>
+				<dt>
+				    <button type="button">slide_title_01</button>
+				    <i class="fa fa-arrow-circle-down"></i>
+				</dt>
 				<dd><strong>slide_content_01</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, dolorum.</dd>
-				<dt><button type="button">slide_title_02</button></dt>
+				<dt>
+				    <button type="button">slide_title_02</button>
+				    <i class="fa fa-arrow-circle-down"></i>
+				</dt>
 				<dd><strong>slide_content_02</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fugiat eligendi magni provident, odit rerum totam. Commodi placeat doloremque nihil.</dd>
-				<dt><button type="button">slide_title_03</button></dt>
+				<dt>
+				    <button type="button">slide_title_03</button>
+				    <i class="fa fa-arrow-circle-down"></i>
+				</dt>
 				<dd><strong>slide_content_03</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque provident exercitationem earum, iure ad itaque veniam laboriosam quidem repellat aliquid similique aliquam ducimus maxime aut ut esse vero possimus porro!</dd>
-				<dt><button type="button">slide_title_04</button></dt>
+				<dt>
+				    <button type="button">slide_title_04</button>
+				    <i class="fa fa-arrow-circle-down"></i>
+				</dt>
 				<dd><strong>slide_content_04</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, deserunt. Ratione nobis eveniet, id quidem aperiam aspernatur dicta itaque dolor cumque cum fugiat, corrupti vel ducimus magnam! Et dolorem dolores, voluptatum ab, modi autem officiis eveniet inventore exercitationem nostrum repudiandae.</dd>
-				<dt><button type="button">slide_title_05</button></dt>
+				<dt>
+				    <button type="button">slide_title_05</button>
+				    <i class="fa fa-arrow-circle-down"></i>
+				</dt>
 				<dd><strong>slide_content_05</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio voluptas nisi fugit quas illum non eaque inventore unde, voluptatibus aperiam, voluptates repudiandae totam fuga explicabo? Facilis nisi, maiores eum adipisci neque a, distinctio id incidunt tempora nemo impedit. Quod officia veritatis optio, in qui. Incidunt laboriosam tenetur hic placeat eum!</dd>
 			</dl>
 		</article>
@@ -60,6 +83,7 @@
 			conMenu.hide(); // conMenu.css({display:'none'}); 와 동일한 기능
 
 			// 2. dt를 클릭하면 dd를 나타나게 만들기
+			var rotate=0;
 			conBtn.on('click', function(e){
 				e.preventDefault();
 				// 단순하게 show명령어로는 모든 dd가 나타게된다.
@@ -74,9 +98,55 @@
 					//4. 클릭시 다시 올라오도록 처리
 					// _$this.next('dd').stop().slideToggle();
 
+							// 8번의 체크사항 검증
+							var viewDD = _$this.next('dd').css('display');
+							 console.log(viewDD);
+							 // 9. dd상태를 파악한 후 fontAwesome의 class이름을 변경되게 처리
+							 //  if(viewDD == 'none'){
+							 //  	//1 기능
+								// 		// _$this.find('i')
+								// 		//  			.removeClass('fa-arrow-circle-down')
+								// 		//  			.addClass('fa-arrow-circle-up');
+								// 	// 2 기능
+								// 	// _$this.find('i').addClass('rotateArrow');
+								// }else{
+								// 	//1 기능
+								// 		// _$this.find('i')
+								// 		//  			.removeClass('fa-arrow-circle-up')
+								// 		//  			.addClass('fa-arrow-circle-down');
+								// 	// 2 기능
+								// 		// _$this.find('i').removeClass('rotateArrow');
+								// }	
+						
+						rotate += 180;
+						console.log(rotate);
+						_$this.find('i').css({transform:'rotate('+ rotate +'deg)'});
+						if(rotate == 360){ rotate = 0;}
+
 					// 5. 다른것을 클릭했다면, 먼저 열려있던 메뉴항목은 닫히도록 처리
 					conMenu.stop().slideUp();
 					_$this.next('dd').stop().slideToggle();
+
+
+					// 6. this의 i요소에 담긴 class이름 fa-arrow-circle-down삭제
+						// _$this.find('i').removeClass('fa-arrow-circle-down');
+					// 7. 삭제된 fa-arrow-circle-down의 class이름 대신 fa-arrow-circle-up을 적용
+						// _$this.find('i').addClass('fa-arrow-circle-up');
+
+					// 6,7번 내용을 한줄로 정리
+						// _$this.find('i')
+						// 			.removeClass('fa-arrow-circle-down')
+						// 			.addClass('fa-arrow-circle-up');
+
+					// 8. 선택된 dt( $(this) )의 바로 뒤에오는 dd의 상태를 확인
+						// 검증- 여기서 이러시면 안됩니다. (5번실행전에 검증!!)
+							// var viewDD = _$this.next('dd').css('display');
+							//  console.log(viewDD);
+
+
+					
+
+
 			});
 
 		})(this.jQuery);
