@@ -83,7 +83,7 @@
 			conMenu.hide(); // conMenu.css({display:'none'}); 와 동일한 기능
 
 			// 2. dt를 클릭하면 dd를 나타나게 만들기
-			var rotate=0;
+			var rotate=0;  // 하나의 값을 가져오기위해 체크 10번 해당사항
 			conBtn.on('click', function(e){
 				e.preventDefault();
 				// 단순하게 show명령어로는 모든 dd가 나타게된다.
@@ -121,7 +121,7 @@
 						rotate += 180;
 						console.log(rotate);
 						_$this.find('i').css({transform:'rotate('+ rotate +'deg)'});
-						if(rotate == 360){ rotate = 0;}
+						// if(rotate >= 360){ rotate = 0;}
 
 					// 5. 다른것을 클릭했다면, 먼저 열려있던 메뉴항목은 닫히도록 처리
 					conMenu.stop().slideUp();
@@ -144,18 +144,9 @@
 							//  console.log(viewDD);
 
 
-					
-
-
 			});
 
 		})(this.jQuery);
 	</script>
 </body>
 </html>
-
-
-
-
-
-
