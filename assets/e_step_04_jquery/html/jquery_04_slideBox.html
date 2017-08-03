@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- jquery_04_slideBox.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery/jquery-ui.min.js"></script>
+	<title>Document</title>
+	<style>
+		#wrap{width: 100%; min-width:960px; height: auto; margin: 0 auto;}
+		#wrap::after{content:" "; display: block; clear: both;}
+		#headBox{width: 100%; height: auto; padding: 0.5em; box-sizing:border-box;
+			background-color: #ccc; float: left;}
+			h1{font-size: 2em; color:#539; font-weight: bold;}
+		#sideBox{width: 20%; min-width:200px; height: auto;  min-height:500px;
+			background-color: #adf; float: left;}
+		#contentBox{width: 80%; min-width:740px; height: auto; min-height:500px;
+			background-color: #fda; float: left; padding:1em; box-sizing:border-box;}
+		#contentBox	dl{width: 100%; height: auto; 
+			            border:1px solid #333; padding:0.2em; background-color: #fff;}
+		#contentBox	dt{width: 100%; height: 1.5em; background-color: #7af; color:#fff;
+									font-size: 1.3em; transition:all 300s ease-out;
+									border-top: 1px solid  #777;} 
+		#contentBox	dt:hover{background-color: #3af;}
+		#contentBox	dd{width: 100%; height: auto; padding:0.5em; box-sizing:border-box;
+									background-color: #d1d1d1; color:#555;}
+		#contentBox	dd:hover{background-color: #ccc;}
+		button{font-size: 1em; color:inherit;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header id="headBox">
+			<h1>세로형 슬라이드 메뉴 만들기</h1>
+		</header>
+		<aside id="sideBox"></aside>
+		<article id="contentBox">
+			<dl>
+				<dt><button type="button">slide_title_01</button></dt>
+				<dd><strong>slide_content_01</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, dolorum.</dd>
+				<dt><button type="button">slide_title_02</button></dt>
+				<dd><strong>slide_content_02</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fugiat eligendi magni provident, odit rerum totam. Commodi placeat doloremque nihil.</dd>
+				<dt><button type="button">slide_title_03</button></dt>
+				<dd><strong>slide_content_03</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque provident exercitationem earum, iure ad itaque veniam laboriosam quidem repellat aliquid similique aliquam ducimus maxime aut ut esse vero possimus porro!</dd>
+				<dt><button type="button">slide_title_04</button></dt>
+				<dd><strong>slide_content_04</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, deserunt. Ratione nobis eveniet, id quidem aperiam aspernatur dicta itaque dolor cumque cum fugiat, corrupti vel ducimus magnam! Et dolorem dolores, voluptatum ab, modi autem officiis eveniet inventore exercitationem nostrum repudiandae.</dd>
+				<dt><button type="button">slide_title_05</button></dt>
+				<dd><strong>slide_content_05</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio voluptas nisi fugit quas illum non eaque inventore unde, voluptatibus aperiam, voluptates repudiandae totam fuga explicabo? Facilis nisi, maiores eum adipisci neque a, distinctio id incidunt tempora nemo impedit. Quod officia veritatis optio, in qui. Incidunt laboriosam tenetur hic placeat eum!</dd>
+			</dl>
+		</article>
+	</div>
+
+	<script>
+		(function($){
+			var content =  $('#contentBox');
+			var conMenu = content.find('dd');	
+			var conBtn  = content.find('dt');
+			// 1. 모든 dd를 숨기기(display:none)
+			conMenu.hide(); // conMenu.css({display:'none'}); 와 동일한 기능
+
+			// 2. dt를 클릭하면 dd를 나타나게 만들기
+			conBtn.on('click', function(e){
+				e.preventDefault();
+				// 단순하게 show명령어로는 모든 dd가 나타게된다.
+				//conMenu.show();	// conMenu.css({display:'block'});
+
+				// 3. 선택한 dt의 바로 뒤에 존재하는 dd만을 나타나게 만들어라!
+				// on()를 통해 이벤트가 발생된 것(선택한것) $(this)
+				// next()  
+					var _$this = $(this);
+					// console.log($(this));
+					// _$this.next('dd').stop().slideDown();
+					//4. 클릭시 다시 올라오도록 처리
+					// _$this.next('dd').stop().slideToggle();
+
+					// 5. 다른것을 클릭했다면, 먼저 열려있던 메뉴항목은 닫히도록 처리
+					conMenu.stop().slideUp();
+					_$this.next('dd').stop().slideToggle();
+			});
+
+		})(this.jQuery);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
