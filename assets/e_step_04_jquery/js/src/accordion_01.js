@@ -11,17 +11,35 @@
 	*   3-1. show() -> height:0
 *   3-2. 원래 가져야하는 높이 값으로 설정 
 */
+/*
+	 // addH_dt.eq(3).css({background:'#f00'});
+	 // addH_dt.on('click',function(){
+	 // 	console.log(addH_dt.index( $(this) ));
+	 // });
+
+	 // var ddList = [];
+	 // var i = 0;
+	 // for(; i < addH_dd.length; i++){
+	 // 	ddList[i] = addH_dd.eq(i).height();
+	 // }
+	 // // console.log(ddList);
+*/
 
 
  var addH = $('.add_h');
  var addH_dt = addH.find('dt');
  var addH_dd = addH.find('dd');
- 
- addH_dd.hide(); // display:none
+ // -------------------------------------
+ var arr = [];
+ var i = 0;
+ for(; i <addH_dd.length; i++){
+	arr[i] = addH_dd.eq(i).height();
+ }
+ // -------------------------------------
 
+ addH_dd.hide(); // display:none
  addH_dt.on('click',function(e){
 	e.preventDefault();
-
 	var _$this = $(this);
 	var nextDd = _$this.next('dd');
 	var ddBro = nextDd.siblings('dd');
@@ -31,33 +49,19 @@
 		  		evt.css({display:'none'});
 		}); 
 	}; // fomeAni()
-
 // 숨겨진 dd를 보이게 만들기
 	var formView = function(evt){
+		var j = addH_dt.index(_$this);
+		console.log(arr[j]);
 		evt.css({display:'block', padding:0, height:0, overflow:'hidden'})
-	     .animate({height:'200px', padding:'0.5em'});
+	     .animate({height:arr[j], padding:'0.5em'});
 	}; // formView()
-  
 	formAni(ddBro);
-
 // dd상태 확인하여 클릭시 처리
 	var ddDp = nextDd.css('display');
 	 (ddDp == 'none') ? formView(nextDd) : formAni(nextDd);
-	 
 });  // $('dt').on('click')
 
 
 // ==========================================
 })(this.jQuery);
-
-
-// animate 기능은   == css('transition')
-// .css({transition:'all 500ms'});
-// .animate({},500);   // display:block는 없다
-// .animate({height:'auto'})  // auto가 없다
-
-// $('dd').width()		// ()안에 값을 입력하지 않으면, 가져오는기능  -> dd의 가로값 파악
-// $('dd').height()  // ()안에 값을 입력하지 않으면, 가져오는기능  -> dd의 세로값 파악
-
-// $(this)  // 선택된 요소
-
