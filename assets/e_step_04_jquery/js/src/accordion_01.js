@@ -22,24 +22,27 @@
   $('dt').on('click',function(e){
   	e.preventDefault();
 
-  	
+  	var _$this = $(this);
+  	var nextDd = _$this.next('dd');
+
   	// $('dd').not( $(this).next('dd') )
-  	$(this).next('dd').siblings('dd')
-  	       .animate({height:0, padding:0},function(){
+  	nextDd.siblings('dd')
+  	      .animate({height:0, padding:0},function(){
+				  		$(this).css({display:'none'});
+				  	}); 
+
+  	var ddDp = nextDd.css('display');
+  	 if(ddDp == 'none'){
+
+	  	nextDd.css({display:'block', padding:0, height:0, overflow:'hidden'})
+	  	      .animate({height:'200px', padding:'0.5em'});
+  	 }else{
+
+  	 	nextDd.animate({height:0, padding:0},function(){
 				  		$(this).css({display:'none'});
 				  	});
-
-  	$(this).next('dd')
-  	       .css({display:'block', padding:0, height:0, overflow:'hidden'})
-  	       .animate({height:'200px', padding:'0.5em'});
-
-
-  	 // if(ddDp == 0){
-
-  	 // }else{
-
-  	 // }      
-  });
+  	 }// else      
+  });  // $('dt').on('click')
 
 
 // ==========================================
@@ -54,4 +57,5 @@
 // $('dd').width()		// ()안에 값을 입력하지 않으면, 가져오는기능  -> dd의 가로값 파악
 // $('dd').height()  // ()안에 값을 입력하지 않으면, 가져오는기능  -> dd의 세로값 파악
 
+// $(this)  // 선택된 요소
 
