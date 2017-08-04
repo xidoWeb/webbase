@@ -12,14 +12,22 @@
 	*   3-2. 원래 가져야하는 높이 값으로 설정 
 	*/
 
-  $('.add_h').find('dd').hide();
+  // $('.add_h').find('dd').hide();
+  $('.add_h').find('dd').css({display:'block', padding:0, height:0, overflow:'hidden'});
   $('dt').on('click',function(e){
   	e.preventDefault();
-  	$('dd').hide();
-  	$(this).next('dd').show();
+  	// $('dd').hide();
+  	$(this).next('dd')
+  	       .css({height:'auto', padding:'0.5em'});
   });
 
-
+// 선택자.메소드(기능, 함수(){
+// 	선택.메소드(기능, 함수(){
+// 		선택.메소드(기능, 함수(){
+// 				....
+// 		});
+// 	});
+// });
 
 
 
