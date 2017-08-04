@@ -33,6 +33,10 @@
 		#contentBox	dd:hover{background-color: #ccc;}
 		button{font-size: 1em; color:inherit;}
 
+	ul{width: 100%; height: auto;}
+	ul::after{content:" "; display: block; clear: both;}
+	li{width: 20%; height: 300px; float:left; margin-right: 5%; background-color: #fff;}
+	p{width: 100%; height: 100px;}
 		/* jquery addClass 요소 */
 		.rotateArrow{transform:rotate(180deg);}
 	</style>
@@ -69,83 +73,38 @@
 				    <button type="button">slide_title_05</button>
 				    <i class="fa fa-arrow-circle-down"></i>
 				</dt>
-				<dd><strong>slide_content_05</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio voluptas nisi fugit quas illum non eaque inventore unde, voluptatibus aperiam, voluptates repudiandae totam fuga explicabo? Facilis nisi, maiores eum adipisci neque a, distinctio id incidunt tempora nemo impedit. Quod officia veritatis optio, in qui. Incidunt laboriosam tenetur hic placeat eum!</dd>
+				<dd><strong>slide_content_05</strong>
+				<ul>
+						<li>list_1</li>
+						<li>list_2</li>
+						<li>list_3</li>
+						<li>list_4</li>
+					</ul>	
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio voluptas nisi fugit quas illum non eaque inventore unde, voluptatibus aperiam, voluptates repudiandae totam fuga explicabo? Facilis nisi, maiores eum adipisci neque a, distinctio id incidunt tempora nemo impedit. Quod officia veritatis optio, in qui. Incidunt laboriosam tenetur hic placeat eum!</p>
+					</dd>
 			</dl>
+
 		</article>
 	</div>
 
 	<script>
 		(function($){
 			var content =  $('#contentBox');
-			var conMenu = content.find('dd');	
 			var conBtn  = content.find('dt');
-			// 1. 모든 dd를 숨기기(display:none)
-			conMenu.hide(); // conMenu.css({display:'none'}); 와 동일한 기능
+			var conMenu = content.find('dd');	
+			conMenu.hide(); 
 
-			// 2. dt를 클릭하면 dd를 나타나게 만들기
-			var rotate=0;  // 하나의 값을 가져오기위해 체크 10번 해당사항
+			var rotate=0;  
 			conBtn.on('click', function(e){
 				e.preventDefault();
-				// 단순하게 show명령어로는 모든 dd가 나타게된다.
-				//conMenu.show();	// conMenu.css({display:'block'});
-
-				// 3. 선택한 dt의 바로 뒤에 존재하는 dd만을 나타나게 만들어라!
-				// on()를 통해 이벤트가 발생된 것(선택한것) $(this)
-				// next()  
-					var _$this = $(this);
-					// console.log($(this));
-					// _$this.next('dd').stop().slideDown();
-					//4. 클릭시 다시 올라오도록 처리
-					// _$this.next('dd').stop().slideToggle();
-
-							// 8번의 체크사항 검증
-							var viewDD = _$this.next('dd').css('display');
-							 console.log(viewDD);
-							 // 9. dd상태를 파악한 후 fontAwesome의 class이름을 변경되게 처리
-							 //  if(viewDD == 'none'){
-							 //  	//1 기능
-								// 		// _$this.find('i')
-								// 		//  			.removeClass('fa-arrow-circle-down')
-								// 		//  			.addClass('fa-arrow-circle-up');
-								// 	// 2 기능
-								// 	// _$this.find('i').addClass('rotateArrow');
-								// }else{
-								// 	//1 기능
-								// 		// _$this.find('i')
-								// 		//  			.removeClass('fa-arrow-circle-up')
-								// 		//  			.addClass('fa-arrow-circle-down');
-								// 	// 2 기능
-								// 		// _$this.find('i').removeClass('rotateArrow');
-								// }	
+				var _$this = $(this);							 
 						
-						rotate += 180;
-						console.log(rotate);
-						_$this.find('i').css({transform:'rotate('+ rotate +'deg)'});
-						// if(rotate >= 360){ rotate = 0;}
+				rotate += 180;
+				_$this.find('i').css({transform:'rotate('+ rotate +'deg)'});
 
-					// 5. 다른것을 클릭했다면, 먼저 열려있던 메뉴항목은 닫히도록 처리
-					conMenu.stop().slideUp();
-					_$this.next('dd').stop().slideToggle();
-
-
-					// 6. this의 i요소에 담긴 class이름 fa-arrow-circle-down삭제
-						// _$this.find('i').removeClass('fa-arrow-circle-down');
-					// 7. 삭제된 fa-arrow-circle-down의 class이름 대신 fa-arrow-circle-up을 적용
-						// _$this.find('i').addClass('fa-arrow-circle-up');
-
-					// 6,7번 내용을 한줄로 정리
-						// _$this.find('i')
-						// 			.removeClass('fa-arrow-circle-down')
-						// 			.addClass('fa-arrow-circle-up');
-
-					// 8. 선택된 dt( $(this) )의 바로 뒤에오는 dd의 상태를 확인
-						// 검증- 여기서 이러시면 안됩니다. (5번실행전에 검증!!)
-							// var viewDD = _$this.next('dd').css('display');
-							//  console.log(viewDD);
-
-
-			});
-
+				conMenu.stop().slideUp();
+				_$this.next('dd').stop().slideToggle();
+				});
 		})(this.jQuery);
 	</script>
 </body>
