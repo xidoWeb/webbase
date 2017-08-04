@@ -12,26 +12,46 @@
 	*   3-2. 원래 가져야하는 높이 값으로 설정 
 	*/
 
-  // $('.add_h').find('dd').hide();
-  $('.add_h').find('dd').css({display:'block', padding:0, height:0, overflow:'hidden'});
-  $('dt').on('click',function(e){
-  	e.preventDefault();
-  	// $('dd').hide();
-  	$(this).next('dd')
-  	       .css({height:'auto', padding:'0.5em'});
-  });
-
-// 선택자.메소드(기능, 함수(){
-// 	선택.메소드(기능, 함수(){
-// 		선택.메소드(기능, 함수(){
-// 				....
-// 		});
-// 	});
+	// $('dt').on('click',function(e){
+// 	console.log($(this).next('dd').index());
 // });
 
 
 
+  $('.add_h').find('dd').hide();
+  $('dt').on('click',function(e){
+  	e.preventDefault();
+
+  	
+  	// $('dd').not( $(this).next('dd') )
+  	$(this).next('dd').siblings('dd')
+  	       .animate({height:0, padding:0},function(){
+				  		$(this).css({display:'none'});
+				  	});
+
+  	$(this).next('dd')
+  	       .css({display:'block', padding:0, height:0, overflow:'hidden'})
+  	       .animate({height:'200px', padding:'0.5em'});
+
+
+  	 // if(ddDp == 0){
+
+  	 // }else{
+
+  	 // }      
+  });
+
 
 // ==========================================
 })(this.jQuery);
+
+
+// animate 기능은   == css('transition')
+// .css({transition:'all 500ms'});
+// .animate({},500);   // display:block는 없다
+// .animate({height:'auto'})  // auto가 없다
+
+// $('dd').width()		// ()안에 값을 입력하지 않으면, 가져오는기능  -> dd의 가로값 파악
+// $('dd').height()  // ()안에 값을 입력하지 않으면, 가져오는기능  -> dd의 세로값 파악
+
 
