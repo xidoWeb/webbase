@@ -15,37 +15,35 @@
  var addH = $('.add_h');
  var addH_dt = addH.find('dt');
  var addH_dd = addH.find('dd');
- // -------------------------------------
  var arr = [];
  var i = 0;
+
  for(; i <addH_dd.length; i++){
 	arr[i] = addH_dd.eq(i).height();
  }
- // -------------------------------------
+
  addH_dd.hide(); 
-// dt클릭하여 기능 처리하기 
-	 addH_dt.on('click',function(e){
-		e.preventDefault();
-		var _$this = $(this);
-		var nextDd = _$this.next('dd');
-		var ddBro = nextDd.siblings('dd');
-	// 클릭시 선택된 dd를 제외한 나머지 숨김처리
-		var formAni = function(evt){
-			evt.animate({height:0, padding:0},function(){
-			  		evt.css({display:'none'});
-			}); 
-		}; // fomeAni()
-	// 숨겨진 dd를 보이게 만들기
-		var formView = function(evt){
-			var j = addH_dt.index(_$this);
-			evt.css({display:'block', padding:0, height:0, overflow:'hidden'})
-		     .animate({height:arr[j], padding:'0.5em'});
-		}; // formView()
-		formAni(ddBro);
-	// dd상태 확인하여 클릭시 처리
-		var ddDp = nextDd.css('display');
-		 (ddDp == 'none') ? formView(nextDd) : formAni(nextDd);
-});  // $('dt').on('click')
+ addH_dt.on('click',function(e){
+	e.preventDefault();
+	var _$this = $(this);
+	var nextDd = _$this.next('dd');
+	var ddBro = nextDd.siblings('dd');
+	var formAni = function(evt){
+		evt.animate({height:0, padding:0},function(){
+		  		evt.css({display:'none'});
+		}); 
+	}; 
+	var formView = function(evt){
+		var j = addH_dt.index(_$this);
+		evt.css({display:'block', padding:0, height:0, overflow:'hidden'})
+	     .animate({height:arr[j], padding:'0.5em'});
+	}; 
+	
+	formAni(ddBro);
+	var ddDp = nextDd.css('display');
+	
+	(ddDp == 'none') ? formView(nextDd) : formAni(nextDd);
+ }); 
 
 
 // ==========================================
