@@ -21,6 +21,7 @@
  for(; i <addH_dd.length; i++){
 	arr[i] = addH_dd.eq(i).height();
  }
+ console.log(arr);
 
  addH_dd.hide(); 
  addH_dt.on('click',function(e){
@@ -28,13 +29,16 @@
 	var _$this = $(this);
 	var nextDd = _$this.next('dd');
 	var ddBro = nextDd.siblings('dd');
+	
 	var formAni = function(evt){
 		evt.animate({height:0, padding:0},function(){
 		  		evt.css({display:'none'});
 		}); 
 	}; 
+
 	var formView = function(evt){
 		var j = addH_dt.index(_$this);
+		console.log(j);
 		evt.css({display:'block', padding:0, height:0, overflow:'hidden'})
 	     .animate({height:arr[j], padding:'0.5em'});
 	}; 
