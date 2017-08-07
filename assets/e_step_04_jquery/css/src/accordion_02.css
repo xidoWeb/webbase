@@ -7,12 +7,14 @@
 #headBox:after{content:" "; display: block; clear: both;}
 	h1{width: 100px; height: 50px; float: left; 
 		background-color: #84a; color:#fff; border-radius:0.5em;}
-	#gnb{width: 600px; height:30px; float: right; }
-	#gnb>ul{width: 100%; height: 100%;}
-	#gnb>ul>li{height: 30px; line-height: 30px; float: left; margin-right:1em; font-size:1.2em;}
+	#gnb{width: 600px; height:auto; float: right; }
+	#gnb>ul{width: 100%; height:auto;}
+	#gnb>ul:after{content:" "; display: block; clear: both;}
+	#gnb>ul>li{width:15%; height: 30px; line-height: 30px; float: left; margin-right:1em; font-size:1.2em;}
 	#gnb>ul>li:hover{background-color:#ccc;}
 	
-
+	#gnb>ul ol{width: 100%; height: auto; padding-top:0.5em; background-color:#f99;
+					display: none;}
 #addBanner{width: 100%; height: 500px; background-color: #fda;}
 
 #contentBox{width: 100%; height:auto; padding-top: 30px; background-color: #afc;}
