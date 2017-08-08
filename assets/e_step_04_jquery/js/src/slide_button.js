@@ -26,6 +26,7 @@ slide_button.on('click',function(e){
 		slide_btn.removeClass('leftMove', 500);
 		slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
 	  slide_button.find('span').text('닫기');
+	  slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
 	}else{
 		slide_btn.addClass('leftMove', 500);
 		slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
@@ -33,20 +34,20 @@ slide_button.on('click',function(e){
 	}
 });
 
+	var timed = 500;
+	// 3. 버튼에 마우스 올렸을경우 .slide_btn이 살짝 나오기(약 10px정도)
+	slide_button.on('mouseenter', function(event) {
+		event.preventDefault();
+		if(parseInt(slide_btn.css('left')) < 0 ){
+			slide_btn.css({'transform':'translateX(20px)', 'transition':'all '+timed+'ms'});
+		}
+	});
+	slide_button.on('mouseleave', function(event) {
+		event.preventDefault();
+		slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+	});
 
-var timed = 500;
-// 3. 버튼에 마우스 올렸을경우 .slide_btn이 살짝 나오기(약 10px정도)
-slide_button.on('mouseenter', function(event) {
-	event.preventDefault();
-	slide_btn.animate({'left':'-230px'},timed);
-});
-slide_button.on('mouseleave', function(event) {
-	event.preventDefault();
-	slide_btn.animate({'left':'-250px'},timed);
-});
-
-// 문제점: 마우스 클릭시 이동처리된 것이 에러를 발생
-
+// 문제 해결: transition이 아닌 ie하위버전 호환처리
 })(this.jQuery);
 
 
