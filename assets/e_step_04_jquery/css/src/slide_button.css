@@ -1,9 +1,14 @@
 /* slide_button.css */
 
-
+body{overflow-x:hidden;}
 #wrap{width: 100%; min-width: 960px; height: auto; margin: 0 auto; }
 
-#headBox{width: 960px; height: 100px; margin: 0 auto; background-color: #acf;}
+#headBox{width: 960px; height: 100px; margin: 0 auto; 
+	      background-color: #acf; position: relative;}
+#headBox:before{content:" "; display: block; 
+            position: absolute; top: 0; left: 50%; z-index:-100; 
+				    width: 100vw; height:inherit; 
+				    background-color:#fcc; margin-left:-50vw;}
 
 #addBanner{width: 100%; height:550px; background-color: #fa7;}
 
