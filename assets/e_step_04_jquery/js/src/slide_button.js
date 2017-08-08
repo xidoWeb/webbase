@@ -1,28 +1,24 @@
 // slide_button.js
 
 (function($) {
-	/* 
-   1. .me_link이름을 .slide_btn>ul에 적용
-   2. .slide_btn>ul>li의 가로값을 세로에도 적용(가로 == 세로)
-*/
 
-// 1 
-// show /hide  - fadeIn/fadeOut - slideDown/slideUp 
-// addClass/removeClass
+var slide_btn = $('.slide_btn');
+var slide_ul = slide_btn.children('ul');
+var slide_li = slide_ul.children('li');
+var slide_button = $('.slide_btn').find('button');
 
-$('.slide_btn>ul').addClass('me_link');
+slide_ul.addClass('me_link');
 
-// 2
-// .slide_btn>ul>li의 가로값
+var slide_li_width = slide_li.width();
+slide_li.height(slide_li_width);
 
-// $('.slide_btn>ul>li').css('width'); // 기본 가로값파악
-// $('.slide_btn>ul>li').width(); // 기본 가로값
-// $('.slide_btn>ul>li').innerWidth(); // padding포함
-// $('.slide_btn>ul>li').outerWidth(); // border포함
-// $('.slide_btn>ul>li').outerWidth(true); // margin까지 포함
+slide_btn.addClass('leftMove');
 
-var slide_li_width = $('.slide_btn>ul>li').width();
-$('.slide_btn>ul>li').height(slide_li_width);
+// click시 .leftMove를 삭제
+slide_button.on('click',function(e){
+	e.preventDefault();
+	slide_btn.removeClass('leftMove');
+});
 
 
 
