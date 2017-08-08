@@ -19,9 +19,15 @@ slide_btn.addClass('leftMove');
 slide_button.on('click',function(e){
 	e.preventDefault();
 
-	var slide_left = parseInt(slide_btn.css('left'));
+	// hasClass()   : class이름의 존재 유무를 판단(true/false)
+	// is()					: class뿐 아니라 다른 내용도 판단가능
 
-	if( slide_left < 0){
+	// var slide_left = parseInt(slide_btn.css('left'));
+	   // var slide_left =  slide_btn.hasClass('leftMove');
+	   var slide_left =  slide_btn.is('.leftMove');
+	   console.log(slide_left);
+
+	if( slide_left ){
 		slide_btn.removeClass('leftMove', 500);
 		slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
 	  slide_button.find('span').text('닫기');
