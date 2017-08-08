@@ -18,17 +18,20 @@ slide_btn.addClass('leftMove');
 // click시 .leftMove를 삭제
 slide_button.on('click',function(e){
 	e.preventDefault();
-	slide_btn.toggleClass('leftMove', 500);
+
+	var slide_left = parseInt(slide_btn.css('left'));
+
+	if( slide_left < 0){
+		slide_btn.removeClass('leftMove', 500);
+		slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
+	  slide_button.find('span').text('닫기');
+	}else{
+		slide_btn.addClass('leftMove', 500);
+		slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
+	  slide_button.find('span').text('열기');
+	}
+
 });
-// 1. if문을 이용하여 이모지(이모티콘) 변경처리
-  slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
-
-// 2. 열기 글자와 닫기글자 기능 토글  hint: text()
-// text() : 글자만 인지
-// html() : 요소까지 포함(요소 코드로 작성하지 않으면 글자로 인지)
-
- slide_button.find('span').text('닫기');
- // slide_button.html('닫기');
 
 
 // 3. 버튼에 마우스 올렸을경우 .slide_btn이 살짝 나오기(약 10px정도)
