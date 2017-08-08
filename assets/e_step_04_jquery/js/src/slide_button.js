@@ -26,7 +26,8 @@ slide_button.on('click',function(e){
 		slide_btn.removeClass('leftMove', 500);
 		slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
 	  slide_button.find('span').text('닫기');
-	  slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+	  // slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+	  slide_btn.css({'marginLeft':'0', 'transition':'all '+timed+'ms'});
 	}else{
 		slide_btn.addClass('leftMove', 500);
 		slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
@@ -39,12 +40,14 @@ slide_button.on('click',function(e){
 	slide_button.on('mouseenter', function(event) {
 		event.preventDefault();
 		if(parseInt(slide_btn.css('left')) < 0 ){
-			slide_btn.css({'transform':'translateX(20px)', 'transition':'all '+timed+'ms'});
+			// slide_btn.css({'transform':'translateX(20px)', 'transition':'all '+timed+'ms'});
+			slide_btn.css({'marginLeft':'20px', 'transition':'all '+timed+'ms'});
 		}
 	});
 	slide_button.on('mouseleave', function(event) {
 		event.preventDefault();
-		slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+		// slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+		slide_btn.css({'marginLeft':'0', 'transition':'all '+timed+'ms'});
 	});
 
 // 문제 해결: transition이 아닌 ie하위버전 호환처리
