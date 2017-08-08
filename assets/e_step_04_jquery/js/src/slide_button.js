@@ -1,25 +1,35 @@
 // slide_button.js
 
-(function($) {	
-	// 브라우저의 스크롤크기를 제외한 내부 가로사이즈 확인
-	var winWidth2 = $(window).innerWidth();
-	console.log(winWidth2);
+(function($) {
+	/* 
+   1. .me_link이름을 .slide_btn>ul에 적용
+   2. .slide_btn>ul>li의 가로값을 세로에도 적용(가로 == 세로)
+*/
 
-	// append 뒤에 추가
-	// 1 다른 요소 불러오는방법 
-	  // $('#headBox').append( $('#addBanner') );
+// 1 
+// show /hide  - fadeIn/fadeOut - slideDown/slideUp 
+// addClass/removeClass
 
-  // 2 없는 요소를 생성방법
-  $('#headBox').append('<div class="bg_box">bgbox1</div>');
+$('.slide_btn>ul').addClass('me_link');
 
-  // 3 css를 설정
-  $('.bg_box').css({ 'width':winWidth2, height:100+'%',
-								'position':'absolute', 'top':0, 'left':50+'%', 'zIndex':-100,
-								'backgroundColor':'#35a', 'marginLeft':- winWidth2 / 2
-								});
-  $('.bg_box').parent().css({'position':'relative'});
+// 2
+// .slide_btn>ul>li의 가로값
+
+// $('.slide_btn>ul>li').css('width'); // 기본 가로값파악
+// $('.slide_btn>ul>li').width(); // 기본 가로값
+// $('.slide_btn>ul>li').innerWidth(); // padding포함
+// $('.slide_btn>ul>li').outerWidth(); // border포함
+// $('.slide_btn>ul>li').outerWidth(true); // margin까지 포함
+
+var slide_li_width = $('.slide_btn>ul>li').width();
+$('.slide_btn>ul>li').height(slide_li_width);
 
 
 
-// =============================================
 })(this.jQuery);
+
+
+
+
+
+
