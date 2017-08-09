@@ -20,6 +20,31 @@
 - .animate()
 - call back 함수
 
+## 4. 슬라이드형 메뉴만들기
+- animate()
+- mouseenter / mouseleave
+- append()    -> 선택된 요소 내부의 뒤에 첨부
+- prepend()   -> 선택된 요소 내부의 앞에 첨부
+- hasClass()  -> class요소가 있는지 없는지를 판단 (true / false)
+- is() 				-> hasClass와 유사하지만 좀더 넓은 범위
+
+
+- appendTo()
+- prependTo()
+- next()
+- prev()
+- before()
+- after()
+
+
+
+
+
+
+
+
+
+
 
 
 
