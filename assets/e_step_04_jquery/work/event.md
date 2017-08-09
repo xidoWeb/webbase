@@ -37,6 +37,30 @@
 - after()
 
 
+## 5. 이미지 갤러리
+<https://amazingslider.com/examples/jquery-image-gallery/>
+- attr()    -> attribute의약자로 속성을 선택하고 그 내용과 기능을 변경
+
+```javascript
+<a href="#" class="hidden">네이버</a>
+
+	$('a').attr('href','http://naver.com');
+	$('a').attr({'href':'http://naver.com', 'class':'link'});
+  $([선택자]).attr([속성명],[변경할 속성값]);
+```
+> html영역에서 속성을 사용할때 data를 앞에 붙인상태의 속성은 사용자가 임의로 만든 속성
+
+```javascript
+
+	<div class="box" id="bigBox" title="간단한 말풍선표시" data-youngran=""> </div>
+```
+
+- text()    -> 글자를 입력/가져올때
+- html()    -> 글자 또는 태그명 입력/가져올때
+
+
+## 6. 모달윈도우(팝업)
+<http://fancybox.net/>
 
 
 
@@ -53,5 +77,3 @@
 
 
 
-
->
