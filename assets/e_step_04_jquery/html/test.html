@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+<h1>text</h1>
+<h2>my uppter case text</h2>
+<h3>third text toUpperCase test</h3>
+<h4>four's text toUpperCase test</h4>
+<p>Lorem ipsum dolor sit amet, consectetur</p>
+	<script>
+		(function($) { // toUpperCase() 처리
+// --jQery 기본-------------------------------
+			var one = $('h1').text(), two = one.toUpperCase();
+			$('h1').text(two);
+// --jQery 함수-------------------------------
+			var upp = function(evt){
+				var myT = evt.text().toUpperCase();
+				evt.text(myT);
+			};
+			var vt = $('h2');
+			upp( vt );
+			upp( $('h3') );
+// -- js 기본 ------------------------------
+		})(this.jQuery);// jQuery end
+		var head4 = document.querySelector('h4'), text = head4.innerText, up = text.toUpperCase();
+		head4.innerText = up;
+// -- js 함수처리 ------------------------------		
+		var myUpText = function(text){
+			var myText = text.innerText, upper = myText.toUpperCase();
+			text.innerText = upper;
+		};
+		var content = document.querySelector('p'); 
+		myUpText(content);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

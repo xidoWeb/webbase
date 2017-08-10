@@ -63,10 +63,22 @@
 <http://fancybox.net/>
 
 
+## 7. slide banner
+### 접근성을 고려하지 않고 처리하는방법
+- append() prepend()
+- appendTo() prependTo()
 
+- setInterval()   -> 일정시간 간격만큼 반복
+- clearInterval() -> setInerval을 취소
+- setTimeout()    -> 지연시간(일정시간 뒤에 동작) - 함수기능 전체를 지연
+- delay()         -> 지연시간(일시정지) - animate, slideToggle
 
-
-
+기본 구조형
+`#addBanner` 요소 내부에 4개의 이미지를 담으려 한다면, 
+- 4개의 이미지를 감싸는 요소는 가로형일경우 가로 4배만큼 커야함
+- 4개의 이미지요소는 가로값이 100%처리하면 안된다.(4개를 가정하면 width:25%)
+- 내부에 들어있는 요소에 이미지가 담긴다면 `:nth-of-type`, `:nth-child` 를 사용할 수 없다.
+- 각각 `class` 이름을 부여
 
 
 
