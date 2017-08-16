@@ -41,17 +41,52 @@ for(; i<li_length; i++){
 	// head_li.eq(i).html('<span>').find('span').text(db[i].name);
 }
 
-})(this.jQuery);
+// ----------------------------------
+
 
 // 네이버, 다음, 구글, w3schools,  darum.daum, nuli.navercorp
 // 위 홈페이지 주소를 찾아 링크와 함께 만드시오.
 
+var site = [
+		{'site':'네이버',           'address':'http://naver.com'},
+		{'site':'다음',            'address':'http://daum.net'},
+		{'site':'구글',            'address':'http://google.com'},
+		{'site':'w3schools',      'address':'http://w3schools.com'},
+		{'site':'darum.daum',     'address':'http://darum.daum.net'},
+		{'site':'nuli.navercorp', 'address':'http://nuli.navercorp.com'},
+	];
+
+// $('body').append('<div id="webPage"></div>'); 
+// 위내용은 script 코드뒤에 작성되는 문제가 있다.
+
+// 내부가 아닌 형제에서 이전 또는 이후 
+// before() | after()
+
+$('body').find('script').before('<div id="webPage"></div>');
+var webPage = $('#webPage');
+webPage.html('<ul>');
+var web_ul = webPage.find('ul');
+
+
+
+// web_ul.html('<li>');   // 기존의 내용을 무시하고 덮어씌우기
+// web_ul.append('<li>'); // 기존의 내용 뒤에 추가
+
+// 변수 초기화
+i = 0;
+for(; i<site.length; i++){
+// 생성된 ul내부에 필요갯수만큼의 li>a생성
+ web_ul.append('<li><a></a></li>');
+ 
+}
+
+
+
+
 // <ul>
-	// <li><a href="http://naver.com">네이버</a></li>
+// 	<li><a href="http://naver.com">네이버</a></li>
 
-	// .attr()
-
-
+// 	.attr([속성명],[변경할값])
 
 
 
@@ -61,4 +96,4 @@ for(; i<li_length; i++){
 
 
 
-
+})(this.jQuery);
