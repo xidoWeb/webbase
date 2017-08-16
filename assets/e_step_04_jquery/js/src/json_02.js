@@ -43,20 +43,34 @@ var coffee = $('#coffee').children('ul');
 	// coffee.find('li').append('<dl><dt>');
 	// coffee.find('li').children('dt').after('<dd>');
 
-	
-coffee.append('<li> <div><img></div>   <dl> <dt></dt> <dd></dd> </dl> </li>');
-var img     = coffee.find('li').eq(0).find('img');
-var title   = coffee.find('li').eq(0).find('dt');
-var content = coffee.find('li').eq(0).find('dd');
 
-img.attr({'src':address + coffee_01[0][0].img.src , 
-	        'alt':address + coffee_01[0][0].img.alt});
-title.text(coffee_01[0][1].menu.title);
-content.text(coffee_01[0][1].menu.content);
+// coffee.append('<li> <div><img></div>   <dl> <dt></dt> <dd></dd> </dl> </li>');
+// var img     = coffee.find('li').eq(0).find('img');
+// var title   = coffee.find('li').eq(0).find('dt');
+// var content = coffee.find('li').eq(0).find('dd');
+
+// img.attr({'src':address + coffee_01[0][0].img.src , 
+// 	        'alt':address + coffee_01[0][0].img.alt});
+// title.text(coffee_01[0][1].menu.title);
+// content.text(coffee_01[0][1].menu.content);
 
 
-// 반복
+// 반복 -----------------------------------
+var img, title, content, 
+    i = 0, 
+    cofeeLength = coffee_01.length;
+console.log(cofeeLength);
+for(; i<cofeeLength; i++){
+	coffee.append('<li> <div><img></div>   <dl> <dt></dt> <dd></dd> </dl> </li>');
+	img     = coffee.find('li').eq(i).find('img');
+	title   = coffee.find('li').eq(i).find('dt');
+	content = coffee.find('li').eq(i).find('dd');
 
+	img.attr({'src':address + coffee_01[i][0].img.src , 
+	          'alt':address + coffee_01[i][0].img.alt});
+	title.text(coffee_01[i][1].menu.title);
+	content.text(coffee_01[i][1].menu.content);
+}
 
 })(this.jQuery);
 
