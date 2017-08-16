@@ -22,8 +22,17 @@
 var address = '../img/coffee/';
 var coffee_01 = [
 		[ {'img': {'src':'chai.jpg','alt':'제품1 이미지설명'} },
-		  {'menu':{'title':'chai', 'content':'제품1 설명'}}
-		]// 제품 1
+		  {'menu':{'title':'chai', 
+		           'content':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus architecto accusamus adipisci, quae ad ex. Ut quia delectus ab dolore nam est eligendi, sint dolorem earum repellat iusto aut eveniet hic blanditiis vitae tempora expedita accusantium! Aut doloribus ipsum quisquam. At quidem quos magni placeat voluptas nemo similique. Voluptatum, id?'}}
+		],  // 제품 1
+		[ {'img': {'src':'englishBreakfast.jpg','alt':'제품1 이미지설명'} },
+		  {'menu':{'title':'englishBreakfast', 
+		           'content':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quaerat, dolores. Vitae corrupti doloribus eveniet, voluptatum necessitatibus excepturi quo culpa hic commodi reiciendis aperiam. Aut modi repudiandae officiis velit reiciendis expedita facilis unde culpa at distinctio quisquam laudantium fuga iusto aspernatur quam voluptatibus vitae, repellat totam. Voluptatem facilis perferendis dolorem repudiandae dolor soluta. Ea voluptates corporis officia quod quis neque a soluta ex error facere possimus cum debitis voluptas nam assumenda, adipisci rerum optio. Quas, culpa. Porro eum placeat, hic possimus a eligendi nesciunt eaque alias itaque dolores ad, ea deleniti mollitia blanditiis, voluptates est fuga aliquid. Ullam, nam reprehenderit!'}}
+		],  // 제품 2
+		[ {'img': {'src':'strawberry.jpg','alt':'제품1 이미지설명'} },
+		  {'menu':{'title':'strawberry', 
+		           'content':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio, obcaecati commodi ipsa nesciunt, praesentium minima quos rerum sapiente, tenetur pariatur repellendus officia nam quis culpa. Vero iste, tempore placeat.'}}
+		],  // 제품 3
 	];
 	
 $('body').find('#headBox').after('<div id="coffee"><ul>');
@@ -33,6 +42,8 @@ var coffee = $('#coffee').children('ul');
 	// coffee.find('li').append('<div><img>');
 	// coffee.find('li').append('<dl><dt>');
 	// coffee.find('li').children('dt').after('<dd>');
+
+	
 coffee.append('<li> <div><img></div>   <dl> <dt></dt> <dd></dd> </dl> </li>');
 var img     = coffee.find('li').eq(0).find('img');
 var title   = coffee.find('li').eq(0).find('dt');
