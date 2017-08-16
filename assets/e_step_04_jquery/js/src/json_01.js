@@ -67,33 +67,76 @@ var webPage = $('#webPage');
 webPage.html('<ul>');
 var web_ul = webPage.find('ul');
 
-
-
 // web_ul.html('<li>');   // 기존의 내용을 무시하고 덮어씌우기
 // web_ul.append('<li>'); // 기존의 내용 뒤에 추가
 
 // 변수 초기화
 i = 0;
+var li_eq;
+
 for(; i<site.length; i++){
 // 생성된 ul내부에 필요갯수만큼의 li>a생성
  web_ul.append('<li><a></a></li>');
- 
+ li_eq = web_ul.find('li').eq(i).find('a');
+
+ li_eq.attr('href',site[i].address);
+ li_eq.text(site[i].site);
+}
+
+// -------------------------------
+// #car 를 생성하고 해당하는 내용에 img태그를 생성하여 이미지 및 설명을 작성하시오.
+//var webPage = $('#webPage');
+
+webPage.after('<div id="car">');
+$('#car').html('<ul>');
+var carUl = $('#car').children('ul');
+// 위 코드는 가능한 내용이지만(알수없는 오류도 발생) 가독성이 떨어지고, 변수할당이 없어, 사용하기 불편하다.
+// 상황에 맞게 적절한 변수 할당과, 기능의 분류를 하는 것이 좋다.
+// car리스트 json형태로 처리
+
+var address = '../img/car/';
+var car = [	
+		{'alt':'citroen', 'img':'citroen.jpg'},
+		{'alt':'jaguar', 'img':'jaguar.jpg'},
+		{'alt':'bents', 'img':'bents.jpg'},
+		{'alt':'audi', 'img':'audi.jpg'},
+		{'alt':'range', 'img':'rl.jpg'},
+		{'alt':'bmw', 'img':'bmw.jpg'},
+		{'alt':'toy', 'img':'cuti.jpg'}
+	];
+
+	// console.log(address + car[0].img);
+
+i = 0;
+var carLength = car.length;
+var myImg, myAlt, liImg;
+// console.log(carLength);
+
+for(; i<carLength; i++){
+	// li태그 및 내부 img태그 생성
+ carUl.append('<li><img>');
+ // 변수값 처리(src, alt, 각내용의 이미지태그)
+ myImg = address + car[i].img;
+ myAlt = car[i].alt;
+ liImg = carUl.find('li').eq(i).find('img');
+
+ // liImg.attr('src',myImg);
+ // liImg.attr('alt',myAlt);
+  liImg.attr({'src':myImg, 'alt':myAlt});
 }
 
 
 
-
-// <ul>
-// 	<li><a href="http://naver.com">네이버</a></li>
-
-// 	.attr([속성명],[변경할값])
-
-
-
-
-
-
-
-
-
 })(this.jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
