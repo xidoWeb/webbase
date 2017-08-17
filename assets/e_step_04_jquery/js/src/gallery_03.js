@@ -81,13 +81,13 @@ var image = [
  }//for
 
  // 3. gallery 큰이미지 창 생성
+ var bigSource, bigAlt;
  $('.gallery_list').before('<div class="gallery_photo"><img></div>');
  // 최초의 이미지 생성
- var bigSource, bigAlt;
  bigSource = url + image[0].big.img;
  bigAlt = image[0].big.alt; 
  $('.gallery_photo').find('img').attr({'src':bigSource,'alt':bigAlt});
-
+ 
 // 4. '.gallery_list'의 'li'를 클릭하면, 큰이미지에 내용변경처리
 var img_list = galleryUl.children('li');
 
@@ -105,6 +105,8 @@ img_list.on('click',function(e) {
  $('.gallery_photo').find('img').attr({'src':bigSource,'alt':bigAlt});
 
 });
+
+
 
 })(this.jQuery);
 
