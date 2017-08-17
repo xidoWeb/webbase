@@ -4,22 +4,59 @@
 // 기본경로
 var url = '../img/gallery/';
 
-// 1. gallery page를 json형태로 취해서 사용
+// 1-1. gallery page를 json형태로 취해서 사용(내용 일부 변경)
 var image = [
-		{'thum' : 'j01.jpg', 'big' : 'j01_big.jpg'},
+		{
+		 'thum' : {'img':'j01.jpg'    , 'alt':'j01.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j01_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j02.jpg'    , 'alt':'j02.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j02_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j03.jpg'    , 'alt':'j03.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j03_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j04.jpg'    , 'alt':'j04.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j04_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j05.jpg'    , 'alt':'j05.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j05_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j06.jpg'    , 'alt':'j06.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j06_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j07.jpg'    , 'alt':'j07.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j07_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j08.jpg'    , 'alt':'j08.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j08_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j09.jpg'    , 'alt':'j09.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j09_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j10.jpg'    , 'alt':'j10.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j10_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j11.jpg'    , 'alt':'j11.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j11_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
+		{
+		 'thum' : {'img':'j12.jpg'    , 'alt':'j12.jpg thumnail 이미지 설명'}, 
+		 'big'  : {'img':'j12_big.jpg', 'alt':'선택된 큰 이미지 설명'}
+		},
 
-		
-		{'thum' : 'j02.jpg', 'big' : 'j02_big.jpg'},
-		{'thum' : 'j03.jpg', 'big' : 'j03_big.jpg'},
-		{'thum' : 'j04.jpg', 'big' : 'j04_big.jpg'},
-		{'thum' : 'j05.jpg', 'big' : 'j05_big.jpg'},
-		{'thum' : 'j06.jpg', 'big' : 'j06_big.jpg'},
-		{'thum' : 'j07.jpg', 'big' : 'j07_big.jpg'},
-		{'thum' : 'j08.jpg', 'big' : 'j08_big.jpg'},
-		{'thum' : 'j09.jpg', 'big' : 'j09_big.jpg'},
-		{'thum' : 'j10.jpg', 'big' : 'j10_big.jpg'},
-		{'thum' : 'j11.jpg', 'big' : 'j11_big.jpg'},
-		{'thum' : 'j12.jpg', 'big' : 'j12_big.jpg'},
+
+	
 	];	
 // console.log(image.length);
 // console.log(image[5]);
