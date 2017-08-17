@@ -87,7 +87,7 @@ var image = [
  bigSource = url + image[0].big.img;
  bigAlt = image[0].big.alt; 
  $('.gallery_photo').find('img').attr({'src':bigSource,'alt':bigAlt});
- 
+
 // 4. '.gallery_list'의 'li'를 클릭하면, 큰이미지에 내용변경처리
 var img_list = galleryUl.children('li');
 
@@ -103,10 +103,7 @@ img_list.on('click',function(e) {
  bigSource = url + image[_this_index].big.img;
  bigAlt = image[_this_index].big.alt; 
  $('.gallery_photo').find('img').attr({'src':bigSource,'alt':bigAlt});
-
 });
-
-
 
 })(this.jQuery);
 
