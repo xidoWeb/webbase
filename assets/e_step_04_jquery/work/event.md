@@ -80,6 +80,28 @@
 - 내부에 들어있는 요소에 이미지가 담긴다면 `:nth-of-type`, `:nth-child` 를 사용할 수 없다.
 - 각각 `class` 이름을 부여
 
+## 8. json basic
+> javascript array, object형태의 결합된 데이터형
+> array형식, object형식을 그대로 사용한다.
+
+- after()   -> 선택자의 동일레벨 상태에서 다음에 위치한 선택자 또는 생성자(요소)처리
+- before()  -> 선택자의 동일레벨 상태에서 이전에 생성자(요소)처리 또는 선택
+
+## 9. gallery step3, modal window, popup page, popup banner
+
+- next()
+- prev()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
