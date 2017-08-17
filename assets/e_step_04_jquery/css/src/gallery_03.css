@@ -1,2 +1,18 @@
 /* gallery_03.css */
 
+#wrap{width: 960px; height: auto; margin: 0 auto;}
+.gallery_list{width: 100%; height: auto; 
+		border:1px solid #333; border-left: 0; border-right: 0;
+		padding:0.5em; box-sizing:border-box;}
+.gallery_list>ul{width: 100%; height: auto;}
+.gallery_list>ul:after{content:" "; display: block; clear: both;}
+.gallery_list li{width: 150px; height:80px; float: left; margin:0.2em; margin-right: 1em;box-sizing:border-box;
+	border: 1px solid #577; border-radius:0.3em; overflow: hidden;}
+.gallery_list li:last-child{margin-right: 0;}
+.gallery_list li>button{width: 100%; height: auto; padding: 0; position: relative;}
+.gallery_list li>button:hover img,
+.gallery_list li>button:focus img{transform:scale(1.2);}
+/*.gallery_list li>button:focus:after{content:" "; display: block; 
+	position: absolute; width: 100%; height: 100%; z-index: 100;
+	background-color:rgba(0,0,0,0.5);}*/
+.gallery_list li img{width: 100%; height: auto; transition:all 300ms ease-in;}

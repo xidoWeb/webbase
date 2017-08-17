@@ -7,6 +7,8 @@ var url = '../img/gallery/';
 // 1. gallery page를 json형태로 취해서 사용
 var image = [
 		{'thum' : 'j01.jpg', 'big' : 'j01_big.jpg'},
+
+		
 		{'thum' : 'j02.jpg', 'big' : 'j02_big.jpg'},
 		{'thum' : 'j03.jpg', 'big' : 'j03_big.jpg'},
 		{'thum' : 'j04.jpg', 'big' : 'j04_big.jpg'},
