@@ -29,8 +29,15 @@ var image = [
  // 반복처리할 내용 변수
  var i = 0;
  var imageLength = image.length;
+ var imgSource;
+
  for(; i<imageLength; i++){
- 	galleryUl.append('<li><button type="button"></button></li>');
+ 	// 선택된 위치의 작은이미지를 변수처리
+ 	imgSource = url + image[i].thum;
+ 	// ul내부에 이미지 갯수만큼 li, button, img생성
+ 	galleryUl.append('<li><button type="button"><img></button></li>');
+ 	// i번째에 해당하는 li내부의 img의 속성값 처리
+ 	galleryUl.children('li').eq(i).find('img').attr({'src':imgSource,'alt':''});
  }//for
 
 
