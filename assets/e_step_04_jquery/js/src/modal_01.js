@@ -30,31 +30,57 @@
  // modal 큰이미지 json형태로 처리
  var url = '../img/gallery/'
  var modalData = [
- 	{'src':'j01_big.jpg', 'alt':'큰이미지_1 설명'},
- 	{'src':'j02_big.jpg', 'alt':'큰이미지_2 설명'},
- 	{'src':'j03_big.jpg', 'alt':'큰이미지_3 설명'},
- 	{'src':'j04_big.jpg', 'alt':'큰이미지_4 설명'},
- 	{'src':'j05_big.jpg', 'alt':'큰이미지_5 설명'},
- 	{'src':'j06_big.jpg', 'alt':'큰이미지_6 설명'},
- 	{'src':'j07_big.jpg', 'alt':'큰이미지_7 설명'},
- 	{'src':'j08_big.jpg', 'alt':'큰이미지_8 설명'},
+	 	{
+	 		'thum':'j01.jpg',
+	 		'big' : {'src':'j01_big.jpg', 'alt':'큰이미지_1 설명'}
+	 	},
+	 	{
+	 		'thum':'j02.jpg',
+	 		'big' : {'src':'j02_big.jpg', 'alt':'큰이미지_2 설명'}
+	 	},
+	 	{
+	 		'thum':'j03.jpg',
+	 		'big' : {'src':'j03_big.jpg', 'alt':'큰이미지_3 설명'}
+	 	},
+	 	{
+	 		'thum':'j04.jpg',
+	 		'big' : {'src':'j04_big.jpg', 'alt':'큰이미지_4 설명'}
+	 	},
+	 	{
+	 		'thum':'j05.jpg',
+	 		'big' : {'src':'j05_big.jpg', 'alt':'큰이미지_5 설명'}
+	 	},
+	 	{
+	 		'thum':'j06.jpg',
+	 		'big' : {'src':'j06_big.jpg', 'alt':'큰이미지_6 설명'}
+	 	},
+	 	{
+	 		'thum':'j07.jpg',
+	 		'big' : {'src':'j07_big.jpg', 'alt':'큰이미지_7 설명'}
+	 	},
+	 	{
+	 		'thum':'j08.jpg',
+	 		'big' : {'src':'j08_big.jpg', 'alt':'큰이미지_8 설명'}
+	 	},
 	];
+// ------------------------------------
+// li요소 각각에 배경이미지 삽입
+var liImg;
+liImg = url + modalData[0].thum;
+console.log(liImg);
+ gallery_list.eq(0).find('button')
+             .css({'backgroundImage':'url('+ liImg +')','backgroundRepeat':'no-repeat',
+									 'backgroundPosition':'center','backgroundSize':'cover'});
 
-
-
-
-
-//------------------------------------
+// ------------------------------------
 // li클릭시 모달창 띄우기
  gallery_list.on('click',function(e){
  	e.preventDefault();
  	var _this = $(this);
  	var _this_i = _this.index();
- 	// console.log(_this_i);
- 	// console.log(modalData[_this_i]);
- 	
- 	var _src = url + modalData[_this_i].src;
- 	var _alt = modalData[_this_i].alt;
+	
+ 	var _src = url + modalData[_this_i].big.src;
+ 	var _alt = modalData[_this_i].big.alt;
  	modal_img.attr({'src':_src, 'alt':_alt});
 	ModalOn('modal_dp');
  });
