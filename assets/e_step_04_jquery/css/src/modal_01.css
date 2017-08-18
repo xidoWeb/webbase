@@ -9,20 +9,21 @@
 /* modal_box */
 .modal_box{width: 900px; height: 500px; position: fixed; background-color: #aaf;
 					top: 50%; left: 50%; margin-top: -250px; margin-left: -450px;
-					z-index:500; border-radius:0.7em;}
+					z-index:1500; border-radius:0.7em;}
 .modal_bg{width: 100%; height: 100%; position: fixed;
-					top: 0; left: 0; z-index:400; background-color:rgba(0,0,0,0.4);}
+					top: 0; left: 0; z-index:1400; background-color:rgba(0,0,0,0.4);}
 .modal_dp{display: none;}
 
 #contentBox h2{font-size: 1.3em; color:#777; margin-bottom: 0.5em;}
 #contentBox ul{width: 100%; height: auto;}
 #contentBox ul:after{content:" "; display: block; clear: both;}
 #contentBox li{width: 150px; height: 150px; float: left; margin: 0.2em;
-							border:0.5em solid #aaa;}
+							border:0.5em solid #aaa; overflow: hidden;}
 #contentBox button{padding:0; width:inherit; height:inherit;}
 #contentBox span{width: 0; height: 0; display: block; 
 								position: absolute; z-index: -100; overflow: hidden;}
-
+#contentBox img{height: 100%; transition:all 300ms ease-out;}
+#contentBox li:hover img{height: 120%;}
 #footBox{width: 100%; height: 120px; background-color: #777;}
 
 
