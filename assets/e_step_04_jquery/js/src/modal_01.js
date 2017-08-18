@@ -66,12 +66,18 @@
 // ------------------------------------
 // li요소 각각에 배경이미지 삽입
 var liImg;
-liImg = url + modalData[0].thum;
-console.log(liImg);
- gallery_list.eq(0).find('button')
-             .css({'backgroundImage':'url('+ liImg +')','backgroundRepeat':'no-repeat',
-									 'backgroundPosition':'center','backgroundSize':'cover'});
-
+// 버튼 반복처리
+var i = 0;
+var dataLength = modalData.length;
+for(; i<dataLength; i++){
+ liImg = url + modalData[i].thum;
+	// console.log(liImg);
+ gallery_list.eq(i).find('button')
+             .css({'backgroundImage':'url('+ liImg +')',
+             	     'backgroundRepeat':'no-repeat',
+									 'backgroundPosition':'center',
+									 'backgroundSize':'cover'});
+}
 // ------------------------------------
 // li클릭시 모달창 띄우기
  gallery_list.on('click',function(e){
