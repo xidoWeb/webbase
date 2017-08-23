@@ -1,63 +1,47 @@
+// gulp
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var $    = require('jquery');
-var sync = require('browser-sync').create();
+var sync = require('browser-sync');
 
-// test -------------------
-gulp.task('test', function(){
-  console.log('---------------------------------');
-  console.log('gulp를 설치하고, 실행하도록 준비하였습니다.'); 
-  console.log('---------------------------------');
-});
-
-// path ---------------------
+// 경로설정
 var url = {before:'./public/src/', after:'./public/dist/'};
 var path = {
-  sass:{
-    src :url + 'src/scss/**/*.scss',
-    dist:url + 'dist/css'
-  },
-  html: url.after +'**/*.html'
+	sass:{
+		src:url.before + 'scss/**/*.scss',
+		dist:url.after + 'css/'
+	}, 
+	html:url.after + '**/*.html',
+	js:url.after+'js/src/**/*.js'
 };
-
-// html 수정시 반영
-gulp.task('html',function(){
-  return gulp.src(path.html)
-             .pipe(sync.stream()); // 자동변환 기능추가
+// html ------------------------
+gulp.task('html', function(){
+	return gulp.src(path.html).pipe(sync.stream());
 });
-
-// sass ---------------------
-gulp.task('sass',function(){
- return gulp
-         .src(path.sass.src)
-         .pipe(sass().on('error', sass.logError))
-         .pipe(gulp.dest(path.sass.dist));
+// js --------------------------
+gulp.task('js', function(){
+	return gulp.src(path.js).pipe(sync.stream());
 });
-
-// jquery -------------------
-gulp.task('jquery', function(){
-  return gulp.src(path.html).pipe(concat('test.js')).pipe(sync.stream());
+// sass ------------------------
+gulp.task('sass', function(){
+	return gulp.src(path.sass.src)
+						 .pipe(sass().on('error', sass.logError))
+						 .pipe(gulp.dest(path.sass.dist))
+						 .pipe(sync.stream());
 });
-
-
-
-
-
-// browser-sync ------------
-gulp.task('sync',['html','sass'], function(){
- return sync.init({
-    port:10530,
-    server:{ baseDir:url.after }
-  });
+// browser-sync ----------------
+gulp.task('sync',['html', 'sass', 'js'], function() {
+   return sync.init({ server: { baseDir: url.after }  });
 });
-
-
-// watch -------------------
-gulp.task('watch',function(){
- gulp.watch(path.html, ['html']);
- gulp.watch(path.sass.src, ['sass']);
+// watch -----------------------
+gulp.task('watch', function(){
+	gulp.watch(path.sass.src, ['sass']);
+	gulp.watch(path.html, ['html']);
 });
+// default ---------------------
+gulp.task('default',['watch', 'sync']);
 
-// default ----------------
-gulp.task('default',['jquery','sync','sass','watch']);
- 
+
+
+
+
