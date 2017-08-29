@@ -1,9 +1,23 @@
 // scrollFix.js
 
 (function($) {
+// ----------------------------------	
+// 화면상의 높이값 계산하기
+var winH = $('html').innerHeight();
+console.log(winH);
+
+var headH = $('#headWrap').innerHeight();
+console.log(headH);
+
+// header위치 브라우저 하단에 위치하게 만들기
+$('#adBanner').height(winH - headH);
+
+
+
+// ----------------------------------	
 	// #headBox의 위치 파악하기(document)의 상단에서부터 offset() 값
 	var head_offset = $('#headBox').offset().top;
-	console.log(head_offset);
+	// console.log(head_offset);
 
 	// 스크롤이 움직였을때
  $(window).on('scroll', function() {
