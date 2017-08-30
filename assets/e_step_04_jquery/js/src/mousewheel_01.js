@@ -7,7 +7,10 @@
   // var body = $('body');
 
   // html.on('mousewheel DOMMouseScroll', WheelEvent);
-  html.on('mousewheel DOMMouseScroll', WheelEvent);
+  html.on('mousewheel DOMMouseScroll',function(event){
+  	var delta = WheelEvent(event);
+  	console.log(delta);
+  } );
 
   	function WheelEvent(event){
   	para.text('마우스 휠 반응');
@@ -27,7 +30,8 @@
   		delta = E.wheelDeltaY;
   	}
 
-  	// 각 OS별 수치값이 다르기 때문에 동일한 수치로 조정
+  	// 각 OS별 수치값이 다르기 때문에(apple에서는 1의 수치, window에서는 3의 수치) 
+  	// 동일한 수치로 조정
   	(delta <= 0) ? (delta = -1) : (delta = 1);
 
   	// console.log(delta);
@@ -35,11 +39,13 @@
   		case -1:
   			$('body').addClass('down').removeClass('up');
   		break;
-  		
+
   		case 1:
   			$('body').addClass('up').removeClass('down');
   		break;
   	}
+
+  	return delta;
   };
 
  
