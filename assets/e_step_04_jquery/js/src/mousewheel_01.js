@@ -3,9 +3,13 @@
 (function($) {
 	var para = $('p');
 	// para.text('test');
-  var body = $('html, body');
+  var html = $('html');
+  // var body = $('body');
 
-  body.on('mousewheel DOMMouseScroll', function(event){
+  // html.on('mousewheel DOMMouseScroll', WheelEvent);
+  html.on('mousewheel DOMMouseScroll', WheelEvent);
+
+  	function WheelEvent(event){
   	para.text('마우스 휠 반응');
   	var E = event.originalEvent;
   	var delta = 0;
@@ -33,7 +37,7 @@
   	}
 
   	console.log(delta);
-  });
+  };
  
 
 
