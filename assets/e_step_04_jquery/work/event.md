@@ -101,9 +101,14 @@
   - left
   - right
 
+## 11. mousewheel, DOMMouseScroll
+- mousewheel : ie, chrome, opera
+- DOMMouseScroll: fire fox
 
+> 사용할 브라우저에 필요한 기능이 있느지 존재유무를 판단.
+> 마우스 휠을 위로 올릴것인지, 아래로 내릴것인지 판단.
 
-
+- on('touchmove')   : 터치마우스의 경우는 원활한 동작이 다소 어렵다!
 
 
 
