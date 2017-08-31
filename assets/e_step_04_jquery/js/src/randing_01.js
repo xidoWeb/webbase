@@ -8,19 +8,18 @@
 		// #headBox 의 높이와, 배경색상을 변경처리
 		// 그림자를 생성
 		var winOffset = $(this).scrollTop();
+
+		var timed = 500;
 		// console.log(winOffset);
 
 		 if( winOffset >= 500){
-		 	$('body').animate({paddingTop:'60px'});
-
-		 	$('#headBox').css({backgroundColor:'#afc', height:'60px', 
-		 										boxShadow:'0 0.2em 0.4em #555',
-		 										transition:'all 400ms ease-in'});
-
-		 	$('#headBox').children().animate({height:'30px'});
+		 	$('body').addClass('scroll',{duration:timed});
+		 	$('#headBox').addClass('scroll',{duration:timed});
+		 	$('#headBox').children().addClass('scroll',{duration:timed});
 		 } else{
-
-
+		 	$('body').removeClass('scroll',{duration:timed});
+		 	$('#headBox').removeClass('scroll',{duration:timed});
+		 	$('#headBox').children().removeClass('scroll',{duration:timed});
 		 }
 	});
 

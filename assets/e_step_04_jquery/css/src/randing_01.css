@@ -1,19 +1,20 @@
 /* randing_01.css */
 
 body{padding-top:80px;}
-
+body.scroll{padding-top:60px;}
 
 #wrap{width: 100%; height: auto;}
 	#headBox{width: 100%; height: 80px; box-sizing:border-box; padding: 1em;
 					background-color:rgba(150,100,180,0.5); position:fixed; top: 0; left:0; z-index:500;}
-	
+	#headBox.scroll{height: 60px; background-color:#aff; box-shadow:0 0.3em 0 #333;}
 
 		h1{width: 150px; height:50px; background-color: #0aa;  
 			position: absolute; left: 50%; margin-left:-470px; top:1em;}
-		
+		h1.scroll{height: 30px; background-color:#fff; border-bottom:2px solid #f07;}
 
 		#gnb{width: 600px; height:50px; background-color: #aa0; 
 			position: absolute; right: 50%; margin-right:-470px; top:1em;}
+		#gnb.scroll{height: 30px; background-color:#fff; border-bottom:2px solid #f07;}
 
 
 
