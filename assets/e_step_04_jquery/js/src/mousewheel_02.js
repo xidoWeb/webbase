@@ -55,7 +55,12 @@ var viewLength = view.length;
 	// $('html,body').scrollTop(viewList[wheelnumber]);
 
 	// 마우스휠 사용시 애니메이션으로 이동
-	$('html,body').stop().animate({scrollTop:viewList[wheelnumber]});
+	var d = false;
+	if(!d){
+		$('html,body').stop().animate({scrollTop:viewList[wheelnumber]});
+	}
+
+
 
 	console.log(wheelnumber);
 
