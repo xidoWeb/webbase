@@ -21,8 +21,12 @@
   	// 0	~ 100
   	// 마우스 좌표 / 내가 가진 브라우저화면의 가로값 * 100
   	// 사용할 크기 / 기준 크기 * 100   -> vw ,vh 사용법과 동일
-  	var myX = parseInt(pagex / winW * 500);
-  	var myY = parseInt(pagey / winH * 500);
+  	var myX = pagex / winW * 100;
+  	var myY = pagey / winH * 100;
+
+  	// percent로 변환
+  	var percentX = parseInt(myX);
+  	var percentY = parseInt(myY);
 
   	// parseInt() => 정수로 변환
   	// Math.random() => 0~1까지 랜덤 숫자
@@ -32,8 +36,10 @@
 
 
   	// 변경된 수치값 체크
-  	$('.x').children('span').text(myX); 
-  	$('.y').children('span').text(myY);
+  	$('.x').children('span').text(percentX); 
+  	$('.y').children('span').text(percentY);
+
+  	$('.my_box').css({'transform':"translate(" + percentX / 2 + "px)"});
 
   })
 
