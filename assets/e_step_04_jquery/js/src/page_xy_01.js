@@ -39,7 +39,7 @@
   	$('.x').children('span').text(percentX); 
   	$('.y').children('span').text(percentY);
 
-  	$('.my_box').css({'transform':"translate(" + percentX / 2 + "px)"});
+  	$('.my_box').css({'transform':"translate("+ -percentX +"px, "+ -percentY +"px)"});
 
   })
 
