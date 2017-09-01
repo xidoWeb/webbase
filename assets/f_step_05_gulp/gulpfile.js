@@ -12,7 +12,7 @@ var path = {
 		dist:url.after + 'css/'
 	}, 
 	html:url.after + '**/*.html',
-	js:url.after+'js/src/**/*.js'
+	js:url.after+'js/**/*.js'
 };
 // html ------------------------
 gulp.task('html', function(){
@@ -37,6 +37,7 @@ gulp.task('sync',['html', 'sass', 'js'], function() {
 gulp.task('watch', function(){
 	gulp.watch(path.sass.src, ['sass']);
 	gulp.watch(path.html, ['html']);
+	gulp.watch(path.js, ['js']);
 });
 // default ---------------------
 gulp.task('default',['watch', 'sync']);

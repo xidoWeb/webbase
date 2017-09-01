@@ -3,6 +3,13 @@
 (function($) {
 	// 스크롤 이벤트 사용 
 		
+	// landing_02
+	// #content_02 상단에서 떨어진 위치 파악
+	// teacher thanks!!!!!!
+
+	var conOffset = $('#content_02').offset().top;
+
+// --------------------------------------------------
 	$(window).on('scroll',function(){
 		// offset().top 500만큼 이동하면,
 		// #headBox 의 높이와, 배경색상을 변경처리
@@ -21,6 +28,16 @@
 		 	$('#headBox').removeClass('scroll',{duration:timed});
 		 	$('#headBox').children().removeClass('scroll',{duration:timed});
 		 }
+		 // --------------
+		// content_02내부의 이미지 나타나게 기들기
+		if(winOffset >= (conOffset - 300) ) {
+			$('.one').addClass('addView');
+			$('.two').addClass('addView');
+		}else{
+			$('.one').removeClass('addView');
+			$('.two').removeClass('addView');
+		}
+
 	});
 
 })(this.jQuery);
