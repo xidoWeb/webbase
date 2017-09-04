@@ -7,6 +7,7 @@
 	// 좌표값을 일정한 크기로 제한(100 값으로 제한)
 	// 이미지태그를 생성한 후
 	// 해당값을 이미지의 파일명과 합쳐서 처리
+
 	$('.my_img').html('<img>');
 	$('.my_img').on('mousemove',function(e) {
 		var imgWidth   = $('.my_img').innerWidth();
@@ -26,12 +27,8 @@
     						   alt:'page x,y 값을 사용한 이미지테스트'       });
 
     // p에 해당하는 이미지 사용설명 처리
-    $('p').find('span').text(url + 'pageImg_'+ myPagex +'.jpg');
-		
+    $('p').find('span').text(url + 'pageImg_'+ myPagex +'.jpg');		
 	});
-
-
-
 
 })(this.jQuery);
 
