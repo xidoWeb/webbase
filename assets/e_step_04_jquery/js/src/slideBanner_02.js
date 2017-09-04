@@ -21,8 +21,8 @@
 
 
 		banner.animate({marginLeft:_thisEq * -100 + '%'});
-		// addClass('')
-		// removeClass('')
+		indi_li.eq(_thisEq).addClass('active').siblings().removeClass('active');
+		// _this.addClass('active').siblings().removeClass('active');
 	});
 
 
