@@ -31,7 +31,7 @@
 	});
 
 // 2번 좌우 기능을 위해 indicator 임시로 숨김 
-	indi.hide();
+	// indi.hide();
 	// 2. 좌,우 버튼을 클릭해서 배너 이동 처리
 	var lBtn = $('.l_btn');
 	var rBtn = $('.r_btn');
@@ -45,28 +45,29 @@
 		// console.log(i);
 		banner.animate({marginLeft: i * 100 +'%'});
 		//내용이 마지막에 위치하면 버튼이 사라지게
-		if(-i == banner_i-1){
-			rBtn.fadeOut();
-			lBtn.fadeIn();
-		}else{
-			rBtn.fadeIn();
-			lBtn.fadeIn();
-		}
+		// if(-i == banner_i-1){ rBtn.fadeOut(); }else{ rBtn.fadeIn(); }
+		BtnEnd();
 	});
 
 	lBtn.on('click',function() {
 		i += 1;
 		banner.animate({marginLeft: i * 100 +'%'});
-		if(i == 0){
-			lBtn.fadeOut();
-			rBtn.fadeIn();
-		}else{
-			rBtn.fadeIn();
-			lBtn.fadeIn();
-		}
+		// if(i == 0){ lBtn.fadeOut(); }else{ rBtn.fadeIn(); }
+		BtnEnd();
 	});
 
-	function BtnEnd(){}
+// 좌, 우 버튼 클릭시 일정 위치에서 사라지거나, 나타나게 만드는 기능을 함수화 처리
+	function BtnEnd(){
+		if(i == 0){
+			lBtn.fadeOut();
+		}else if(-i == banner_i-1){
+			rBtn.fadeOut();
+		}else{
+			lBtn.fadeIn();
+			rBtn.fadeIn();
+		}
+	}
+	BtnEnd();
 
 })(this.jQuery);
 
