@@ -5,7 +5,7 @@
 	// 3. 좌,우 버튼을 클릭시 indicator도 같이 처리
 
 // 좌, 우 버튼 일정 위치에서 사라지거나, 나타나게 만드는 기능을 함수화 처리
-	function BtnEnd(){
+	function BtnEnd(i){
 		if(i <= 0){
 			i=0;
 			lBtn.fadeOut();
@@ -36,27 +36,23 @@
 	var i = 0;
 
 	// 변수값보다 함수호출이 먼저되면 undefined 또는 에러를 도출
-	BtnEnd();
+	BtnEnd(i);
 
 
 // ------------ indicator 클릭
 	indi_li.on('click',['button'],function(e) {
 		e.preventDefault();
 		var _this = $(this);
-		i = _this.index();
-
-		BtnEnd();
+		BtnEnd( _this.index() );
 	});
 
 	// 2. 좌,우 버튼을 클릭해서 배너 이동 처리
 	rBtn.on('click',function() {
-		i += 1;
-		BtnEnd();
+		BtnEnd(++i);
 	});
 
 	lBtn.on('click',function() {
-		i -= 1;
-		BtnEnd();
+		BtnEnd(--i);
 	});
 
 
