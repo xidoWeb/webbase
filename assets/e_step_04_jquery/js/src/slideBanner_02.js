@@ -5,10 +5,22 @@
 	// 3. 좌,우 버튼을 클릭시 indicator도 같이 처리
 
 
-// 1번기능 - 좌,우 버튼 임시로 숨김
-	// $('.slide_btn').hide();
-
-
+// 좌, 우 버튼 일정 위치에서 사라지거나, 나타나게 만드는 기능을 함수화 처리
+	function BtnEnd(){
+		if(i <= 0){
+			i=0;
+			lBtn.fadeOut();
+			rBtn.fadeIn();
+		}else if(i >= banner_i-1){
+			i=banner_i-1;
+			rBtn.fadeOut();
+			lBtn.fadeIn();
+		}else{
+			lBtn.fadeIn();
+			rBtn.fadeIn();
+		}
+		console.log(i);
+	}
 
 	// indicator클릭시 해당하는 값이 이동
 	var indi = $('.indicator');
@@ -16,58 +28,39 @@
 	var banner = $('#bannerBox');
 	var banner_child = banner.children();
 	var banner_i = banner_child.length;
+	var lBtn = $('.l_btn');
+	var rBtn = $('.r_btn');
+	var i = 0;
+	BtnEnd();
 
 	indi_li.on('click',['button'],function(e) {
 		e.preventDefault();
 		var _this = $(this);
 		var _thisEq = _this.index();
-		// 순서 확인 검증
-		console.log(_thisEq);
+		i = _thisEq;
 
-
-		banner.animate({marginLeft:_thisEq * -100 + '%'});
+		BtnEnd();
+		banner.stop().animate({marginLeft:_thisEq * -100 + '%'});
 		indi_li.eq(_thisEq).addClass('active').siblings().removeClass('active');
-		// _this.addClass('active').siblings().removeClass('active');
 	});
 
-// 2번 좌우 기능을 위해 indicator 임시로 숨김 
-	// indi.hide();
 	// 2. 좌,우 버튼을 클릭해서 배너 이동 처리
-	var lBtn = $('.l_btn');
-	var rBtn = $('.r_btn');
-
-
-	var i = 0;
 	rBtn.on('click',function() {
-		// 클릭시 일정한 값이 계속 누적되도록 처리
-		// -100% -> -200% -> -300% ....
-		i -= 1;
-		// console.log(i);
-		banner.animate({marginLeft: i * 100 +'%'});
-		//내용이 마지막에 위치하면 버튼이 사라지게
-		// if(-i == banner_i-1){ rBtn.fadeOut(); }else{ rBtn.fadeIn(); }
+		i += 1;
 		BtnEnd();
+		banner.stop().animate({marginLeft: -i * 100 +'%'});
+		indi_li.eq(i).addClass('active').siblings().removeClass('active');
 	});
 
 	lBtn.on('click',function() {
-		i += 1;
-		banner.animate({marginLeft: i * 100 +'%'});
-		// if(i == 0){ lBtn.fadeOut(); }else{ rBtn.fadeIn(); }
+		i -= 1;
 		BtnEnd();
+		banner.stop().animate({marginLeft: -i * 100 +'%'});
+		indi_li.eq(i).addClass('active').siblings().removeClass('active');
 	});
 
-// 좌, 우 버튼 클릭시 일정 위치에서 사라지거나, 나타나게 만드는 기능을 함수화 처리
-	function BtnEnd(){
-		if(i == 0){
-			lBtn.fadeOut();
-		}else if(-i == banner_i-1){
-			rBtn.fadeOut();
-		}else{
-			lBtn.fadeIn();
-			rBtn.fadeIn();
-		}
-	}
-	BtnEnd();
+
+
 
 })(this.jQuery);
 
