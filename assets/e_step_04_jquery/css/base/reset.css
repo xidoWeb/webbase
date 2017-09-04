@@ -35,7 +35,7 @@ hgroup, figure, main{	display: block;}
 /* web accessibility */
 a:focus,
 input:focus, button:focus, textarea:focus, select:focus, button:focus{
-	outline: 2px solid  #0af; position: relative; z-index: 1000;}
+	outline: 2px solid  #fa0; position: relative; z-index: 1000;}
 /*:focus{background-color:rgba(255,255,0,0.3); color:#333; position: relative; z-index: 1000;}*/
 
 input[type="text"]:focus, input[type="password"]:focus,
