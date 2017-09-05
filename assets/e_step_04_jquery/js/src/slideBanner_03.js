@@ -24,17 +24,14 @@
 		// }
 		// console.log(i);
 		banner.stop().animate({marginLeft: -i * 100 + '%'});
-		indi_li.eq(i).addClass('active').siblings().removeClass('active');
+		// indi_li.eq(i).addClass('active').siblings().removeClass('active');
 	}
 
 	// indicator클릭시 해당하는 값이 이동
 	var banner = $('#bannerBox');
 	var banner_child = banner.children();
 	var banner_i = banner_child.length;  //  복제하기 전의 갯수를 파악
-	console.log(banner_i);
-
-	var indi = $('.indicator');
-	var indi_li = indi.children();
+	// console.log(banner_i);
 
 	var lBtn = $('.l_btn');
 	var rBtn = $('.r_btn');
@@ -60,6 +57,16 @@
  	banner_child.css({'width':100 / banner_i + '%'});
 
 
+ 	// banner갯수와 동일하게 indicator 처리 및 생성
+ 	var slideBanner = $('#slideBanner');
+ 	slideBanner.append('<ol class="indicator"></ol>');
+ 	var indi = $('.indicator');
+ 	// .indicator 내부에 li값 및 button생성(test)
+ 	indi.append('<li><button><span class="hidden">숨김내용</span></button></li>');
+
+
+	var indi_li = indi.children();
+	
 	// ------------------------------------------------------------------------------------------
 
 // ------------ indicator 클릭
