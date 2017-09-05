@@ -4,6 +4,7 @@
 	#headBox{width: 100%; height: 100px; background-color: #afc;}
 	#slideBanner{width: 100%; height: 600px; position: relative;}
 	  .slide_btn{width: 100%; height: 0; position: absolute; left: 0; top: 50%; margin-top: -2.5rem;}
+		.slide_btn>div{width:5rem; height:5rem; background-color: #0af; color:#fff; text-align: center;
 									line-height: 5rem; font-size: 3rem; font-weight: bold; border-radius:5rem;
 									cursor:pointer; transition:all 300ms ease-in;}
 		.slide_btn>div:hover{background-color:#0df; 

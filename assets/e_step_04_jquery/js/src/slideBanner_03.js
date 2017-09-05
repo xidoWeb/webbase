@@ -62,12 +62,19 @@
  	slideBanner.append('<ol class="indicator"></ol>');
  	var indi = $('.indicator');
  	// .indicator 내부에 li값 및 button생성
- 	// 반복기능을 이용하여 여러개의 li 생성(test2)
+ 	// 반복기능을 이용하여 여러개의 li 생성 정확한 값
  	var j = 0; 
  	for(; j < banner_i; j++){
-	 	indi.append('<li><button><span class="me_hidden">숨김내용</span></button></li>');
+ 		//  배너 내부의 li 각각에 존재하는 속성 title의 값 가져오기
+ 		var banner_t = banner_child.eq(j).attr('title');  
+
+	 	indi.append('<li class="indi_'
+	 		           + j +'"><button type="button"><span class="me_hidden">'
+	 		           + banner_t +'</span></button></li>');
  	}
 
+ 	var indi_width = indi.width();
+ 	indi.css({marginLeft: -indi_width / 2 });
 
 	var indi_li = indi.children();
 	
