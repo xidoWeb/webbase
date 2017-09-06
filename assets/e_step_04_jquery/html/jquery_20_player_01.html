@@ -19,31 +19,44 @@
 			<div id="video">
 				<video muted preload autoplay>
 					<source src="../multi/movie/WebDesignMaster.mp4" type="video/mp4" />
+					<source src="../multi/movie/WebDesignMaster.ogg" type="movie/ogg" />
+					<source src="../multi/movie/WebDesignMaster.webM" type="movie/webM" />
 					<!-- 파일의 이름은 공백없이 영문으로 사용하여 올바르게 동작합니다.  -->
-					<!-- <source src="" type="movie/ogg" /> -->
-					<!-- <source src="" type="movie/webM" /> -->
 					<p>현재 사용하고 계신 브라우저는 동영상을 볼 수 없는 브라우저입니다. <br />
 					   최신 브라우저 또는 <a href="http://google.com/chrome">크롬브라우저</a>를 설치하시고 사용하세요.</p>
 			   <!-- 비디오를 재생할 수 없는 브라우저를 위해 별도의 메시지를 담아주기 -->
 			   <!-- 
-					controls:
-					muted:
-					preload:
-					autoplay:
-					volume:
-					poster:
-
+					controls: 재생기 직접 컨트롤 할 수 있는 기능
+					muted: 무음처리
+					preload: 로딩
+					autoplay: 자동재생
+					volume: 0 ~ 1 볼륨 컨트롤
+					poster: 미리보여주는 이미지(mp3에서는 동작x)
 			    -->
 				</video>
 			</div>
-			<div id="playButton">
+			<div class="playButton">
 				<button type="button" class="play">재생</button>
 				<button type="button" class="pause">일시정지</button>
 			</div>
 		</section>
 		<section id="musicBox">
-			<div id="music"></div>
-			<div id="musicButton"></div>
+			<div id="music">
+				<audio>
+					<source src="../multi/music/01- In Da Club [Explicit].mp3" type="audio/mp3">
+					<!--
+					<source src="../multi/music/01- In Da Club [Explicit].ogg" type="audio/ogg">
+					<source src="../multi/music/01- In Da Club [Explicit].aac" type="audio/aac">
+					<source src="../multi/music/01- In Da Club [Explicit].wav" type="audio/wav">
+					  -->
+					<p>지금 브라우저는 음악이 재생이 안되쥬? 크롬깔아야쥬?!!</p>
+				</audio>
+
+			</div>
+			<div class="playButton">
+				<button type="button" class="play">재생</button>
+				<button type="button" class="pause">일시정지</button>
+			</div>
 		</section>
 		<article id="contentBox"></article>
 		<footer id="footBox"></footer>
@@ -52,3 +65,10 @@
 	<script src="../js/src/player_01.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
