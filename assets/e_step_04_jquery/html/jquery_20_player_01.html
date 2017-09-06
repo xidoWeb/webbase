@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- jquery_20_player_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/normalize.css">
+	<link rel="stylesheet" href="../css/src/player_01.css">
+	<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery/jquery-ui.min.js"></script>
+	<title>multi player</title>
+</head>
+<body>
+	<div id="wrap">
+		<header id="headBox">
+			<h1>music and video test</h1>
+		</header>
+		<section id="videoBox">
+			<div id="video">
+				<video muted preload autoplay>
+					<source src="../multi/movie/WebDesignMaster.mp4" type="video/mp4" />
+					<!-- 파일의 이름은 공백없이 영문으로 사용하여 올바르게 동작합니다.  -->
+					<!-- <source src="" type="movie/ogg" /> -->
+					<!-- <source src="" type="movie/webM" /> -->
+					<p>현재 사용하고 계신 브라우저는 동영상을 볼 수 없는 브라우저입니다. <br />
+					   최신 브라우저 또는 <a href="http://google.com/chrome">크롬브라우저</a>를 설치하시고 사용하세요.</p>
+			   <!-- 비디오를 재생할 수 없는 브라우저를 위해 별도의 메시지를 담아주기 -->
+			   <!-- 
+					controls:
+					muted:
+					preload:
+					autoplay:
+					volume:
+					poster:
+
+			    -->
+				</video>
+			</div>
+			<div id="playButton">
+				<button type="button" class="play">재생</button>
+				<button type="button" class="pause">일시정지</button>
+			</div>
+		</section>
+		<section id="musicBox">
+			<div id="music"></div>
+			<div id="musicButton"></div>
+		</section>
+		<article id="contentBox"></article>
+		<footer id="footBox"></footer>
+	</div>
+
+	<script src="../js/src/player_01.js"></script>
+</body>
+</html>

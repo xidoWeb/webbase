@@ -130,11 +130,15 @@
 - [event].pagex   : 이벤트의 기능을 받아 처리되는 X 좌표처리
 - [event].pagey   : 이벤트의 기능을 받아 처리되는 Y 좌표처리
 
+## 15. slideBanner _02
+- clone()
 
 
+## 16. movie & music player
+- play()  : 재생
+- pause() : 정지(일시정지)
 
-
-
+- 파일을 바로 재생, 정지는 없다. :배열값이 사용된다는것
 
 
 

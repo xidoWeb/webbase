@@ -82,9 +82,8 @@
 		i+=1;
 		if(i >= banner_i){
 			i = 1;
-			banner.css({'marginLeft':0}).animate({marginLeft: -100 + '%'});
+			banner.css({'marginLeft':0}).animate({marginLeft: -i * 100 + '%'});
 			// indi_li.eq(i).addClass('active').siblings().removeClass('active');
-			IndiI(i);
 		}else{
 			banner.stop().animate({marginLeft: -i * 100 + '%'});
 		}
@@ -107,7 +106,7 @@
 	});
 
 // 최종 indicator 처음내용 숨기기 및 배너영역 처리
-indi_li.eq(0).hide();
-slideBanner.css({'overflow':'hidden'});
+// indi_li.eq(0).hide();
+// slideBanner.css({'overflow':'hidden'});
 
 })(this.jQuery);
