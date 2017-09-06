@@ -7,7 +7,7 @@
 
 	var vi = $('#videoBox');
 	var mu = $('#musicBox');
-	
+
 	var video = vi.find('video')[0];
 	var audio =mu.find('audio')[0];
 
@@ -28,14 +28,23 @@
 	video.pause();
 });
 // ---------------------------------------
+
+ muPause.hide();
+
  muPlay.on('click',function(e) {
  	e.preventDefault();
  	audio.play();
+ 	// 상황에 따른 버튼 보이기와 숨기기
+ 	muPause.show();
+ 	muPlay.hide();
  });
 
  muPause.on('click',['button'],function(e) {
 	e.preventDefault();
 	audio.pause();
+	// 상황에 따른 버튼 보이기와 숨기기
+	muPause.hide();
+ 	muPlay.show();
 });
 
 
