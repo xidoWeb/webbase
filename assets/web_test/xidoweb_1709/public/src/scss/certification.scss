@@ -1,0 +1,63 @@
+// certification.scss
+@import "./bin/setting";
+
+h1{padding: 1px; background-color:$primary; color:$white; font-size: 2em;}
+#certification{width: 450px; height: 365px; margin: 0 auto; box-shadow:0.1em 0.1em 0.1em $deepGray;
+  h2{width: 100%; height: 73px; padding:28px 38px; box-sizing: border-box; color:$white; font-size:1.375rem; background-color:$main; position: relative; overflow: hidden;
+    background-image:linear-gradient(60deg, $main 80%,lighten($main,20%) 80%,lighten($main,10%));}
+  //  .color_box{width: 150px; height: 150px;background-color:lighten($main, 20%);
+  //    display: block; position: absolute; top: -50px; right: -50px; transform: rotate(-30deg);}
+  .certifi_box{width: 100%; height: 292px; background-color:$white; padding:18px 38px; box-sizing: border-box;
+      >h3{font-size:1.125rem; margin-bottom:0.5rem;}
+      >p{font-size: 0.875rem; margin-bottom:0.75rem;}
+      >form{width: 100%; height: auto;}
+      fieldset{width: 100%; box-sizing: border-box;}
+      .telecom{height: auto; margin-bottom:0.875rem; border-bottom:1px solid $deepGray;
+        >div{width: 100%; height: auto; padding:20px 10px; box-sizing: border-box;
+          background-color:$lightGray; margin-bottom: 0.3rem;}// div
+        dl{width: 100%; height: 20px;
+            dt{width:70px; height: 100%; float: left; font-size:0.875rem; letter-spacing:-0.025rem}
+            dd{width: 70px; height: 100%; margin-left:22px; float: left;  position: relative;}
+            dd::before{content:"-"; position: absolute; left: -20%;}
+            dd:first-of-type::before{display: none;}
+          }//dl
+        .num{margin-bottom: 16px;
+          select{width: 100%; height: 100%; border:1px solid $deepGray;}
+          input{width: 100%; height: 100%; border:1px solid $deepGray;
+            text-indent:0.5rem;}
+        }// .num
+        .tel{
+          input{position: absolute; z-index:-100;}
+          label>i{margin-right: 0.3em; transition:all 0.2s;}
+          input:checked + label>i{color:$main; font-size: 1.2em;}
+          input:focus + label>i{outline:3px solid $point;}
+            div{background-color:rgba(200,40,10,0.5);}
+          // :after활용하는 방법
+          span{float: right;}
+          [for="skt"]::after{content:"sk"; color:$deepGray; display:inline-block;                    text-transform:uppercase;}
+          [for="ktt"]::after{content:"kt"; color:$deepGray; display:inline-block;                    text-transform:uppercase;}
+          [for="lgt"]::after{content:"lg"; color:$deepGray; display:inline-block;                    text-transform:uppercase;}
+          }// .tekl
+        }// .telecom
+      .btn{height: 40px; padding: 0 90px;
+         button{width: 70px; height: 40px;  font-size:1.375rem;}
+         [type="submit"]{float: left; background-color:$main; color:$white;}
+         [type="reset"]{float: right; background-color:$lightGray; color:$deepGray;}
+      }//.btn
+  }//.certifi_box
+}// #certification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

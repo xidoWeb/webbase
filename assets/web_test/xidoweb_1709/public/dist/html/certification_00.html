@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/certification.css">
+  <title>xido web</title>
+</head>
+<body>
+  <h1>certification</h1>
+  <div id="certification">
+    <h2>정보 인증 서비스 <!-- <span class="color_box"></span> --></h2>
+    <div class="certifi_box">
+      <h3>휴대폰 인증</h3>
+
+      <p>입력하신 정보는 암호화 처리되며, <br>  어떠한 비용도 발생하지 않습니다.</p>
+      <form action="" method="post">
+        <fieldset class="telecom">
+          <div>
+            <dl class="num">
+              <dt>
+                <label for="phoneNum">휴대폰 번호
+                  <span class="hidden">를 입력하세요.</span>
+                </label>
+              </dt>
+              <dd><select name="" id="phoneNum">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="012">012</option>
+                <option value="013">013</option>
+                <option value="014">014</option>
+                <option value="015">015</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+                <option value="0505">0505</option>
+              </select></dd>
+              <dd>
+                <input type="tel" maxlength="4" name="" id="middleNum" value="">
+                <label for="middleNum" class="hidden">
+                  휴대폰 번호 가운데 셋 또는 네자리를 입력하세요.
+                </label>
+              </dd>
+              <dd>
+                <input type="tel" maxlength="4" name="" id="lastNum" value="">
+                <label for="lastNum" class="hidden">
+                  휴대폰 마지막 네자리를 입력하세요.
+                </label>
+              </dd>
+            </dl>
+            <dl class="tel">
+              <dt>이동 통신사</dt>
+              <dd>
+                <input type="radio" name="telecom" value="sk" id="skt">
+                <label for="skt"><i class="fa fa-check"></i>
+                  <span class="hidden">에스케이 텔레콤</span></label>
+              </dd>
+              <dd>
+                <input type="radio" name="telecom" value="kt" id="ktt">
+                <label for="ktt"><i class="fa fa-check"></i>
+                  <span class="hidden">케이티 텔레콤</span></label>
+              </dd>
+              <dd>
+                <input type="radio" name="telecom" value="lg" id="lgt">
+                <label for="lgt"><i class="fa fa-check"></i>
+                  <span class="hidden">엘지 유 플러스 팔로우팔로우미</span></label>
+              </dd>
+            </dl>
+          </div>
+          <input type="checkbox" name="check" value="signCheck" id="check">
+          <label for="check">
+            개인정보 제공 및 활용에 동의합니다.
+          </label>
+        </fieldset>
+        <fieldset class="btn">
+            <button type="submit" name="ok">확인</button>
+            <button type="reset" name="reset">취소</button>
+        </fieldset>
+      </form>
+    </div><!--// .certifi_box -->
+  </div><!--// #certification -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->

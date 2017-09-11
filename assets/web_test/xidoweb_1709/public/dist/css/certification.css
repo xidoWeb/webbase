@@ -1,0 +1,128 @@
+h1 {
+  padding: 1px;
+  background-color: #333;
+  color: #fff;
+  font-size: 2em; }
+
+#certification {
+  width: 450px;
+  height: 365px;
+  margin: 0 auto;
+  box-shadow: 0.1em 0.1em 0.1em #575757; }
+  #certification h2 {
+    width: 100%;
+    height: 73px;
+    padding: 28px 38px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.375rem;
+    background-color: #f06;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(60deg, #f06 80%, #ff66a3 80%, #ff3385); }
+  #certification .certifi_box {
+    width: 100%;
+    height: 292px;
+    background-color: #fff;
+    padding: 18px 38px;
+    box-sizing: border-box; }
+    #certification .certifi_box > h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem; }
+    #certification .certifi_box > p {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem; }
+    #certification .certifi_box > form {
+      width: 100%;
+      height: auto; }
+    #certification .certifi_box fieldset {
+      width: 100%;
+      box-sizing: border-box; }
+    #certification .certifi_box .telecom {
+      height: auto;
+      margin-bottom: 0.875rem;
+      border-bottom: 1px solid #575757; }
+      #certification .certifi_box .telecom > div {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        background-color: #cfcfcf;
+        margin-bottom: 0.3rem; }
+      #certification .certifi_box .telecom dl {
+        width: 100%;
+        height: 20px; }
+        #certification .certifi_box .telecom dl dt {
+          width: 70px;
+          height: 100%;
+          float: left;
+          font-size: 0.875rem;
+          letter-spacing: -0.025rem; }
+        #certification .certifi_box .telecom dl dd {
+          width: 70px;
+          height: 100%;
+          margin-left: 22px;
+          float: left;
+          position: relative; }
+        #certification .certifi_box .telecom dl dd::before {
+          content: "-";
+          position: absolute;
+          left: -20%; }
+        #certification .certifi_box .telecom dl dd:first-of-type::before {
+          display: none; }
+      #certification .certifi_box .telecom .num {
+        margin-bottom: 16px; }
+        #certification .certifi_box .telecom .num select {
+          width: 100%;
+          height: 100%;
+          border: 1px solid #575757; }
+        #certification .certifi_box .telecom .num input {
+          width: 100%;
+          height: 100%;
+          border: 1px solid #575757;
+          text-indent: 0.5rem; }
+      #certification .certifi_box .telecom .tel input {
+        position: absolute;
+        z-index: -100; }
+      #certification .certifi_box .telecom .tel label > i {
+        margin-right: 0.3em;
+        transition: all 0.2s; }
+      #certification .certifi_box .telecom .tel input:checked + label > i {
+        color: #f06;
+        font-size: 1.2em; }
+      #certification .certifi_box .telecom .tel input:focus + label > i {
+        outline: 3px solid #ff0; }
+      #certification .certifi_box .telecom .tel div {
+        background-color: rgba(200, 40, 10, 0.5); }
+      #certification .certifi_box .telecom .tel span {
+        float: right; }
+      #certification .certifi_box .telecom .tel [for="skt"]::after {
+        content: "sk";
+        color: #575757;
+        display: inline-block;
+        text-transform: uppercase; }
+      #certification .certifi_box .telecom .tel [for="ktt"]::after {
+        content: "kt";
+        color: #575757;
+        display: inline-block;
+        text-transform: uppercase; }
+      #certification .certifi_box .telecom .tel [for="lgt"]::after {
+        content: "lg";
+        color: #575757;
+        display: inline-block;
+        text-transform: uppercase; }
+    #certification .certifi_box .btn {
+      height: 40px;
+      padding: 0 90px; }
+      #certification .certifi_box .btn button {
+        width: 70px;
+        height: 40px;
+        font-size: 1.375rem; }
+      #certification .certifi_box .btn [type="submit"] {
+        float: left;
+        background-color: #f06;
+        color: #fff; }
+      #certification .certifi_box .btn [type="reset"] {
+        float: right;
+        background-color: #cfcfcf;
+        color: #575757; }

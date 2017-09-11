@@ -1,0 +1,33 @@
+/* base.css */
+
+/* ir기법적용 */
+.hidden{width: 0; height: 0; display: block; overflow: hidden;}
+@mixin hidden(){width: 0; height: 0; display: block; overflow: hidden;}
+
+.hidden_wrap a{width:100%; height:100%; display:block;
+    background-repeat:no-repeat; background-position:0 0;}
+.hidden_wrap a>span{width: 0; height: 0; display: block; overflow: hidden;}
+
+@mixin imgWrap($w:100%, $h:100%, $b:block, $r:no-repeat, $p:0 0, $u:$url, $f:"img.jpg"){
+  a{width:$w; height:$h; display:$b;
+    background-repeat:$r; 
+    background-position:$p;
+    background-image: url($u + $f);
+    >span{
+      width: 0; height: 0; display: block; overflow: hidden;
+    }// span
+  }// a
+}// @mixin imgwrap()
+
+
+/* clear:both 적용 */
+.clearfix:after, .cf:after{content:" "; display: block; clear: both;}
+
+/* table:sett */
+table{border:2px solid #575757; border-left:0; border-right:0; }
+thead{background-color:#cfcfcf;} 
+tbody td{border-top:1px solid #575757; vertical-align:middle; text-indent:3px;}
+tbody th{background-color:#cfcfcf;}
+
+/* nav last, first margin */
+.nav_fr li:first-child, .nav_la li:last-child{margin: 0; padding: 0; border:0;}

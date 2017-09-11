@@ -1,0 +1,75 @@
+/* main_addBanner.css ----------------------------------------------*/
+#addBanner{width: 100%; height: 430px; background-color: #cfcfcf; overflow:hidden;
+  position: relative;}
+.ad_btn{width: 100%; height:0; position:absolute; top: 50%; left: 0;
+  box-sizing: border-box; padding:0 10px;}
+.ad_btn>div{width: 59px; height: 82px; margin-top: -37px;
+  cursor:pointer; background-repeat: no-repeat; background-position:center;}
+
+$url:'../img/main/banner/';
+.ad_btn>.ad_btn_left{float: left; background-image:url($url + "left_btn.png");
+                   &:hover{background-image:url($url + "left_btn_on.png")}  }
+.ad_btn>.ad_btn_right{float: right; background-image:url($url + "right_btn.png");
+                   &:hover{background-image:url($url + "right_btn_on.png")}  }
+
+
+.indicator{width:auto; height: 10px; position: absolute; right:100px; bottom:30px;}
+.indicator>li{width:auto; min-width: 16px; height: 16px; margin-right: 10px; 
+  float: left; background-color: lighten($main, 30%); border-radius:8px;
+  
+  &:hover{background-color:$main;}
+  >a{width:16px; height:100%; transition:all 0.5s;}
+  >a:focus{width:60px; background-color:$main; border-radius:8px; display: block;}
+}
+.indicator>li:last-child{margin-right: 0;}
+.indicator>li>a{}
+.indi_1{}
+.indi_2{}
+.indi_3{}
+.indi_4{}
+.indi_5{}
+
+.banner_box{width:500%; height:inherit; margin-left: -100%;}
+.banner_box>li{width:20%; height: 100%; float: left; font-size: 3em;
+  background-repeat:no-repeat; background-position:center bottom;
+  // background-size: cover | contain | 100%;
+  // cover: 해당하는 태그에 꽉차게 만드는 기능
+  // contain: 해당하는 영역에 이미지 전체를 보이게하는기능
+  // 100%: 기본은 가로를 기준으로 100% 꽉차게 만드는 기능
+  // 만약 가로/세로 모두 비율조정시에는 (가로% 세로%) 사용
+  background-size:cover;  
+  }
+// 1. 간단하게 변수지정사용.
+//.banner_1{background-image:url($url + "banner_04.png");}
+//.banner_2{background-image:url($url + "banner_05.png");}
+//.banner_3{background-image:url($url + "banner_02.png");}
+//.banner_4{background-image:url($url + "banner_03.png");}
+//.banner_5{background-image:url($url + "banner_01.png");}
+
+// 2. @for문 사용
+//$banner: "banner_01.png",  "banner_02.png", "banner_03.png", "banner_04.png", "banner_05.png";
+//
+//@for $i from 1 through length($banner){
+////  .banner_1{background-image:url($url + "banner_01.png");}
+//  .banner_#{$i}{background-image:url($url + nth($banner, $i) );}
+//}
+
+// 3. @for문을 이미지에도 적용!!
+@for $j from 1 through 5{
+  .banner_#{$j}{background-image: url($url + "banner_0"+$j+".png");}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

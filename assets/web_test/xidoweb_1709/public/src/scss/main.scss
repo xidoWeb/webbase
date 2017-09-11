@@ -1,0 +1,13 @@
+/* main.css */
+
+@import "bin/_setting";
+@import "bin/_reset";
+@import "bin/_base";
+
+/* #wrap ----------------------------------------------*/
+#wrap{width:960px; height:auto; margin: 0 auto;}
+
+@import "src/_headBox";
+@import "src/_main_addBanner";
+@import "src/_main_content";
+@import "src/_footBox";

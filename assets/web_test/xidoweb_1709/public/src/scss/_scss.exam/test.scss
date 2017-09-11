@@ -1,0 +1,85 @@
+// 1 ---------------------------------
+/*
+.apple{background-color:#a80;}
+.ms{background-color:#b80;}
+.linux{background-color:#c80;}
+.book{background-color:#d80;}
+.epub{background-color:#d8a;}
+.myway{background-color:#d87;}
+*/
+
+$more:(
+  apple:#a80,
+  ms:#b80,
+  linux:#c80,
+  book:#d80,
+  epub:#d8a,
+  myway:#d87
+);
+
+@each  $what,$color in $more{
+  .#{$what}{background-color:#{$color}; display: block; width: 100%;}
+}
+
+// 2--------------------------
+//----------------------------------
+//.box>li:nth-child(1){background-color:#f00; color:#097}
+//.box>li:nth-child(2){background-color:#0f9; color:#097}
+//...
+//.box>li:nth-child(7){background-color:#123; color:#097}
+
+$bgc:#f00, #0f9, #ac0, #062, #111, #222, #333;
+$co:#097, #000, #fff, #ccc, #daa, #aaa, #fda;
+//$co:#097;
+
+@for  $j  from 1 through  length($bgc) { 
+  .box>li:nth-child(#{$j}){background-color:nth($bgc,$j); 
+                           color:nth($co,$j);}  
+}
+
+
+/* 3 -----------------------------------------------*/
+
+.test > li:nth-child(1){color:#0af;}
+.test > li:nth-child(10){color:#9af;}  //10개
+.test > li:nth-child(1):hover{color:#9af;}
+.test > li:nth-child(10):hover{color:#0af;} //10개
+
+$test:#111, #222, #333, #444, #555, #666, #777, #888, #999;
+$test-on:#fff, #ccc, #fff, #ccc, #fff, #ccc, #fff, #ccc, #fff, #ccc;
+
+@mixin testif($type, $t:$test, $on:$test-on, $over:false){
+    @for $i from 1 through length($t){
+      #{$type} > li:nth-child(#{$i}){color:nth($t, $i);}
+      @if $over == true{ 
+        #{$type}> li:nth-child(#{$i}):hover{color:nth($on, $i);}
+      } // @if
+  }// @for
+}// testif()
+
+@include testif('.test', $over:true);
+
+$testBox:#111, #222, #333, #444, #555, #666; 
+@include testif('.testBox', $t:$testBox);
+
+
+
+//$test:;
+//$test-on:;
+
+//@mixin testif(){}
+
+//@include testif(){}
+//@include testif(){}
+
+
+
+
+
+
+
+
+
+
+
+

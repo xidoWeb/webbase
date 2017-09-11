@@ -1,0 +1,45 @@
+@import "./common";
+
+// design
+h1{padding: 1em; background-color:$main;
+color:$white; font-size: 1.3em;}
+
+
+.login_box{  width: 250px;  height:120px;
+  position: relative; background-color: #afc;
+  margin: 0 auto;
+  >.close_btn{width: 100%;height: 20px;    background-color:$lightGray;
+  position: absolute; bottom: 0; left: 0;
+    >button{float: right; background-color: transparent; height: 100%; width: auto;
+      >.arr{display: inline-block; width: 5px; height: 0; border: 7px solid transparent;
+            border-bottom-color:$deepGray; box-sizing: border-box; margin-right: 0.5em; }
+    }// button
+  }//.close_btn
+  >form{width: 100%;    height:100px;  background-color: $deepGray;
+  padding:24px 14px 0; box-sizing: border-box;
+    >fieldset{width: 100%;
+        &:first-of-type{height: 50px;
+            // @import "./src/user";
+          .user{width:70%; height:100%; float: left;}
+          .user>input{width:100%; height:22px; margin-bottom: 6px; border: 0;
+            text-indent:0.5em;}
+          .user>#userPwd{margin-bottom: 0;}
+
+          .btn{width:20%; height:100%; float: right;}
+          .btn>input{width: 100%; height: 100%; background-color:$main;
+            font-size:.7em; word-spacing:-0.25em; text-transform: uppercase;
+            color:$white;}
+          label{width: 0; height: 0; overflow: hidden; display: block;}
+        }// &:first
+        &:last-of-type{height: 26px;
+          // .remember, .find
+          >div{color:$lightGray; font-size:0.7em; line-height: 26px;
+           >a{color:inherit;}
+         }// div
+          .remember{float: left;}
+          .find{float: right;}
+        }// &:last
+      legend{width: 0; height: 0; overflow: hidden; color:#fff;}
+    }// fieldset
+  }//form
+}// .login_box

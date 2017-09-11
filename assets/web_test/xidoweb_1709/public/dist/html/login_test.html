@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>Document</title>
+
+  <style>
+    form{width: 500px; height: auto;}
+    fieldset{width: 100%; height:inherit; background-color: #afc; padding:0.3em;}
+    .input_box{width: 50%; height: auto; float: left;}
+    .input_box>span{display: block; float: left; width:50px; height: 30px;}
+    .input_box>input{float: left; width:200px; height: 30px;}
+    .btn_box{width: 30%; height: auto; float: right;}
+    .btn_box>input{width: 100%; height: 60px; background-color:#f03; color:#fff;}
+    span{text-transform:uppercase;}
+  </style>
+</head>
+<body>
+  <h1>form login test</h1>
+  <form action="" method="post">
+    <fieldset>
+      <div class="input_box">
+        <legend class="hidden">로그인 만들기</legend>
+        <label for="user" class="hidden">아이디를 입력하세요.</label>
+        <span>id</span><input type="text" name="user" id="user" value="">
+        <label for="pwd" class="hidden">비밀번호를 입력하세요.</label>
+        <span>pw</span><input type="text" name="pwd" id="pwd" value="">
+      </div>
+      <div class="btn_box">
+        <label for="loginBtn" class="hidden">로그인 버튼</label>
+        <input type="submit" name="" id="loginBtn" value="log in">
+      </div>
+    </fieldset>
+  </form>
+
+</body>
+</html>

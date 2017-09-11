@@ -1,0 +1,51 @@
+/* main_content.css ----------------------------------------------*/
+
+#contentBox{width: 100%; height:auto; padding:20px 30px; box-sizing:border-box; background-color: #f06;}
+
+  .content_title{width:100%; height:22px; margin-bottom:18px;
+    > h3{width:50px; height:inherit; float: left; margin-right: 10px; color:$white} // h3
+    > .content_inner_line{width:calc(100% - 92px); height: 15px; float: left; border-bottom:2px solid #fff;}// .content_inner_line
+    > .more_view{width: 22px; height:inherit; float: right; margin-left:10px; font-size:1.375rem; color:$white; transition:all 0.3s;
+    
+      &:hover{transform:rotate(180deg);
+       a{color:inherit;}
+      } 
+    }// .more_view
+  }// .content_title
+
+$url:"../img/main/article/";
+  .content_p{width:100%; height:auto;}
+  .content_p::after{content:" "; display: block; clear: both;}
+    .forum_link{width: 380px; height:280px; float: left; 
+      background-image:url($url + "article_box_01.png"); padding:20px 50px 20px 200px; box-sizing: border-box; 
+      
+      >li{width: 100%; height:40px; color:$white; font-size:1em; font-weight: bold; padding-top:20px; box-sizing: border-box;
+        border-bottom:1px solid $white;}
+    }// .forum_link
+
+    .today_people{width:calc(100% - 380px); height:280px; float: right;
+      
+      .people_img{width: 240px; height: 100%; float: left; 
+        overflow: hidden;
+        >img{width:auto; height:100%;}
+      }// .people_img
+      .people_nar{width:calc(100% - 240px); height: 100%; 
+        float: right; overflow: hidden;
+        box-sizing: border-box; padding: 0.5em; font-size: .985em;
+        background-image:linear-gradient(120deg, $main 60%, darken($main, 50%) 95%);
+        
+        >p{width: 100%; height: 100%; color:$white;          
+          overflow-y: scroll; padding-right:3em;
+        }// p
+        
+      }// .people_nar
+      
+    }// .today_people
+
+
+
+
+
+
+
+

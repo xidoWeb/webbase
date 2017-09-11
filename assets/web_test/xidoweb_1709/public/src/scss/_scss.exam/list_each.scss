@@ -1,0 +1,100 @@
+$test:#acf;
+h1{background-color:$test;}
+
+// -------------------------------------------
+$green:(nh:#f00, mj:#0f9, sj:#ac0, ho:#062);
+
+@each  $people, $color in $green{
+  .green_#{$people}{color:$color;}
+}
+// -------------------------------------------
+
+$list-position-on:0 bottom, -75px bottom,-139px bottom, -200px bottom;
+$list-position:0 5px, -75px 5px,-139px 5px, -200px 5px;
+
+//p{color:nth($list,3);} //문제
+//p{color: #ac0;} //답
+
+//2
+@for $i from 1 through length($list){
+.box>li:nth-child(#{$i}){color:nth($list,$i);}
+.box>li:nth-child(#{$i})>a{background-position:nth($list-position,$i);}
+.box>li:nth-child(#{$i}):hover>a{background-position:nth($list-position-on,$i);}
+}
+
+
+
+$list:(#f00, #0f9, #ac0, #062, #111, #222, #333, #444, #555, #666, #777, #123);
+@for $i from 1 through length($list){
+.box>li:nth-child(#{$i}){background-color:nth($list,$i);}
+}
+/* ----------------------------- */
+
+
+@mixin ifbox($hover:false){
+  li{background-color:#fa0;}
+  @if $hover == true {
+    li:hover{background-color:#f0a;}
+  }
+}
+@include ifbox(true);
+
+
+
+
+
+
+
+
+
+/* ---------------------------- */
+
+$ifList: #0af, #05f, #a0f, #49f, #38f, #acd, #c83, #d96;
+$ifList-on: #00f, #00f, #a0f, #40f, #30f, #a0d, #c03, #d06;
+
+@mixin listbox($type, $list:$ifList, $on:$ifList-on, $hover:false){
+  @for $i from 1 through length($list){
+    #{$type}>li:nth-child(#{$i}){color:nth($list,$i);}
+    @if $hover == true{ 
+    #{$type}>li:nth-child(#{$i}):hover{color:nth($on,$i);}
+    } //@if
+  } //@for
+} // listbox()
+
+@include listbox($type:'.box', $hover:true);
+//답
+.box>li:nth-child(1){color:#0af;}
+.box>li:nth-child(2){color:#05f;}
+.box>li:nth-child(3){color:#a0f;}
+.box>li:nth-child(8){color:#d96;}
+
+.box>li:nth-child(1):hover{color: #00f;}
+
+
+
+
+/* ---------------------------------- */
+//
+//$ifList-on: #00f, #00f, #a0f, #40f, #30f, #a0d, #c03, #d06;
+//@include listbox($type:'#test' , $hover:true);
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

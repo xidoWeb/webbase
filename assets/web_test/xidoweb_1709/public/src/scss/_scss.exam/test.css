@@ -1,0 +1,152 @@
+/*
+.apple{background-color:#a80;}
+.ms{background-color:#b80;}
+.linux{background-color:#c80;}
+.book{background-color:#d80;}
+.epub{background-color:#d8a;}
+.myway{background-color:#d87;}
+*/
+.apple {
+  background-color: #a80;
+  display: block;
+  width: 100%; }
+
+.ms {
+  background-color: #b80;
+  display: block;
+  width: 100%; }
+
+.linux {
+  background-color: #c80;
+  display: block;
+  width: 100%; }
+
+.book {
+  background-color: #d80;
+  display: block;
+  width: 100%; }
+
+.epub {
+  background-color: #d8a;
+  display: block;
+  width: 100%; }
+
+.myway {
+  background-color: #d87;
+  display: block;
+  width: 100%; }
+
+.box > li:nth-child(1) {
+  background-color: #f00;
+  color: #097; }
+
+.box > li:nth-child(2) {
+  background-color: #0f9;
+  color: #000; }
+
+.box > li:nth-child(3) {
+  background-color: #ac0;
+  color: #fff; }
+
+.box > li:nth-child(4) {
+  background-color: #062;
+  color: #ccc; }
+
+.box > li:nth-child(5) {
+  background-color: #111;
+  color: #daa; }
+
+.box > li:nth-child(6) {
+  background-color: #222;
+  color: #aaa; }
+
+.box > li:nth-child(7) {
+  background-color: #333;
+  color: #fda; }
+
+/* 3 -----------------------------------------------*/
+.test > li:nth-child(1) {
+  color: #0af; }
+
+.test > li:nth-child(10) {
+  color: #9af; }
+
+.test > li:nth-child(1):hover {
+  color: #9af; }
+
+.test > li:nth-child(10):hover {
+  color: #0af; }
+
+.test > li:nth-child(1) {
+  color: #111; }
+
+.test > li:nth-child(1):hover {
+  color: #fff; }
+
+.test > li:nth-child(2) {
+  color: #222; }
+
+.test > li:nth-child(2):hover {
+  color: #ccc; }
+
+.test > li:nth-child(3) {
+  color: #333; }
+
+.test > li:nth-child(3):hover {
+  color: #fff; }
+
+.test > li:nth-child(4) {
+  color: #444; }
+
+.test > li:nth-child(4):hover {
+  color: #ccc; }
+
+.test > li:nth-child(5) {
+  color: #555; }
+
+.test > li:nth-child(5):hover {
+  color: #fff; }
+
+.test > li:nth-child(6) {
+  color: #666; }
+
+.test > li:nth-child(6):hover {
+  color: #ccc; }
+
+.test > li:nth-child(7) {
+  color: #777; }
+
+.test > li:nth-child(7):hover {
+  color: #fff; }
+
+.test > li:nth-child(8) {
+  color: #888; }
+
+.test > li:nth-child(8):hover {
+  color: #ccc; }
+
+.test > li:nth-child(9) {
+  color: #999; }
+
+.test > li:nth-child(9):hover {
+  color: #fff; }
+
+.testBox > li:nth-child(1) {
+  color: #111; }
+
+.testBox > li:nth-child(2) {
+  color: #222; }
+
+.testBox > li:nth-child(3) {
+  color: #333; }
+
+.testBox > li:nth-child(4) {
+  color: #444; }
+
+.testBox > li:nth-child(5) {
+  color: #555; }
+
+.testBox > li:nth-child(6) {
+  color: #666; }
+
+/*# sourceMappingURL=test.css.map */

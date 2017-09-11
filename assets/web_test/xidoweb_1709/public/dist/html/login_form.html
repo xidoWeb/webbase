@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/login_form.css">
+  <title>login</title>
+</head>
+<body>
+  <h1>login area</h1>
+  <div class="login_box">
+    <div class="close_btn">
+      <button type="button"><i class="arr"></i>닫기</button>
+    </div>
+    <form action="" method="post">
+      <fieldset>
+        <legend>로그인 내용입력</legend>
+        <div class="user">
+          <input type="text" name="userName" id="userName" value="" placeholder="ID 입력하기"/>
+          <input type="password" name="userPwd" id="userPwd" value="" placeholder="PW 입력하기"/>
+
+          <label for="userName">사용자의 계정 아이디를 입력하세요.</label>
+          <label for="userPwd">사용자 비밀번호를 입력하세요.</label>
+        </div>
+        <div class="btn">
+          <input type="submit" name="loginBtn" id="loginBtn" value="log in" />
+          <label for="loginBtn">로그인 버튼입니다. 로그인하려면 엔터키를 누르세요.</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>ID 및 password 세팅</legend>
+        <div class="remember">
+          <input type="checkbox" name="idCheck" id="idCheck" value="rememberID">
+          <label for="idCheck">ID기억하기</label>
+        </div>
+        <div class="find">
+          <a href="#">ID찾기</a> | <a href="#">비밀번호찾기</a>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
