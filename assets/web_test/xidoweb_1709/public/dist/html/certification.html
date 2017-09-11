@@ -26,8 +26,18 @@
 				<fieldset>
 					<legend>개인 휴대폰 정보</legend>
 					<dl>
-						<dt>휴대폰 번호</dt>
-						<dd></dd>
+						<dt>
+							<label for="firstNum">
+								<span class="me_hidden">사용자의</span>
+								휴대폰 번호
+								<span class="me_hidden">를 입력하세요.</span>
+							</label>
+						</dt>
+						<dd>
+							<select name="firstNum" id="firstNum">
+								<!-- option 내용을 jQuery를 이용하여 생성 -->
+							</select>
+						</dd>
 						<dd>
 							<label for="middleNum" class="me_hidden">고객의 휴대폰번호 가운데 셋 또는 네자리를 입력하세요.</label>
 							<input type="text" max-length="4" id="middleNum" name="middleNum" value="" />
@@ -57,6 +67,18 @@
 			</form>	
 		</div>
 	</div>
+
+
+	<script>
+		(function($) {
+			var  firstName = $('#firstNum');
+			for(var i=0; i<10; i++){
+				firstName.append('<option value="01' + i 
+													+'">01'+ i 
+													+'</option>');
+			}
+		})(this.jQuery);
+	</script>
 </body>
 </html>
 

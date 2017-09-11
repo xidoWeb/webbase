@@ -26,13 +26,15 @@
 					background-color:#fff;font-size: 0.9em; letter-spacing:-0.025em;}
 	#certivate>form dl>dd{width:4.75rem; height:1.375rem; float:left; margin-right: 0.625rem;
 					background-color:#fff; position: relative;
-					&:before{content:"-"; position: absolute; top:0; left:-0.5em;}
+					&:before{content:"-"; position: absolute; top:0; left:-0.2em;}
 					&:last-of-type{margin-right: 0;}
 					&:first-of-type:before{display: none;}
 
 					>input{width:4.375rem; height: 100%; border:1px solid $deepGray;
 								box-sizing:border-box; text-indent:0.35rem; float: right;}
 						} // dd
+		#firstNum{width: 100%; height: 100%; box-sizing:border-box; 
+						border:1px solid $deepGray; background-color: #0aa;}
 
 // ---------------------------------------------------------
 	#certivate>form>fieldset:last-of-type{width: 100%; height: auto;}
