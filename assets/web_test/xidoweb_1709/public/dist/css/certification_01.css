@@ -66,10 +66,12 @@ header, article, aside, footer, nav, figure, main, srcset {
 
 /* base.css */
 /* ir기법적용 */
-.hidden {
+.me_hidden {
   width: 0;
   height: 0;
   display: block;
+  position: absolute;
+  z-index: -100;
   overflow: hidden; }
 
 .hidden_wrap a {
@@ -150,8 +152,7 @@ tbody th {
 
 #certivate > form {
   width: 100%;
-  height: auto;
-  background-color: #ffddaa; }
+  height: auto; }
 
 #certivate > form > fieldset:first-of-type {
   width: 100%;
@@ -188,9 +189,24 @@ tbody th {
   height: 1.375rem;
   float: left;
   margin-right: 0.625rem;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
+  #certivate > form dl > dd:before {
+    content: "-";
+    position: absolute;
+    top: 0;
+    left: -0.5em; }
   #certivate > form dl > dd:last-of-type {
     margin-right: 0; }
+  #certivate > form dl > dd:first-of-type:before {
+    display: none; }
+  #certivate > form dl > dd > input {
+    width: 4.375rem;
+    height: 100%;
+    border: 1px solid #575757;
+    box-sizing: border-box;
+    text-indent: 0.35rem;
+    float: right; }
 
 #certivate > form > fieldset:last-of-type {
   width: 100%;

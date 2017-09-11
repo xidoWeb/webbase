@@ -67,10 +67,12 @@ header, article, aside, footer, nav, figure, main, srcset {
 
 /* base.css */
 /* ir기법적용 */
-.hidden {
+.me_hidden {
   width: 0;
   height: 0;
   display: block;
+  position: absolute;
+  z-index: -100;
   overflow: hidden; }
 
 .hidden_wrap a {
