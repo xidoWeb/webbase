@@ -35,6 +35,14 @@ table, th, td {
   border-collapse: collapse; }
 
 /* set_2: form */
+form, fieldset, legend {
+  border: 0; }
+
+legend {
+  width: 0;
+  height: 0;
+  overflow: hidden; }
+
 input, select, textarea {
   box-sizing: border-box;
   border: 1px solid #575757; }

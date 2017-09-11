@@ -18,7 +18,8 @@ a:hover{color:$main;}
 table,th,td{border-spacing:0; border-collapse:collapse;}
 
 /* set_2: form */
-form, fieldset, legend{}
+form, fieldset, legend{border:0}
+legend{width: 0; height: 0; overflow: hidden;}
 input, select, textarea{box-sizing:border-box; border:1px solid $deepGray;}
 button, 
 input[type="button"], input[type="submit"],

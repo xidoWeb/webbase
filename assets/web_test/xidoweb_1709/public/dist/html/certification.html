@@ -21,12 +21,54 @@
 		<div id="certivate">
 			<h3>본인 인증</h3>
 			<p>입력하는 정보는 암호화 처리되며, <br /> 어떠한 비용도 발생하지 않으며, <br /> 개인정보를 유출하지 않습니다. </p>
-			
-			<form action=""></form>	
+
+			<form action="" method="post">
+				<fieldset>
+					<legend>개인 휴대폰 정보</legend>
+					<dl>
+						<dt>휴대폰 번호</dt>
+						<dd></dd>
+						<dd>
+							<!-- <label for="middleNum">고객의 휴대폰번호 가운데 셋 또는 네자리를 입력하세요.</label> -->
+							<!-- <input type="text" max-length="4" id="middleNum" name="middleNum" value="" /> -->
+						</dd>
+						<dd>
+							<!-- <label for="lastNum">고객의 휴대폰번호 마지막 네자리를 입력하세요.</label> -->
+							<!-- <input type="text" max-length="4" id="lastNum"  name="lastNum" value="" /> -->
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>이동 통신사</dt>
+						<dd></dd>
+						<dd></dd>
+						<dd></dd>
+					</dl>
+				</fieldset>
+				<fieldset>
+					<legend>동의 및 전송</legend>
+					<div>
+						<input type="checkbox" name="ok" id="checkOk" value="ok">
+						<label for="checkOk">개인정보 활용 및 제공에 동의 합니다.</label>
+					</div>
+					<input type="submit" value="확인" />
+					<input type="reset" value="취소" />
+				</fieldset>
+			</form>	
 		</div>
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
