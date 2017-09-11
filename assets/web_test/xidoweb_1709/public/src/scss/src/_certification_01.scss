@@ -25,7 +25,7 @@
 			}
 
 			&:last-of-type{
-				label{cursor:pointer; transition:all 500ms ease-in;}
+				label{cursor:pointer; transition:all 200ms ease-in;}
 				label>i{width: 1rem; height: 1rem; display:inline-block; border-radius:1rem; background-color:$deepGray;
 								margin-right: 1rem;}
 				input[type="radio"]{opacity:0; position: absolute; z-index:-100;}
@@ -35,8 +35,7 @@
 			}// dl:last
 		}// dl
 
-	#certivate>form dl>dt{width:4.75rem; height:1.375rem; float:left; margin-right:0.625rem;
-					background-color:#fff;font-size: 0.9em; letter-spacing:-0.025em;}
+	#certivate>form dl>dt{width:4.75rem; height:1.375rem; float:left; margin-right:0.625rem; font-size: 0.9em; letter-spacing:-0.025em;}
 	#certivate>form dl>dd{width:4.75rem; height:1.375rem; float:left; margin-right: 0.625rem; position: relative;
 					&:last-of-type{margin-right: 0;}
 					&:first-of-type:before{display: none;}
