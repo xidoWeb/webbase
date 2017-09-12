@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* check.css */
+/* reset.css */
+/* basic */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+html, body, h1, h2, h3, h4, h5, h6, p, div,
+form, fieldset,
+table, tr, td, th, thead, tbody, tfoot,
+img,
+ul, ol, li, dt, dd, dl {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #575757;
+  font-size: 100%;
+  line-height: 1.2;
+  font-family: "nanum gothic", sans-serif; }
+
+/* set_1 */
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  color: #f06; }
+
+table, th, td {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+/* set_2: form */
+form, fieldset, legend {
+  border: 0; }
+
+legend {
+  width: 0;
+  height: 0;
+  overflow: hidden; }
+
+input, select, textarea {
+  box-sizing: border-box;
+  border: 1px solid #575757; }
+
+button,
+input[type="button"], input[type="submit"],
+input[type="reset"] {
+  border: 0;
+  cursor: pointer; }
+
+/* focus */
+a:focus, input:focus, button:focus, textarea:focus, select:focus {
+  outline: 3px solid #ff0;
+  outline-offset: 5px;
+  position: relative;
+  z-index: 1000; }
+
+/* html5 */
+header, article, aside, footer, nav, figure, main, srcset {
+  display: block; }
+
+/* base.css */
+/* ir기법적용 */
+.me_hidden {
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: -100;
+  overflow: hidden; }
+
+.hidden_wrap a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
+.hidden_wrap a > span {
+  width: 0;
+  height: 0;
+  display: block;
+  overflow: hidden; }
+
+/* clear:both 적용 */
+.clearfix:after, .cf:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+/* table:sett */
+table {
+  border: 2px solid #575757;
+  border-left: 0;
+  border-right: 0; }
+
+thead {
+  background-color: #cfcfcf; }
+
+tbody td {
+  border-top: 1px solid #575757;
+  vertical-align: middle;
+  text-indent: 3px; }
+
+tbody th {
+  background-color: #cfcfcf; }
+
+/* nav last, first margin */
+.nav_fr li:first-child, .nav_la li:last-child {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+#wrap {
+  width: 100%;
+  height: auto; }
+
+form {
+  width: 35rem;
+  height: auto;
+  margin: 3em auto; }
+
+#joinCheck {
+  width: inherit;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0.3em 0.3em 0.3em rgba(87, 87, 87, 0.7);
+  margin: 0 auto; }
+
+h3 {
+  font-size: 0.75rem;
+  color: #575757;
+  margin-left: 2.5rem; }
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 2.5rem;
+  margin-bottom: 0.5rem; }
+
+.all_check {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.375rem; }
+
+.term_chck {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.375rem; }
+
+.content {
+  width: 100%;
+  height: 7.75rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #cfcfcf;
+  overflow-y: auto; }
+
+.person_check {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.375rem; }

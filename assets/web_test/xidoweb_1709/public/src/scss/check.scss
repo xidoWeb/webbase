@@ -1,0 +1,11 @@
+// check.scss
+/* check.css */
+// 기본 세팅파일 불러오기 (variable, mixin, reset, normalize)
+@import './bin/setting';
+@import './bin/reset';
+@import './bin/base';
+
+// layout file 불러오기
+// @import './src/headBox';
+@import './src/check';
+// @import './src/footBox';
