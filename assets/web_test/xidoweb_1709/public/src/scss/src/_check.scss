@@ -6,56 +6,46 @@
 
 input[type='checkbox']:focus{outline: 0; z-index:-100; position: absolute;}
 
-#wrap{width: 100%; height: auto;}
-form{width: 35rem; height: auto; margin: 3em auto;}
-#joinCheck{width:inherit; height: auto; background-color:$white; 
-					box-shadow:0.3em 0.3em 0.3em rgba($deepGray,0.7); margin: 0 auto; }
+form{width: 35rem; height: auto; margin: 3em auto; padding:1em; box-sizing:border-box;
+		box-shadow:0.3em 0.3em 0.3em rgba($deepGray,0.7);}
+#joinCheck{width:100%; height: auto; background-color:$white; }
 	h3{font-size:0.75rem; color:$deepGray; margin-left:2.5rem;}
 	// 이미지로 사용된 서체크기와(14px), 직접적으로 사용된 폰트(12px)로 쓰인 크기는 정의가 다르다.
 	h4{font-size:1.25rem; font-weight: bold; margin-bottom: 0.5rem;}
 	h4>label{width: 100%; height: auto;}
-
+	label>span{cursor:pointer;}
 // 전체 체크 상자내용 
 	.all_check label{position: relative; font-size: 0.7rem; margin-left: 2.5rem;}
 	.all_icon{width: 30px; height: 30px; display: inline-block;
 				background-image: url('../img/join/join_icon.png');
 				background-repeat:no-repeat; background-position: 0 0;
 				position: absolute; left:-2.5rem; top:-1rem; z-index: 100;}
-	// .all_check input:checked + label .all_icon{background-position:0 -40px;}
-	.all_icon.moreIcon{background-position:0 -40px;}
-	
+					
 // 개별 체크 상자
 	.check_icon{width: 20px; height: 20px; margin-right:1rem; display:inline-block;
 			background-image:url('../img/join/join_icon.png'); background-repeat:no-repeat; background-position:0 -80px; 
 			transition:all 300ms;}
-	
-// 개별 체크상자 선택될 경우 label안의 이미지 변경
-	// .term_check input:checked + h4 .check_icon{background-position:0 -100px;}
-	// .person_check input:checked + h4 .check_icon{background-position:0 -100px;}		
+
+// focus 기능처리			
+	input:focus + label .all_icon{outline:0.1875rem solid #f06;}
+	input:focus + h4 .check_icon{outline:0.1875rem solid #f06;}
+	label{cursor:pointer;}
+// 개별 체크상자 선택될 경우 label안의 이미지 변경	(moreIcon)
+	.all_icon.moreIcon{background-position:0 -40px;}	
 	.check_icon.moreIcon{background-position:0 -100px;}
 
 // 각영역 동일하게 처리
-	.all_check   {width: 100%; height: auto; margin-bottom:2.375rem;}
-	.term_check   {width: 100%; height: auto; margin-bottom:2.375rem;}
-	.person_check{width: 100%; height: auto; margin-bottom:2.375rem;}
-	
+	.all_check ,.each_check {width: 100%; height: auto; margin-bottom:2.375rem;}
+
 	.content{width: 100%; height:7.75rem; padding:1rem; box-sizing:border-box;
-						background-color:$lightGray; overflow-y:auto;}
+						background-color:rgba($lightGray, 0.5); overflow-y:auto;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.send{width: 110px; height:auto; margin:0 7.5rem; font-size: 1.2rem; 
+				transition:all 300ms; padding: 1rem;}
+	input[type="submit"]{background-color: $main; color:$white; float: left; margin-right: 0;
+		&:hover, &:focus{background-color:darken($main, 20%); outline: 0; padding:1.2rem;}
+	}					
+	input[type="reset"]{background-color: $lightGray; color:$font; float: right; margin-left: 0;
+		&:hover, &:focus{background-color:darken($lightGray, 30%);  color:$white;
+				outline: 0; padding:1.2rem;}
+	}	
