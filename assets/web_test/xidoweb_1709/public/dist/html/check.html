@@ -17,7 +17,6 @@
 </head>
 <body>
 	<div id="wrap">
-
 		<h2 class="me_hidden">회원가입 내용 확인 및 동의</h2>
 		<form action="" mtehod="post">
 			<fieldset id="joinCheck">
@@ -25,19 +24,19 @@
 				<div class="all_check">
 					<h3>이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 안내</h3>
 					<p>
-					<input type="checkbox" id="allCheck" name="allCheck" value="term of use check" />
+					<input type="checkbox" id="allCheck" name="allCheck" value="term of use check" class="me_hidden" />
 					<label for="allCheck"><span class="all_icon"></span>메일 수신(선택)에 모두 동의합니다.</label>
 					</p>
 				</div>
 				<div class="term_chck">
-					<input type="checkbox" id="termCheck" name="termCheck" value="term of use check" class="me_hidden" />
+					<input type="checkbox" id="termCheck" name="termCheck" value="term of use check" class="me_hidden more_check" />
 					<h4><label for="termCheck"><span class="check_icon"></span> XIDO 이용약관동의(필수)</label> </h4>
 					<div class="content">
 						<!-- 내용 -->
 					</div>
 				</div>
 				<div class="person_check">
-				  <input type="checkbox" id="personCheck" name="personCheck" value="person check" class="me_hidden" />
+				  <input type="checkbox" id="personCheck" name="personCheck" value="person check" class="me_hidden more_check" />
 					<h4><label for="personCheck"><span class="check_icon"></span> 개인정보 수집 및  이용에 관한 안내(필수)</label> </h4>
 					<div class="content">
 						<!-- 내용 -->
@@ -45,14 +44,35 @@
 				</div>
 			</fieldset>
 		</form>
-
 	</div> <!-- #wrap -->
 
 
 	<script>
 		(function($) {
+			// $('#allCheck').on('click',function() {
+			// 		$('input[type="checkbox"]').attr('checked',true);
+			// });
+
 			$('#allCheck').on('click',function() {
-					$('input[type="checkbox"]').attr('checked',true);
+				var allCheck = $('#allCheck');
+				var allCheckState = allCheck.attr('checked');
+
+				if(!allCheckState == true){
+					$('input[type="checkbox"]').each(function(){
+						$(this).attr('checked',true);
+					}); 
+					$('label>span').each(function(){
+						$(this).addClass('moreIcon');
+					});
+ 
+				}else{
+					$('input[type="checkbox"]').each(function(){
+						$(this).attr('checked',false);
+					})
+					$('label>span').each(function(){
+						$(this).removeClass('moreIcon');
+					});
+				}
 			});
 
 		})(this.jQuery);

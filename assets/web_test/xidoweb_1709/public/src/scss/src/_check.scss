@@ -22,6 +22,7 @@ form{width: 35rem; height: auto; margin: 3em auto;}
 				background-repeat:no-repeat; background-position: 0 0;
 				position: absolute; left:-2.5rem; top:-1rem; z-index: 100;}
 	.all_check input:checked + label .all_icon{background-position:0 -40px;}
+	.all_icon.moreIcon{background-position:0 -40px;}
 	
 // 개별 체크 상자
 	.check_icon{width: 20px; height: 20px; margin-right:1rem; display:inline-block;
@@ -31,6 +32,7 @@ form{width: 35rem; height: auto; margin: 3em auto;}
 // 개별 체크상자 선택될 경우 label안의 이미지 변경
 	.term_chck input:checked + h4 .check_icon{background-position:0 -100px;}
 	.person_check input:checked + h4 .check_icon{background-position:0 -100px;}		
+	.check_icon.moreIcon{background-position:0 -100px;}
 
 // 각영역 동일하게 처리
 	.all_check   {width: 100%; height: auto; margin-bottom:2.375rem;}

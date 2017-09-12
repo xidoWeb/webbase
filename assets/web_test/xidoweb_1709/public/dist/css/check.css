@@ -172,6 +172,9 @@ h4 > label {
 .all_check input:checked + label .all_icon {
   background-position: 0 -40px; }
 
+.all_icon.moreIcon {
+  background-position: 0 -40px; }
+
 .check_icon {
   width: 20px;
   height: 20px;
@@ -186,6 +189,9 @@ h4 > label {
   background-position: 0 -100px; }
 
 .person_check input:checked + h4 .check_icon {
+  background-position: 0 -100px; }
+
+.check_icon.moreIcon {
   background-position: 0 -100px; }
 
 .all_check {
