@@ -28,14 +28,14 @@
 					<label for="allCheck"><span class="all_icon"></span>메일 수신(선택)에 모두 동의합니다.</label>
 					</p>
 				</div>
-				<div class="term_chck">
+				<div class="term_check each_check">
 					<input type="checkbox" id="termCheck" name="termCheck" value="term of use check" class="me_hidden more_check" />
 					<h4><label for="termCheck"><span class="check_icon"></span> XIDO 이용약관동의(필수)</label> </h4>
 					<div class="content">
 						<!-- 내용 -->
 					</div>
 				</div>
-				<div class="person_check">
+				<div class="person_check each_check">
 				  <input type="checkbox" id="personCheck" name="personCheck" value="person check" class="me_hidden more_check" />
 					<h4><label for="personCheck"><span class="check_icon"></span> 개인정보 수집 및  이용에 관한 안내(필수)</label> </h4>
 					<div class="content">
@@ -53,6 +53,7 @@
 			// 		$('input[type="checkbox"]').attr('checked',true);
 			// });
 
+// 전체 동의 및 해제
 			$('#allCheck').on('click',function() {
 				var allCheck = $('#allCheck');
 				var allCheckState = allCheck.attr('checked');
@@ -68,13 +69,36 @@
 				}else{
 					$('input[type="checkbox"]').each(function(){
 						$(this).attr('checked',false);
-					})
+					});
 					$('label>span').each(function(){
 						$(this).removeClass('moreIcon');
 					});
 				}
 			});
 
+
+// 각각 선택 및 해제
+		var each_ck = $('.each_check').find('input[type="checkbox"]');
+
+			each_ck.on('click',function() {
+				var _this = $(this);
+				var thisId = _this.attr('id');
+				var thisCheck = _this.attr('checked');
+				console.log(thisId);
+				console.log(thisCheck);
+				var labelCheck = $('label[for="'+thisId+'"]');
+
+				if(!thisCheck == true){
+					$(this).attr('checked',true);
+					labelCheck.children('span').addClass('moreIcon');
+				}else{
+					$(this).attr('checked',false);
+					labelCheck.children('span').removeClass('moreIcon');
+				}
+			});	
+
+
+			
 		})(this.jQuery);
 	</script>
 </body>

@@ -169,9 +169,6 @@ h4 > label {
   top: -1rem;
   z-index: 100; }
 
-.all_check input:checked + label .all_icon {
-  background-position: 0 -40px; }
-
 .all_icon.moreIcon {
   background-position: 0 -40px; }
 
@@ -185,12 +182,6 @@ h4 > label {
   background-position: 0 -80px;
   transition: all 300ms; }
 
-.term_chck input:checked + h4 .check_icon {
-  background-position: 0 -100px; }
-
-.person_check input:checked + h4 .check_icon {
-  background-position: 0 -100px; }
-
 .check_icon.moreIcon {
   background-position: 0 -100px; }
 
@@ -199,7 +190,7 @@ h4 > label {
   height: auto;
   margin-bottom: 2.375rem; }
 
-.term_chck {
+.term_check {
   width: 100%;
   height: auto;
   margin-bottom: 2.375rem; }
