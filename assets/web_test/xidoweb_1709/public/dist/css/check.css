@@ -67,7 +67,7 @@ header, article, aside, footer, nav, figure, main, srcset {
 
 /* base.css */
 /* ir기법적용 */
-.me_hidden {
+.me_hidden, .hidden {
   width: 0;
   height: 0;
   display: block;

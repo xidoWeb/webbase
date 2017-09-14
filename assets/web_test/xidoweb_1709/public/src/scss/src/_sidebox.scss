@@ -1,0 +1,29 @@
+// _sidebox.scss
+
+/* sidebox.css */
+
+/* ----------------------------------------------- */
+#side_box{width:7.625rem; height: auto; min-height:9.375rem; background-color: #ccc;
+				position: fixed; top: 1rem; left: 50%; z-index:1000; margin-left:31.25rem;}
+
+	.top_box{width: 122px; height: auto; position: relative;
+
+		
+
+		>h3{width: 3.25rem; height: 1rem; 
+			 background-image: url("../img/side_bar/logo.png"); 
+			 background-repeat:no-repeat; background-position:0 top;
+			margin:10px auto;}
+		>p{width: 8.25rem; height: 2.875rem; background-color:$deepGray; position: absolute;
+				left: 50%; margin-left:-4.125rem;
+				&:before{content:" "; display: block; width: 100%; 
+					      height:calc(100% - 6px); position: absolute;
+								left: 0; top:2px; border:1px solid $white; border-left:0; border-right: 0;}
+			}
+		>ol{}
+	} // .top_box
+
+	.bottom_box{width:7.625rem; height:4.6875rem; background-color: #aad; margin-top:0.3125rem;}
+.subject{}
+.subject>li{text-transform:uppercase;}
+/* ----------------------------------------------- */

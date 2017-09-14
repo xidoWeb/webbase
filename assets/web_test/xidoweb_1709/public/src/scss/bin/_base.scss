@@ -1,7 +1,7 @@
 /* base.css */
 
 /* ir기법적용 */
-.me_hidden{width: 0; height: 0; display: block; position: absolute; z-index:-100;
+.me_hidden,.hidden{width: 0; height: 0; display: block; position: absolute; z-index:-100;
 					overflow: hidden;}
 @mixin hidden(){width: 0; height: 0; display: block; position: absolute; z-index:-100;
 					overflow: hidden;}

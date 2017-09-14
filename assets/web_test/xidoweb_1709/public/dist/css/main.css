@@ -67,7 +67,7 @@ header, article, aside, footer, nav, figure, main, srcset {
 
 /* base.css */
 /* ir기법적용 */
-.me_hidden {
+.me_hidden, .hidden {
   width: 0;
   height: 0;
   display: block;
@@ -413,6 +413,59 @@ h1 {
 .banner_5 {
   background-image: url("../img/main/banner/banner_05.png"); }
 
+/* sidebox.css */
+/* ----------------------------------------------- */
+#side_box {
+  width: 7.625rem;
+  height: auto;
+  min-height: 9.375rem;
+  background-color: #ccc;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  z-index: 1000;
+  margin-left: 31.25rem; }
+
+.top_box {
+  width: 122px;
+  height: auto;
+  position: relative; }
+  .top_box > h3 {
+    width: 3.25rem;
+    height: 1rem;
+    background-image: url("../img/side_bar/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    margin: 10px auto; }
+  .top_box > p {
+    width: 8.25rem;
+    height: 2.875rem;
+    background-color: #575757;
+    position: absolute;
+    left: 50%;
+    margin-left: -4.125rem; }
+    .top_box > p:before {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: calc(100% - 6px);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      border: 1px solid #fff;
+      border-left: 0;
+      border-right: 0; }
+
+.bottom_box {
+  width: 7.625rem;
+  height: 4.6875rem;
+  background-color: #aad;
+  margin-top: 0.3125rem; }
+
+.subject > li {
+  text-transform: uppercase; }
+
+/* ----------------------------------------------- */
 /* main_content.css ----------------------------------------------*/
 #contentBox {
   width: 100%;
