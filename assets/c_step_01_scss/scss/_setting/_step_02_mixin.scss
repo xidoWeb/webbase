@@ -1,21 +1,24 @@
-// _step_02_mixin.scss
-// scss class(html에서 불리는 class와는 다소 다른 의미)
+\n // scss class(html에서 불리는 class와는 다소 다른 의미)
+\n // base layout
+\n @mixin baseLayout($w:100%, $h:auto, $c:$primary){width:$w; height:$h; background-color:$c;}
+\n // 외부 기본 연결주소 세팅
+\n $url:"../../img/";
+\n // 문자의 연결은 '+' 기호로 표기
+\n @mixin link($u:$url, $f:none, $p:center, $t:700ms){ a{width: 100%; height: 100%; display: block; background-image: url($u + $f);	background-repeat: no-repeat; background-position:$p;transition:all $t lenear;
+\n >span{display: block; width:0; height:0; position: absolute; z-index:-100; overflow: hidden;}//span 
+\n }// a   
+} // link()
 
-// base layout
-@mixin baseLayout($w:100%, $h:auto, $c:$primary){
-	width:$w; height:$h; background-color:$c;
+@mixin firstPrefix($p, $v){
+	-webkit-#{$p} : $v;
+	-moz-#{$p}    : $v;
+	-ms-#{$p}     : $v;
+	-o-#{$p}      : $v;
 }
 
-// 외부 기본 연결주소 세팅
-$url:"../../img/";
-// 문자의 연결은 '+' 기호로 표기
-@mixin link($u:$url, $f:none, $p:center, $t:700ms){
-	a{width: 100%; height: 100%; display: block; 
-				background-image: url($u + $f);
-				background-repeat: no-repeat; 
-				background-position:$p;
-				transition:all $t lenear;
-		>span{display: block; width:0; height:0;
-					position: absolute; z-index:-100; overflow: hidden;}
-		}// a   
-} // link()
+@mixin lastPrefix($p, $v){
+	#{$p} : -webkit-$v;
+	#{$p} : -moz-$v;
+	#{$p} : -ms-$v;
+	#{$p} : -o-$v;
+}

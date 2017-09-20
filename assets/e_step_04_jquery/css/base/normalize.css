@@ -7,12 +7,13 @@
 .me_base{width: 960px; height: auto;
 				 padding:0 10px; box-sizing:border-box;
 				 margin: 0 auto;}
+
 .me_base:after{content:" "; display: block; clear:both;}
 .me_wide{width: auto; max-width: 100%;  min-width: 960px; height: auto;
 				 padding:0 10px; box-sizing:border-box;	 margin: 0 auto;}
 .me_base:after{content:" "; display: block; clear: both;}
 
-@media screen and (min-width:960px;){
+@media screen and (min-width:960px) {
 	body{overflow-x:hidden;}
 	.me_line{position: relative;}
 	.me_line:before{width: 100vw; height: 100%; position: absolute; top: 0; left: 50%; margin-left: -50vw;background-color:inherit;}

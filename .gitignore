@@ -24,7 +24,9 @@ assets/graphic/photoshop/template/*
 *.ppt
 *.pptx
 
-
+# node_modules/ 파일 제한
+**/node_modules
+**/notUploadGit
 
 
 
