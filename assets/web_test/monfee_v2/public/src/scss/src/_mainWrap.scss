@@ -1,0 +1,12 @@
+// _mainWrap.scss
+
+#wrap{
+	width: 100%; height: 100%;	background-color: #ccc; }
+
+@import "./src/headBox";
+@import "./src/adBanner";
+@import "./src/bestNews";
+@import "./src/issueBox";
+@import "./src/materialBox";
+@import "./src/location";
+@import "./src/footBox";	 

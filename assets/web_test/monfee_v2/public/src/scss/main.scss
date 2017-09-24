@@ -1,0 +1,8 @@
+// main.scss 
+/* ========== main.css ========== */ 
+ @import "./base/variable.scss";
+ @import "./base/mixin.scss";
+
+ @import "./src/headBox.scss";
+ @import "./src/mainContent.scss";
+ @import "./src/footBox.scss"; 

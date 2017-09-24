@@ -1,0 +1,93 @@
+// _adBanner.scs
+$baseUrl:'../../img/';
+$url:'../../img/adBanner/';
+
+/* #adBanner */
+
+
+#adBanner{
+	@include baseLayout($boo:true ,$h:100%, $bgc:gray, $myC:null); 
+	position: relative; padding-bottom:rem(120); box-sizing:border-box;
+	
+	// 버튼 최상단(300)
+	// 내용(li) - (200)
+	// 마우스 애니메이션:버튼과 동일위치(300)
+	// indicator(300)
+
+/*   좌, 우 버튼 영역 */
+.btn{width: 100%; height: 0; position: absolute; top: 50%; margin-top:rem(-174 / 2) ;
+	z-index:300;
+	>button{width: rem(83); height:rem(174); background-color:color(gray);}
+	>.l_btn{float: left; margin-left:rem(100); margin-left:wideVw(100);}
+	>.r_btn{float: right; margin-right:rem(100); margin-right:wideVw(100);}
+	} // .btn
+
+/* 내용 설명 영역 */	
+.explain{width: 40%; height: 100%; float: left; position:absolute; 
+	background-color:color(main, 0.8); top: 0; left: 0; z-index:200;
+	padding:rem(200) rem(50) rem(100) rem(200);
+	padding:wideVw(150) wideVw(20) wideVw(80) wideVw(250);
+	box-sizing:border-box;
+	} // .explain
+
+	.explain_box{width: 100%; height: 100%; overflow: hidden;	}
+	.explain_wrap{width: 500%; height: 100%;
+		>li{width: 20%; height: 100%; padding-right:rem(30); box-sizing:border-box; float: left; font-size: fs(menuTitle); color:color(white); 
+			} // li
+		} //dl
+
+	dl{width: 100%; height: 100%; padding-right:rem(60); overflow:hidden; overflow-y: auto;
+		>dt{width: 100%; height:wideVw(130);
+			text-align: center; line-height:wideVw(130); font-size:fs(big2);
+			margin-bottom:rem(16);}	
+		>dd{width: 100%; padding-right:rem(30); }
+		}// ul.explain_wrap
+	
+
+// 내용 이미지 삽입
+		.explain_content_1{
+			dt{ @include img($u:$baseUrl,$p:0 0, $f:"monfee_svg_logo.svg");}
+		}
+		// .explain_content_2{}
+		// .explain_content_3{} 
+		// .explain_content_4{}
+		// .explain_content_5{}
+
+ .banner_wrap{width: 100%; height: 100%; position: relative;
+	>div{width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; position: absolute; z-index:0;
+		background-position:center;
+	&.active{z-index:100;}
+	}
+	.banner_img_1{background-image:url($url + 'slide_01.png');}
+	.banner_img_2{background-image:url($url + 'slide_02.png');}
+	.banner_img_3{background-image:url($url + 'slide_03.png');}
+	.banner_img_4{background-image:url($url + 'slide_04.png');}
+	.banner_img_5{background-image:url($url + 'slide_05.png');}
+ } // .banner_wrap
+
+ .mouse_scroll{width:rem(44); height:rem(134); position: absolute; z-index: 300; left: 50%; margin-left:rem(-22); bottom:rem(140); background-color:color(point);} // .mouse_scroll
+ .indicator{width:rem(270); height:rem(30); position: absolute;left: 50%; margin-left:rem(80); bottom:rem(140); 
+	>ol{width: 100%; height: 100%;
+		>li{width:rem(30); height:rem(30); margin-right:rem(30); border-radius:rem(30); float: left;
+			overflow: hidden;
+			&:last-child{margin-right:0;}
+			>button{width: 100%; height: 100%; background-color:color(white);
+				&:hover, &:focus{background-color:color(point);}
+			} // button
+			&.active > button{background-color:color(main);}
+		} // li
+	 } // ol
+ } //.indicator
+
+} // #adBanner
+
+
+
+
+
+
+
+
+
+
+

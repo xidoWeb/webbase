@@ -1,0 +1,33 @@
+// _bestNews.scss
+$url:'../../img/new_menu/';
+/* #bestNews */
+#bestNews{
+	@include baseLayout($w:#{rem(960)}, $h:auto); margin: 0 auto;
+	padding-top:rem(180); padding-bottom:rem(70); box-sizing:border-box; 
+	// background-color: #faa;
+
+	>h2{font-size:fs(big2); text-decoration: underline; margin-bottom:rem(30);
+		padding-left:rem(10);}
+	>ul{width: 100%; height: auto;
+	 li{ width:rem(220); height:auto; min-height:rem(400); margin:rem(10); margin-bottom:rem(40); float: left;	// background-color:color(primary);
+		&.default_menu{ @include img($f:"default_menu.png");}
+
+		>a{width: 100%; height:auto; display: block; position: relative;
+			&:before{content:" "; display: block; width: 100%; height: 100%; position: absolute;	z-index: 300;	@include img($f:"menu_on.png", $c:color(main,0.8), $p:center rem(110)); opacity: 0; @include ani(); }
+			&:hover:before, &:focus:before{opacity:1; background-position:center; color:color(black);}
+
+			>.img_1{width: 100%; height:rem(220); background-color:color(point); margin-bottom:rem(10); }
+
+		} // a
+		dl{width: 100%; height:rem(130); @include boxSizing(20);
+			>dt{width: 100%; height: auto; font-size:fs(menuTitle);}
+			>dd{width: 100%; height: auto; font-size: fs(base);}
+		 } // dl
+   
+		}// li
+	}
+ } // #bestNews
+
+
+
+

@@ -1,0 +1,55 @@
+// variable.scss 
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+// /* ------------ color ------------  */
+$color: ( 
+	primary : #777, 
+	main    : #a30, 
+	sub1    : #0af, 
+	sub2    : #afc, 
+	dark    : #333, 
+	gray    : #777, 
+	point   : darken(#0af, 20%), 
+	font1   : #333, 
+	font2   : #777, 
+	white   : #fff, 
+	black   : #171717, 
+	line1   : #f06, 
+	line2   : #777, 
+	line3   : #171717, 
+	zero    : transparent);
+
+// /* ------------ line ------------  */
+$line: ( 
+	l1 : 1px solid map-get($color, line1), 
+  l2 : 2px solid map-get($color, line2), 
+  l3 : 3px solid map-get($color, point),
+  l4 : 4px solid map-get($color, main),
+  );
+
+// /* ------------ font ------------  */
+$size: 16;
+$fontSize: ( 
+	base      : ($size / 16 * 0.875)  + rem,     // 14px
+	big       : ($size / 16 * 5)      + rem, 		 // 80px
+	big2      : ($size / 16 * 2.5)    + rem,     // 40px
+	middle    : ($size / 16 * 1.25)   + rem,     // 20px
+	small     : ($size / 16 * 0.75)   + rem,     // 12px
+	menuTitle : ($size / 16 * 1.5) + rem,     // 24px
+
+	);
+
+$fontFamily:( 
+	english : ("myriad pro", arial), 
+	korean  : (nanumGothic, "nanum Gothic", dotum), 
+	all     : ("myriad pro", arial, nanumGothic, "nanum Gothic", dotum, sans-serif)
+	);
+ 
+// /*  -------------- etc ----------------- */
+$minWidth : 960;
+$baseTime : 300ms;
+$baseMotion : ease-in;
+$baseaniUse : all;
+
+ $url:"../../img/";

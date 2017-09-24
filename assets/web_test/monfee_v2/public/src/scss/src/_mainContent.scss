@@ -1,0 +1,9 @@
+// mainContent.scss 
+/* ========== mainContent.css ========== */ 
+#mainContent{width: 960px; margin: 0 auto; text-align: center;
+ .logo{width:10rem; height:auto; margin:0.5rem auto;  
+ >img{width:100%; height:auto;}} 
+ >h2{border-bottom:map-get($line, l1); padding-bottom:0.5rem; margin-bottom:1rem; font-size:map-get($fontSize,big2); color:map-get($color,point);}
+ h3{font-size:map-get($fontSize,big2);margin-top:1rem; border-bottom:map-get($line, l2)}
+ >p{line-height:1.4rem; color:map-get($color,gray); text-align:center;} 
+ #modules{width:300px; margin:1rem auto; padding:1rem; background-color:lighten(map-get($color,point),60%); color:map-get($color,black); text-align:left; font-size:1.1rem; line-height:1.5rem; border-radius:0.5rem; word-spacing:0.3rem;}}

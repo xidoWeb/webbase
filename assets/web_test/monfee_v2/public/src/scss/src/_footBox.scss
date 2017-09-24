@@ -1,0 +1,8 @@
+// _footBox.scss
+/* ============== footBox.css ============== */
+#footBox{
+	width: 100%; height: auto;
+	padding-top: 8.75rem; padding-bottom: 12.5rem; padding-top: 7.291667vw;	
+	background-color: #aaa;
+ 	&:after{content:" "; display: block; width: 100%; height: 0; clear: both;}
+	} 
