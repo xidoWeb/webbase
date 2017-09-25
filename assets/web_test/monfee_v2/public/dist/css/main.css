@@ -1,7 +1,37 @@
 /* ========== main.css ========== */
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 /* ============== headBox.css ============== */
-#headBox { width: 100%; height: 120px; height: 7.5rem; bottom: 0; left: 0; background-color: #aaf; z-index: 100; }
+#headBox { width: 100%; height: 120px; height: 7.5rem; min-width: 960px; min-width: 60rem; background-color: #fff; position: absolute; bottom: 0; left: 0; z-index: 500; box-shadow: 0.3rem 0.3rem 0.3rem rgba(101, 101, 101, 0.5); }
+
+#headBox > .head_wrap { width: 960px; height: 100%; margin: 0 auto; padding: 0 10px; padding: 0 0.625rem; background-color: #fff; }
+
+h1 { width: 220px; width: 13.75rem; height: 100%; background-color: #a30; float: left; }
+
+#gnb { width: 600px; width: 37.5rem; height: auto; min-height: 100%; float: right; box-sizing: border-box; position: relative; }
+
+#gnb:before { content: " "; display: block; width: 100%; height: 100%; position: absolute; z-index: -200; right: 0; top: 0; background-color: rgba(170, 51, 0, 0.5); padding-left: 360px; padding-left: 22.5rem; right: 0; }
+
+#gnb > h2 { width: 140px; width: 8.75rem; height: 140px; height: 8.75rem; position: absolute; top: 140px; top: 8.75rem; left: -320px; left: -20rem; background-color: #fff; transition: all 300ms ease-in; }
+
+#gnb > dl { width: 120px; width: 7.5rem; height: 100%; float: left; margin-left: 40px; margin-left: 2.5rem; }
+
+#gnb > dl:first-of-type { margin-left: 0; }
+
+#gnb > dl:hover { height: auto; }
+
+#gnb > dl > dt { width: 100%; height: 100%; font-size: 40px; font-size: 2.5rem; line-height: 120px; line-height: 7.5rem; position: relative; }
+
+#gnb > dl > dt:before { content: " "; display: block; width: 100%; height: 0; left: 0; border-bottom: 4px solid #a30; border-bottom-width: 0; position: absolute; bottom: 35px; bottom: 2.1875rem; z-index: -100; transition: all 300ms ease-in; }
+
+#gnb > dl > dt:hover:before { left: 0; border-bottom-width: 4px; border-bottom-width: 0.25rem; }
+
+#gnb > dl > dd { width: 100%; height: auto; padding-top: 16px; padding-top: 1rem; transition: all 300ms ease-in; padding-bottom: 10px; padding-bottom: 0.625rem; }
+
+#gnb > dl > dd > a { display: inline-block; width: 100%; padding: 6px; padding: 0.375rem; box-sizing: border-box; color: #fff; font-style: 20px; font-style: 1.25rem; }
+
+#gnb.up:before { transform: translateY(-180px); }
+
+#gnb.up h2, #gnb.up dd { transform: translateY(-300px); }
 
 /* ========== mainContent.css ========== */
 #mainContent { width: 960px; margin: 0 auto; text-align: center; }
@@ -10,12 +40,15 @@
 
 #mainContent .logo > img { width: 100%; height: auto; }
 
-#mainContent > h2 { border-bottom: 1px solid #f06; padding-bottom: 8px; padding-bottom: 0.5rem; margin-bottom: 16px; margin-bottom: 1rem; font-size: 24px; font-size: 1.5rem; color: #006699; }
+#mainContent > h2 { border-bottom: 1px solid #a30; padding-bottom: 8px; padding-bottom: 0.5rem; margin-bottom: 16px; margin-bottom: 1rem; font-size: 40px; font-size: 2.5rem; color: #3dd; }
 
-#mainContent h3 { font-size: 24px; font-size: 1.5rem; margin-top: 16px; margin-top: 1rem; border-bottom: 2px solid #777; }
+#mainContent h3 { font-size: 40px; font-size: 2.5rem; margin-top: 16px; margin-top: 1rem; border-bottom: 2px solid #656565; }
 
-#mainContent > p { line-height: 22.4px; line-height: 1.4rem; color: #777; text-align: center; }
+#mainContent > p { line-height: 22.4px; line-height: 1.4rem; color: #bbb; text-align: center; }
 
-#mainContent #modules { width: 300px; margin: 16px auto; margin: 1rem auto; padding: 16px; padding: 1rem; background-color: #cceeff; color: #171717; text-align: left; font-size: 17.6px; font-size: 1.1rem; line-height: 24px; line-height: 1.5rem; border-radius: 0.5rem; word-spacing: 4.8px; word-spacing: 0.3rem; }
+#mainContent #modules { width: 300px; margin: 16px auto; margin: 1rem auto; padding: 16px; padding: 1rem; background-color: white; color: #171717; text-align: left; font-size: 17.6px; font-size: 1.1rem; line-height: 24px; line-height: 1.5rem; border-radius: 0.5rem; word-spacing: 4.8px; word-spacing: 0.3rem; }
 
 /* ============== footBox.css ============== */
+#footBox { width: 100%; height: auto; padding-top: 140px; padding-top: 8.75rem; padding-bottom: 200px; padding-bottom: 12.5rem; padding-top: 7.291667vw; background-color: #aaa; }
+
+#footBox:after { content: " "; display: block; width: 100%; height: 0; clear: both; }

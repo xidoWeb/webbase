@@ -4,19 +4,19 @@
 
 // /* ------------ color ------------  */
 $color: ( 
-	primary : #777, 
+	primary : #656565, 
 	main    : #a30, 
-	sub1    : #0af, 
-	sub2    : #afc, 
-	dark    : #333, 
-	gray    : #777, 
-	point   : darken(#0af, 20%), 
-	font1   : #333, 
-	font2   : #777, 
+	sub1    : #c00, 
+	sub2    : #ffaf00, 
+	dark    : #656565, 
+	gray    : #bbb, 
+	point   : #3dd, 
+	font1   : #171717, 
+	font2   : #656565, 
 	white   : #fff, 
 	black   : #171717, 
-	line1   : #f06, 
-	line2   : #777, 
+	line1   : #a30, 
+	line2   : #656565, 
 	line3   : #171717, 
 	zero    : transparent);
 
@@ -36,8 +36,7 @@ $fontSize: (
 	big2      : ($size / 16 * 2.5)    + rem,     // 40px
 	middle    : ($size / 16 * 1.25)   + rem,     // 20px
 	small     : ($size / 16 * 0.75)   + rem,     // 12px
-	menuTitle : ($size / 16 * 1.5) + rem,     // 24px
-
+	menuTitle : ($size / 16 * 1.5)    + rem,     // 24px
 	);
 
 $fontFamily:( 
@@ -51,5 +50,32 @@ $minWidth : 960;
 $baseTime : 300ms;
 $baseMotion : ease-in;
 $baseaniUse : all;
+$url:"../../img/";
 
- $url:"../../img/";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
