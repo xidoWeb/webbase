@@ -1,27 +1,31 @@
 // _headBox.scss
+$url:'../img/';
 /* ============== headBox.css ============== */
 #headBox{
  @include baseLayout($boo:true ,$h:rem(120), $bgc:white, $myC:true); 
 	 /* position: absolute; bottom: 0;  */ left:0; z-index:500;
 	box-shadow:0.3rem 0.3rem 0.3rem rgba(map-get($color, dark),0.5);
-	> .head_wrap{width: 960px; height:100%; margin:0 auto;padding:0 rem(10); background-color:color(white);
+	> .head_wrap{width:rem(960); height:100%; margin:0 auto;padding:0 rem(10); background-color:color(white);
 	} // .head_wrap
 	&.ab{position: absolute; bottom: 0;}
 	&.fixed{position: fixed; top: 0; }
 } // #headBox
 // #headBox.fixed{}
 
-	h1{width:rem(220); height: 100%; background-color:color(main); float: left;}
+	h1{width:rem(220); height: 100%; background-color:color(main); float: left;
+		@include boxSizing(10);
+		@include link($f:"monfee_svg_logo.svg", $s:100%);
+	} //h1
 	
 	#gnb{width:rem(600); height: auto; min-height: 100%; float: right;
 		 box-sizing:border-box; position: relative;
 		 //배경 색상 나타나게 만들기
 	&:before{content: " "; display: block; width: 100%; height:100%;
 			 position: absolute; z-index: -200; right: 0; top: 0;
-			background-color:color(main, 0.5); padding-left:rem(360); right: 0;}
+			background-color:color(main, 0.8); padding-left:rem(360); right: 0; @include ani($t:150ms);}
 		
 		>h2{width:rem(140); height:rem(140); position: absolute; top:rem(140); left:rem(-320);
-			background-color:color(white); /* @include ani(); */}
+			@include ani($t:150ms); @include img($f:"character.svg",$s:100%);}
 
 		>dl{width:rem(120); height:100%; float: left; margin-left:rem(40); 
 			&:first-of-type{margin-left: 0;}
@@ -31,23 +35,28 @@
 				>dt{width: 100%; height: 100%; font-size:fs(big2); line-height:rem(120);	position: relative; 
 				
 					&:before{content:" "; display: block; width:100%; height: 0; left:0;border-bottom:line(l4); border-bottom-width:0; position: absolute; bottom:rem(35); z-index:-100;
-						/* @include ani(); */ 
+						 @include ani(); 
 						}
 					&:hover:before{left: 0;  border-bottom-width:rem(4);}
 				} // dt
 				>dd{ width: 100%; height: auto; padding-top:rem(16); 
-					/* @include ani(); */ padding-bottom:rem(10);
-					>a{display: inline-block; width: 100%; @include boxSizing(6); color:color(white); font-style:fs(middle);}
-				 } //dd
-				} //dl
+					position: relative;
+					 @include ani();  padding-bottom:rem(10);
+					>a{display: inline-block; width: 100%; @include boxSizing(6); color:color(white); font-style:fs(middle); margin-bottom:rem(6);
+						&:hover{font-weight: bold; text-decoration: underline;}
+					} // a
+				 } // dd
+				} // dl
 	// #gnb에 addClass부여시 설정기능 		
-		 &.up:before{transform:translateY(-180px);}
+		 &.up:before{transform:translateY(-200px);}
 		 &.up h2,
-		 &.up dd{transform:translateY(-300px);}
-		 &.upView:before{height: 0; padding: 0; overflow: hidden;}
-		 &.upView h2{height: 0; overflow: hidden;}
-		 &.upView dd{height: 0; overflow: hidden;}
-			} // #gnb
+		 &.up dd{ transform:translateY(-300px); bottom: 0;}
+
+		 &.upView:before{height: 0; padding-top: 0; padding-bottom: 0; overflow: hidden; }
+		 &.upView h2,
+		 &.upView dd{height: 0; padding-top: 0; padding-bottom:0; overflow: hidden; }
+		 &.upView dd>a{font-size: 0; padding-top: 0; padding-bottom: 0; }
+			} // #gnb  
 
 
 

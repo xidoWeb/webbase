@@ -9,18 +9,26 @@
 	var gnb = $('#gnb');
 	var dd = gnb.find('dd');
 	var h2 = gnb.find('h2');
+ 
+// 내용 수
+// height()   - padding포함하지 않음 
+// innerHeight() - padding 포함
+// outerHeight() - padding, margin포함
 
 	gnb.addClass('upView');
-
+ 
 	gnb.on('mouseenter',function() {
 		gnb.removeClass('upView');
 	}).on('mouseleave',function() {
 		gnb.addClass('upView');
 	});
 
-// height()   - padding포함하지 않음
-// innerHeight() - padding 포함
-// outerHeight() - padding, margin포함
+// 접근성 고려항목(focus)
+	gnb.find('a').on('focus',function() {
+		gnb.removeClass('upView');
+	}).on('blur',function() {
+		gnb.addClass('upView');
+	}); 
 
 
 // 2. 
@@ -29,6 +37,10 @@ var headBox = $('#headBox');
 var headTop = headBox.offset().top;
 // console.log(headTop);
 $(window).on('scroll', function() {
+	MyScroll();
+});
+
+function MyScroll(){
 	var _this = $(this);
 	var sct = _this.scrollTop();
 	// console.log( sct );
@@ -43,7 +55,9 @@ $(window).on('scroll', function() {
 		headBox.addClass('ab');
 		gnb.addClass('up');
 	}
-});
+} // MKyScroll();
+MyScroll();
+
 
 // 3 
 // 이미 기본 틀은 만들어져 있으니 끼워 넣기!!!

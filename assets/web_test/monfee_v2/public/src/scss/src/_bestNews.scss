@@ -13,10 +13,11 @@ $url:'../../img/new_menu/';
 		&.default_menu{ @include img($f:"default_menu.png");}
 
 		>a{width: 100%; height:auto; display: block; position: relative;
-			&:before{content:" "; display: block; width: 100%; height: 100%; position: absolute;	z-index: 300;	@include img($f:"menu_on.png", $c:color(main,0.8), $p:center rem(110)); opacity: 0; @include ani(); }
+			&:before{content:" "; display: block; width: 100%; height:rem(220); position: absolute;	z-index: 300;	@include img($f:"menu_on.png", $c:color(main,0.8), $p:center rem(110)); opacity: 0; @include ani(); }
 			&:hover:before, &:focus:before{opacity:1; background-position:center; color:color(black);}
 
-			>.img_1{width: 100%; height:rem(220); background-color:color(point); margin-bottom:rem(10); }
+			>.new_img{width: 100%; height:rem(220); background-color:color(point); margin-bottom:rem(10);
+			  @include img($u:false,$s:cover); }
 
 		} // a
 		dl{width: 100%; height:rem(130); @include boxSizing(20);
@@ -26,6 +27,13 @@ $url:'../../img/new_menu/';
    
 		}// li
 	}
+	.img_1{background-image: url($url + "menu_01.png");}
+	.img_2{background-image: url($url + "menu_02.png");}
+	.img_3{background-image: url($url + "menu_03.png");}
+	.img_4{background-image: url($url + "menu_04.png");}
+	.img_5{background-image: url($url + "menu_05.png");}
+	.img_6{background-image: url($url + "menu_06.png");}
+	.img_7{background-image: url($url + "menu_07.png");}
  } // #bestNews
 
 
