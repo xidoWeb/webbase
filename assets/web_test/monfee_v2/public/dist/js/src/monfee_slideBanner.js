@@ -15,7 +15,7 @@
 	var bgBanner     = $('.banner_wrap');
 	var bgBannerList = bgBanner.children();
 // 기타 설정
-	var i            = 1;
+	var i            = 0;
 	var timed        = 7000;
 	var autoMove;
 // ---------------------------------------------------
@@ -25,15 +25,16 @@ indicatorLi.on('click',function(e) {
 	e.preventDefault() ;
 
 	var _this        = $(this);
-	var index        = _this.index();
+	i                = _this.index();
 	// console.log(index);
 
-	BannerAll(index);
+	BannerAll(i);
 });
 // ---------------------------------------------------
 // 사용 기능 함수처리
 function BannerAll(index){
 	// indicator 선택 체크 
+
 	indicatorLi.eq(index).addClass('active');
 	indicatorLi.eq(index).siblings().removeClass('active');
 
@@ -46,7 +47,6 @@ function BannerAll(index){
 	// explain 이동처리
 	explainWrap.animate({marginLeft: index * -100 + '%'});
 }
-
 // ---------------------------------------------------
 
 // setInterval(반복실행함수, 시간)  : 일정 시간마다 반복 처리하는 기능
@@ -83,17 +83,38 @@ SetIn();
 
 adBanner.on({'mouseenter': ClearIn,'mouseleave':SetIn });
 // -------------------------------------------------------
+// 좌,우 클릭시 연속으로 띠형태로 취해서 무한히 도는 것 같은 형태
+
+// // (해당하는 자식요소)의 (첫번째)를 (복제)하여 (부모요소의 마지막에 담기)
+// explainList.first().clone().appendTo(explainWrap);
+// indicatorLi.first().clone().appendTo(indicator);
+// bgBannerList.first().clone().appendTo(bgBanner);
+
+// // 마지막요소 추가하여 크기값(css) 수정
+// explainWrap.css({width:600+'%'});
+// explainList.css({width:100 / 6 +'%'});
+// indicator.css({width:330 + 'px',width:330 / 16 + 'rem'});
+
+
+// -------------------------------------------------------
+// 왼쪽 버튼 클릭
+
 lBtn.on('click',function(e) {
 	e.preventDefault();
-
 	// console.log(i);
-	--i
-	if(i <= 0){ i = 5 }
-
+	--i;
+	if(i < 0){ i = 4 }
 	BannerAll(i);
 });
+// -------------------------------------------------------
+// 오른쪽 버튼 클릭
 
-
+rBtn.on('click',function(e){
+	e.preventDefault();
+	++i;
+	if(i >= 5){ i = 0 }
+	BannerAll(i);
+});
 // -------------------------------------------------------
 
 })(this.jQuery);
