@@ -1,5 +1,5 @@
 // _bestNews.scss
-$url:'../../img/new_menu/';
+$url:'../img/new_menu/';
 /* #bestNews */
 #bestNews{
 	@include baseLayout($w:#{rem(960)}, $h:auto); margin: 0 auto;

@@ -59,7 +59,7 @@
 
 	@if $u == false{} @else{background-image: url($u + $f);}
 	background-repeat: no-repeat; 
-	background-position:$p;
+	@if $p == false {}	@else {	background-position:$p;}
 	background-size:$s;
 	@if $c == false {}@else {	background-color:$c; }
 
@@ -79,9 +79,10 @@
  	#{$p} : -o-$v;
  }
 
-@mixin shadow($x, $y, $b,$c, $i:false){
+$shadow:2;
+@mixin shadow($x:$shadow, $y:$shadow, $b:$shadow,$c:#{dark,0.2}, $i:false){
 	@if $i == false{
-	 box-shadow:$x $y $b $c;
+	 box-shadow:rem($x) rem($y) rem($b) color($c);
 	 } @else if $i == true {
 	 box-shadow:$x $y $b $c inset;
  }
