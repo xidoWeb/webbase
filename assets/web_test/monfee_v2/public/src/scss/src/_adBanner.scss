@@ -78,7 +78,8 @@ $url:'../../img/adBanner/';
 	 // animation-iteration-count:infinite;
 
  } // .mouse_scroll
- .indicator{width:rem(270); height:rem(30); position: absolute;left: 50%; margin-left:rem(80); bottom:rem(140); 
+ .indicator{width:rem(270); height:rem(30); position: absolute;
+ 		        z-index:300; left: 50%; margin-left:rem(80); bottom:rem(140); 
 		>ol{width: 100%; height: 100%;
 			>li{width:rem(30); height:rem(30); margin-right:rem(30); border-radius:rem(30); float: left;
 				overflow: hidden;
