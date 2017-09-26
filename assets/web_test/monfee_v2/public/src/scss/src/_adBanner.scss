@@ -18,7 +18,7 @@ $url:'../../img/adBanner/';
 .btn{width: 100%; height: 0; position: absolute; top: 50%; margin-top:rem(-174 / 2) ;
 	z-index:300;
 	>button{width: rem(83); height:rem(174); background-color:color(gray);}
-	>.l_btn{float: left; margin-left:rem(100); margin-left:wideVw(100);}
+	>.l_btn{float: left; margin-left:rem(100); margin-left:wideVw(100);	}
 	>.r_btn{float: right; margin-right:rem(100); margin-right:wideVw(100);}
 	} // .btn
 
@@ -65,24 +65,54 @@ $url:'../../img/adBanner/';
 	.banner_img_5{background-image:url($url + 'slide_05.png');}
  } // .banner_wrap
 
- .mouse_scroll{width:rem(44); height:rem(134); position: absolute; z-index: 300; left: 50%; margin-left:rem(-22); bottom:rem(140); background-color:color(point);} // .mouse_scroll
+ .mouse_scroll{width:rem(44); height:rem(134); position: absolute; z-index: 300; left: 50%; margin-left:rem(-22); bottom:rem(140); background-color:color(point);
+	// animation: 이름 시간 반복 방향(끝나고 다시 어떻게?) 속도감;
+	 -webkit-animation: mouseScroll 0.8s infinite alternate linear;
+	 -moz-animation: mouseScroll 0.8s infinite alternate linear;
+	 -ms-animation: mouseScroll 0.8s infinite alternate linear;
+	 -o-animation: mouseScroll 0.8s infinite alternate linear;
+	 animation: mouseScroll 0.8s infinite alternate linear;
+
+	 // animation-name: mouseScroll;
+	 // animation-duration: 0.8s;
+	 // animation-iteration-count:infinite;
+
+ } // .mouse_scroll
  .indicator{width:rem(270); height:rem(30); position: absolute;left: 50%; margin-left:rem(80); bottom:rem(140); 
-	>ol{width: 100%; height: 100%;
-		>li{width:rem(30); height:rem(30); margin-right:rem(30); border-radius:rem(30); float: left;
-			overflow: hidden;
-			&:last-child{margin-right:0;}
-			>button{width: 100%; height: 100%; background-color:color(white);
-				&:hover, &:focus{background-color:color(point);}
-			} // button
-			&.active > button{background-color:color(main);}
-		} // li
-	 } // ol
- } //.indicator
+		>ol{width: 100%; height: 100%;
+			>li{width:rem(30); height:rem(30); margin-right:rem(30); border-radius:rem(30); float: left;
+				overflow: hidden;
+				&:last-child{margin-right:0;}
+				>button{width: 100%; height: 100%; background-color:color(white);
+					&:hover, &:focus{background-color:color(point);}
+				} // button
+				&.active > button{background-color:color(main);}
+				} // li
+			 } // ol
+		 } //.indicator
 
 } // #adBanner
 
 
+@keyframes mouseScroll {
+	0%{ transform:translateY(-1rem); opacity:0.5;}
+	100%{ transform:translateY(1rem); opacity:1;}
+}
+// @-webkit-keyframes mouseScroll {
+// 	0%{ -webkit-transform:translateY(-2rem);}
+// 	50%{ -webkit-transform:translateY(1rem);}
+// 	100%{ -webkit-transform:translateY(-1rem);}
+// }
+// @-moz-keyframes mouseScroll {
+// 	0%{ -moz-transform:translateY(-2rem);}
+// 	50%{ -moz-transform:translateY(1rem);}
+// 	100%{ -moz-transform:translateY(-1rem);}
+// }
 
+// https://www.w3schools.com/css/css3_animations.asp
+// animation: 속성은 반드시 @keyframes{}와 함께 사용한다!! 
+// ie하위 브라우저는 지원하지 않는다(10이후)
+// 프리픽스를 달아주어야 한다!
 
 
 

@@ -95,7 +95,7 @@ h1 a > span { display: block; width: 0; height: 0; position: absolute; z-index: 
 
 #adBanner .banner_wrap .banner_img_5 { background-image: url("../../img/adBanner/slide_05.png"); }
 
-#adBanner .mouse_scroll { width: 44px; width: 2.75rem; height: 134px; height: 8.375rem; position: absolute; z-index: 300; left: 50%; margin-left: -22px; margin-left: -1.375rem; bottom: 140px; bottom: 8.75rem; background-color: #3dd; }
+#adBanner .mouse_scroll { width: 44px; width: 2.75rem; height: 134px; height: 8.375rem; position: absolute; z-index: 300; left: 50%; margin-left: -22px; margin-left: -1.375rem; bottom: 140px; bottom: 8.75rem; background-color: #3dd; -webkit-animation: mouseScroll 0.8s infinite alternate linear; -moz-animation: mouseScroll 0.8s infinite alternate linear; -ms-animation: mouseScroll 0.8s infinite alternate linear; -o-animation: mouseScroll 0.8s infinite alternate linear; animation: mouseScroll 0.8s infinite alternate linear; }
 
 #adBanner .indicator { width: 270px; width: 16.875rem; height: 30px; height: 1.875rem; position: absolute; left: 50%; margin-left: 80px; margin-left: 5rem; bottom: 140px; bottom: 8.75rem; }
 
@@ -110,6 +110,11 @@ h1 a > span { display: block; width: 0; height: 0; position: absolute; z-index: 
 #adBanner .indicator > ol > li > button:hover, #adBanner .indicator > ol > li > button:focus { background-color: #3dd; }
 
 #adBanner .indicator > ol > li.active > button { background-color: #a30; }
+
+@keyframes mouseScroll { 0% { transform: translateY(-1rem);
+		opacity: 0.5; }
+	100% { transform: translateY(1rem);
+		opacity: 1; } }
 
 /* #bestNews */
 #bestNews { width: 960px; width: 60rem; height: auto; margin: 0 auto; padding-top: 180px; padding-top: 11.25rem; padding-bottom: 70px; padding-bottom: 4.375rem; box-sizing: border-box; }
