@@ -57,11 +57,15 @@ h1 a > span { display: block; width: 0; height: 0; position: absolute; z-index: 
 
 #adBanner .btn { width: 100%; height: 0; position: absolute; top: 50%; margin-top: -87px; margin-top: -5.4375rem; z-index: 300; }
 
-#adBanner .btn > button { width: 83px; width: 5.1875rem; height: 174px; height: 10.875rem; background-color: #bbb; }
+#adBanner .btn > button { width: 83px; width: 5.1875rem; height: 174px; height: 10.875rem; background-color: #bbb; background-image: url("../../img/adBanner/slide_btn.png"); background-repeat: no-repeat; background-position: center; background-size: 200%; }
 
-#adBanner .btn > .l_btn { float: left; margin-left: 100px; margin-left: 6.25rem; margin-left: 5.208333vw; }
+#adBanner .btn > .l_btn { float: left; margin-left: 100px; margin-left: 6.25rem; margin-left: 5.208333vw; background-position: top left; }
 
-#adBanner .btn > .r_btn { float: right; margin-right: 100px; margin-right: 6.25rem; margin-right: 5.208333vw; }
+#adBanner .btn > .l_btn:hover, #adBanner .btn > .l_btn:focus { background-position: bottom left; }
+
+#adBanner .btn > .r_btn { float: right; margin-right: 100px; margin-right: 6.25rem; margin-right: 5.208333vw; background-position: top right; }
+
+#adBanner .btn > .r_btn:hover, #adBanner .btn > .r_btn:focus { background-position: bottom right; }
 
 #adBanner .explain { width: 40%; height: 100%; float: left; position: absolute; background-color: rgba(170, 51, 0, 0.8); top: 0; left: 0; z-index: 200; padding: 200px 50px 100px 200px; padding: 12.5rem 3.125rem 6.25rem 12.5rem; padding: 7.8125vw 1.041667vw 4.166667vw 13.020833vw; box-sizing: border-box; }
 
@@ -95,7 +99,7 @@ h1 a > span { display: block; width: 0; height: 0; position: absolute; z-index: 
 
 #adBanner .banner_wrap .banner_img_5 { background-image: url("../../img/adBanner/slide_05.png"); }
 
-#adBanner .mouse_scroll { width: 44px; width: 2.75rem; height: 134px; height: 8.375rem; position: absolute; z-index: 300; left: 50%; margin-left: -22px; margin-left: -1.375rem; bottom: 140px; bottom: 8.75rem; background-color: #3dd; -webkit-animation: mouseScroll 0.8s infinite alternate linear; -moz-animation: mouseScroll 0.8s infinite alternate linear; -ms-animation: mouseScroll 0.8s infinite alternate linear; -o-animation: mouseScroll 0.8s infinite alternate linear; animation: mouseScroll 0.8s infinite alternate linear; }
+#adBanner .mouse_scroll { width: 44px; width: 2.75rem; height: 134px; height: 8.375rem; position: absolute; z-index: 300; left: 50%; margin-left: -22px; margin-left: -1.375rem; bottom: 140px; bottom: 8.75rem; /* background-color:color(point); */ background-image: url("../../img/adBanner/mouse.png"); background-repeat: no-repeat; background-position: center; background-size: contain; -webkit-animation: mouseScroll 0.8s infinite alternate linear; -moz-animation: mouseScroll 0.8s infinite alternate linear; -ms-animation: mouseScroll 0.8s infinite alternate linear; -o-animation: mouseScroll 0.8s infinite alternate linear; animation: mouseScroll 0.8s infinite alternate linear; }
 
 #adBanner .indicator { width: 270px; width: 16.875rem; height: 30px; height: 1.875rem; position: absolute; z-index: 300; left: 50%; margin-left: 80px; margin-left: 5rem; bottom: 140px; bottom: 8.75rem; }
 

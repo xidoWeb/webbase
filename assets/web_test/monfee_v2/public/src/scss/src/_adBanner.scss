@@ -17,9 +17,14 @@ $url:'../../img/adBanner/';
 /*   좌, 우 버튼 영역 */
 .btn{width: 100%; height: 0; position: absolute; top: 50%; margin-top:rem(-174 / 2) ;
 	z-index:300;
-	>button{width: rem(83); height:rem(174); background-color:color(gray);}
-	>.l_btn{float: left; margin-left:rem(100); margin-left:wideVw(100);	}
-	>.r_btn{float: right; margin-right:rem(100); margin-right:wideVw(100);}
+	>button{width: rem(83); height:rem(174);  background-color:color(gray); 
+		@include img($f:"slide_btn.png", $s:200%);}
+	>.l_btn{float: left; margin-left:rem(100); margin-left:wideVw(100);	
+			background-position: top left;
+			&:hover,&:focus{background-position: bottom left;}}
+	>.r_btn{float: right; margin-right:rem(100); margin-right:wideVw(100);
+			background-position: top right;
+			&:hover,&:focus{background-position: bottom right;}}
 	} // .btn
 
 /* 내용 설명 영역 */	
@@ -65,7 +70,9 @@ $url:'../../img/adBanner/';
 	.banner_img_5{background-image:url($url + 'slide_05.png');}
  } // .banner_wrap
 
- .mouse_scroll{width:rem(44); height:rem(134); position: absolute; z-index: 300; left: 50%; margin-left:rem(-22); bottom:rem(140); background-color:color(point);
+ .mouse_scroll{width:rem(44); height:rem(134); position: absolute; z-index: 300; left: 50%; margin-left:rem(-22); bottom:rem(140); 
+ /* background-color:color(point); */
+ 	@include img($f:'mouse.png');
 	// animation: 이름 시간 반복 방향(끝나고 다시 어떻게?) 속도감;
 	 -webkit-animation: mouseScroll 0.8s infinite alternate linear;
 	 -moz-animation: mouseScroll 0.8s infinite alternate linear;

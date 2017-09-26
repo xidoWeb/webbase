@@ -83,6 +83,18 @@ SetIn();
 
 adBanner.on({'mouseenter': ClearIn,'mouseleave':SetIn });
 // -------------------------------------------------------
+lBtn.on('click',function(e) {
+	e.preventDefault();
+
+	// console.log(i);
+	--i
+	if(i <= 0){ i = 5 }
+
+	BannerAll(i);
+});
+
+
+// -------------------------------------------------------
 
 })(this.jQuery);
 
