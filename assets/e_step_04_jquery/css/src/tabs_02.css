@@ -1,0 +1,27 @@
+/* tabs_02.css */
+h1{padding:2rem; background-color: #077; color:#fff; font-size: 2.5rem;}
+h1+p{padding: 0.3rem; padding-left: 2.5rem; background-color: #0aa; color:#fff; font-size: 1.3rem; line-height: 130%;	}
+
+#tabs{width: 80%; min-width: 800px; height: auto; margin: 0 auto; margin-top: 1rem;}
+#tabs ul{width: 100%; height: auto; position: relative; z-index:100;}
+#tabs ul:after{content:" "; display: block; clear: both;}
+#tabs ul li{width: 200px; height: 50px; float: left; border-right:2px solid #fff;
+	box-sizing:border-box;}
+#tabs ul li:first-child{border-top-left-radius:0.5rem; overflow: hidden;}
+#tabs ul li:last-child{border-right: 0; border-top-right-radius:0.5rem; overflow: hidden;}
+#tabs ul li > a{display: block; width: 100%; height: 100%; background-color:#077; text-align: center; line-height: 50px; color:#fff;}
+#tabs ul li > a:focus{background-color: #0af !important; color:#fff !important;}
+/* * !important 는 속성값이 끝나기 전에 작성하는것이 올바른 규칙이며, 자주사용하는 것은 오히려 독입니다. 
+   * 이곳에서는 포커스가 잡혀 접근성을 높여주는 경우에만 사용하여, 처리하였습니다. */
+
+#tabs ul li.active{border: 3px solid  #077; border-bottom:transparent;	}
+#tabs ul li.active > a{background-color: #fff; color:#077; font-weight: bold;} 
+
+#tabs>div{width: 100%; height: auto; box-sizing:border-box; padding: 1rem; border: 3px solid  #077;
+	margin-top: -3px; display: none;}
+#tabs>div.active{display: block;}	
+#tabs>div>p{width: 100%; height: auto; color:#777; font-size: 1.2em; margin-bottom: 1rem;}
+#tabs>div>p:last-of-type{margin-bottom: 0;}
+
+
+/* 내용에서 부족한 부분은 수정해서 사용하세요 */
