@@ -1,0 +1,46 @@
+/* rwd.css */
+
+/* 공통영역 */
+body{background-color: #ccc; transition:all 300ms;}
+/*#wrap{transition:all 100ms;}*/
+h1{font-size: 3rem;}
+
+/* mob */
+@media screen and (max-width:640px) {
+
+	body{background-color: #0af;}
+	#wrap{width: 100%; height: 500px; background-color: #cca;}
+}
+
+/* tab */
+@media screen and (min-width:641px) and (max-width:1024px) {
+	body{background-color: #faf;}
+	#wrap{width: 90%; height: 30vw;
+				/* 가로화면의 % 기준으로 처리 즉, 가로화면전체의 30%만큼의 크기를 높이값으로 설정 */
+				/* ex: 디자인작업시: 가로 650px 사이즈에서 높이 100px만큼 작업;
+					 공식: 사용크기 / 기준(브라우저가로) * 100 vw
+					 			100   / 650 * 100 vw   => 15.384615vw
+				*/
+		 margin: 0 auto;
+			  background-color: #ca0;}
+}
+
+/* pc */
+@media screen and (min-width:1025px) and (max-width:1366px), print {
+	#wrap{width: 960px; margin: 0 auto; 
+				background-color: #f7f; padding-top:1.3rem;}
+}
+
+/* pcfull */
+@media screen and (min-width:1367px) {
+	#wrap{width: 100%; height:50vw; background-color: #af8; }
+}
+
+
+
+
+
+
+
+
+

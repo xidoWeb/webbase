@@ -1,0 +1,55 @@
+/* grid_01.css */
+
+/* scss코드를 활용하여 사용!! */
+
+// $mob :640;
+// $tab :$mob;
+// $pc  :1024;
+// $full:1366;
+// 
+// $mobSize : screen and  (max-width:#{$mob} + px);
+// $tabSize : screen and  (min-width:#{$tab} + 1 + px);
+// $pcSize : screen and   (min-width:#{$pc} + 1 + px);
+// $fullSize : screen and (min-width:#{$full} + 1 + px);
+
+
+$baseLength: 12;
+$mobColumn  : 4;
+$tabColumn  : 8;
+$pcColumn   : 12;
+$fullColumn : 24;
+
+@mixin column($name:base, $init:1, $length:$baseLength) {
+	@for $i from $init through $length{
+		.#{$name}_#{$i}{width:(100 / $length) * $i + %; float: left;}
+	}
+}
+
+/* mob */
+@media screen and (max-width:640px) {
+ /*grid 4분할*/
+	@include column($name:mob, $length:$mobColumn);
+}
+/* tab */
+@media screen and (min-width:641px) and (max-width:1024px) {
+/*grid 8분할*/
+	@include column($name:tab, $length:$tabColumn);
+}
+/* pc */
+@media screen and (min-width:1025px) and (max-width:1366px), print {
+	/*grid 12분할*/				
+	@include column($name:pc, $length:$pcColumn);
+}
+/* pcfull */
+@media screen and (min-width:1367px) {
+	@include column($name:full, $length:$fullColumn);
+}
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,17 @@
 // variable.scss 
+// ==================
+// 1. webfont
+// 2. color
+// 3. line setting
+// 4. font
+// 5. grid setting
+// 6. etc
+// ==================
 
+// 1. webfont
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+// 2. color
 // /* ------------ color ------------  */
 $color: ( 
 	primary : #656565, 
@@ -20,6 +30,7 @@ $color: (
 	line3   : #171717, 
 	zero    : transparent);
 
+// 3. line setting
 // /* ------------ line ------------  */
 $line: ( 
 	l1 : 1px solid map-get($color, line1), 
@@ -28,6 +39,7 @@ $line: (
   l4 : 4px solid map-get($color, main),
   );
 
+// 4. font
 // /* ------------ font ------------  */
 $size: 16;
 $fontSize: ( 
@@ -44,7 +56,13 @@ $fontFamily:(
 	korean  : (nanumGothic, "nanum Gothic", dotum), 
 	all     : ("myriad pro", arial, nanumGothic, "nanum Gothic", dotum, sans-serif)
 	);
- 
+
+
+// 5. grid setting
+
+
+
+// 6. etc 
 // /*  -------------- etc ----------------- */
 $minWidth : 960;
 $baseTime : 300ms;

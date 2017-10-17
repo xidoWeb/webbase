@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* grid_01.css */
+/* scss코드를 활용하여 사용!! */
+/* mob */
+@media screen and (max-width: 640px) { /*grid 4분할*/
+  .mob_1 { width: 25%; float: left; }
+  .mob_2 { width: 50%; float: left; }
+  .mob_3 { width: 75%; float: left; }
+  .mob_4 { width: 100%; float: left; } }
+
+/* tab */
+@media screen and (min-width: 641px) and (max-width: 1024px) { /*grid 8분할*/
+  .tab_1 { width: 12.5%; float: left; }
+  .tab_2 { width: 25%; float: left; }
+  .tab_3 { width: 37.5%; float: left; }
+  .tab_4 { width: 50%; float: left; }
+  .tab_5 { width: 62.5%; float: left; }
+  .tab_6 { width: 75%; float: left; }
+  .tab_7 { width: 87.5%; float: left; }
+  .tab_8 { width: 100%; float: left; } }
+
+/* pc */
+@media screen and (min-width: 1025px) and (max-width: 1366px), print { /*grid 12분할*/
+  .pc_1 { width: 8.33333%; float: left; }
+  .pc_2 { width: 16.66667%; float: left; }
+  .pc_3 { width: 25%; float: left; }
+  .pc_4 { width: 33.33333%; float: left; }
+  .pc_5 { width: 41.66667%; float: left; }
+  .pc_6 { width: 50%; float: left; }
+  .pc_7 { width: 58.33333%; float: left; }
+  .pc_8 { width: 66.66667%; float: left; }
+  .pc_9 { width: 75%; float: left; }
+  .pc_10 { width: 83.33333%; float: left; }
+  .pc_11 { width: 91.66667%; float: left; }
+  .pc_12 { width: 100%; float: left; } }
+
+/* pcfull */
+@media screen and (min-width: 1367px) { .full_1 { width: 4.16667%; float: left; }
+  .full_2 { width: 8.33333%; float: left; }
+  .full_3 { width: 12.5%; float: left; }
+  .full_4 { width: 16.66667%; float: left; }
+  .full_5 { width: 20.83333%; float: left; }
+  .full_6 { width: 25%; float: left; }
+  .full_7 { width: 29.16667%; float: left; }
+  .full_8 { width: 33.33333%; float: left; }
+  .full_9 { width: 37.5%; float: left; }
+  .full_10 { width: 41.66667%; float: left; }
+  .full_11 { width: 45.83333%; float: left; }
+  .full_12 { width: 50%; float: left; }
+  .full_13 { width: 54.16667%; float: left; }
+  .full_14 { width: 58.33333%; float: left; }
+  .full_15 { width: 62.5%; float: left; }
+  .full_16 { width: 66.66667%; float: left; }
+  .full_17 { width: 70.83333%; float: left; }
+  .full_18 { width: 75%; float: left; }
+  .full_19 { width: 79.16667%; float: left; }
+  .full_20 { width: 83.33333%; float: left; }
+  .full_21 { width: 87.5%; float: left; }
+  .full_22 { width: 91.66667%; float: left; }
+  .full_23 { width: 95.83333%; float: left; }
+  .full_24 { width: 100%; float: left; } }
